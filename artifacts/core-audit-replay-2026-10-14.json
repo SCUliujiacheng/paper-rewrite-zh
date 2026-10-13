@@ -1,0 +1,1394 @@
+{
+  "measured_at": "2026-10-13T17:04:33.694394+00:00",
+  "scope": "frozen development candidates; not a semantic accuracy benchmark",
+  "rows": [
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "zh-01",
+      "segment": 0,
+      "attempt": 0,
+      "source": "在本项目虚构的蓝盒协议实验中，我们将24枚木片随机放入两个容器，并在20 ℃下记录其滚动时间。甲组均值为12.5 s，乙组为15.0 s；这些数值仅用于软件测试。按照占位引文[1]定义的计时步骤，结果不支持甲组在所有温度下都更快。由于没有进行高温测试，当前结论只适用于该玩具装置，不能推及真实材料的性能。",
+      "candidate": "在本项目虚构的“蓝盒协议”实验中，我们将 24 枚木片随机分配至两个容器，并在 20 ℃下记录其滚动时间：甲组均值为 12.5 s，乙组为 15.0 s；上述数值仅用于软件测试。依据占位引文 [1] 定义的计时步骤，结果不支持甲组在所有温度下表现更快。由于未进行高温测试，当前结论仅适用于该玩具装置，无法推及真实材料的性能。",
+      "old_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 1, \"不能\": 1, \"没有\": 1}",
+            "after": "{\"不\": 1, \"无法\": 1, \"未\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 1, \"不能\": 1, \"没有\": 1}",
+            "after": "{\"不\": 1, \"无法\": 1, \"未\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "zh-01",
+      "segment": 0,
+      "attempt": 1,
+      "source": "在本项目虚构的蓝盒协议实验中，我们将24枚木片随机放入两个容器，并在20 ℃下记录其滚动时间。甲组均值为12.5 s，乙组为15.0 s；这些数值仅用于软件测试。按照占位引文[1]定义的计时步骤，结果不支持甲组在所有温度下都更快。由于没有进行高温测试，当前结论只适用于该玩具装置，不能推及真实材料的性能。",
+      "candidate": "在本项目虚构的“蓝盒协议”实验中，我们将 24 枚木片随机分配至两个容器，并于 20 ℃下记录其滚动时间。甲组均值为 12.5 s，乙组为 15.0 s；这些数值仅用于软件测试。依据占位引文 [1] 定义的计时步骤，结果不支持甲组在所有温度下更快。鉴于未开展高温测试，当前结论仅适用于该玩具装置，无法推及真实材料的性能。",
+      "old_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 1, \"不能\": 1, \"没有\": 1}",
+            "after": "{\"不\": 1, \"无法\": 1, \"未\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 1, \"不能\": 1, \"没有\": 1}",
+            "after": "{\"不\": 1, \"无法\": 1, \"未\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "zh-02",
+      "segment": 0,
+      "attempt": 0,
+      "source": "本段描述原创的虚构方格计数器研究。我们设置三个纸面棋盘，每个棋盘包含八行标记，计数规则记为$S=\\sum_{i=1}^{8}x_i$。模拟结果显示，方案A识别18个标记，方案B识别16个标记[2]。这并不意味着A能减少错误，因为误报次数尚未统计。样本范围仅包括黑白格；彩色格与旋转格被排除，因此比较必须保留这一适用条件。",
+      "candidate": "本研究涉及原创的虚构方格计数器（方格计数器）设计，设置三个纸面棋盘，每个棋盘包含八行标记，计数规则定义为$S=\\\\sum_{i=1}^{8}x_i$。模拟结果显示，方案 A 识别出 18 个标记，而方案 B 识别出 16 个标记 [2]。这并不表明方案 A 能减少错误，因为误报次数尚未统计。样本范围仅限于黑白格；彩色格与旋转格被排除，因此上述比较必须保留该适用条件。",
+      "old_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "latex",
+            "severity": "error",
+            "before": "{\"$S=\\\\sum_{i=1}^{8}x_i$\": 1}",
+            "after": "{\"$S=\\\\\\\\sum_{i=1}^{8}x_i$\": 1}"
+          },
+          {
+            "code": "protected_terms",
+            "severity": "error",
+            "before": "{\"方格计数器\": 1}",
+            "after": "{\"方格计数器\": 2}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "latex",
+            "severity": "error",
+            "before": "{\"$S=\\\\sum_{i=1}^{8}x_i$\": 1}",
+            "after": "{\"$S=\\\\\\\\sum_{i=1}^{8}x_i$\": 1}"
+          },
+          {
+            "code": "protected_terms",
+            "severity": "error",
+            "before": "{\"方格计数器\": 1}",
+            "after": "{\"方格计数器\": 2}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "zh-02",
+      "segment": 0,
+      "attempt": 1,
+      "source": "本段描述原创的虚构方格计数器研究。我们设置三个纸面棋盘，每个棋盘包含八行标记，计数规则记为$S=\\sum_{i=1}^{8}x_i$。模拟结果显示，方案A识别18个标记，方案B识别16个标记[2]。这并不意味着A能减少错误，因为误报次数尚未统计。样本范围仅包括黑白格；彩色格与旋转格被排除，因此比较必须保留这一适用条件。",
+      "candidate": "本段描述原创的虚构“方格计数器”研究。实验设置三个纸面棋盘，每个棋盘含八行标记，计数规则记为$S=\\\\sum_{i=1}^{8}x_i$。模拟结果显示，方案 A 识别 18 个标记，方案 B 识别 16 个标记 [2]。但这并不表明 A 能减少错误，因为尚未统计误报次数。样本范围仅限黑白格；彩色格与旋转格被排除，故比较须保留此适用条件。",
+      "old_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "latex",
+            "severity": "error",
+            "before": "{\"$S=\\\\sum_{i=1}^{8}x_i$\": 1}",
+            "after": "{\"$S=\\\\\\\\sum_{i=1}^{8}x_i$\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "latex",
+            "severity": "error",
+            "before": "{\"$S=\\\\sum_{i=1}^{8}x_i$\": 1}",
+            "after": "{\"$S=\\\\\\\\sum_{i=1}^{8}x_i$\": 1}"
+          },
+          {
+            "code": "obligation",
+            "severity": "warning",
+            "before": "{\"必须\": 1}",
+            "after": "{}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "zh-03",
+      "segment": 0,
+      "attempt": 0,
+      "source": "为测试改写后的条件范围，我们构造了不存在于真实文献中的雾灯指标。玩具模拟采用10 Hz采样，并分别生成0.2 m和0.4 m的虚拟路径；全部数据均为人为设定。只有当噪声小于0.03时，指标才保持稳定，参见占位引文[3,4]。我们未观察到稳定性随路径长度单调增加的现象，因而不能写成“路径越长越可靠”，也不能删掉噪声阈值。",
+      "candidate": "为测试改写后的条件范围，我们构造了不存在于真实文献中的雾灯指标。玩具模拟采用 10 Hz 采样，分别生成了 0.2 m 和 0.4 m 的虚拟路径；全部数据均为人为设定。仅当噪声小于 0.03 时，该指标保持稳定（参见占位引文 [3,4]）。我们未观察到稳定性随路径长度单调增加的现象，因此不能将其表述为“路径越长越可靠”，亦不可删去噪声阈值。",
+      "old_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 1, \"不能\": 2, \"未\": 1}",
+            "after": "{\"不\": 2, \"不能\": 1, \"未\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 1, \"不能\": 2, \"未\": 1}",
+            "after": "{\"不\": 2, \"不能\": 1, \"未\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "zh-03",
+      "segment": 0,
+      "attempt": 1,
+      "source": "为测试改写后的条件范围，我们构造了不存在于真实文献中的雾灯指标。玩具模拟采用10 Hz采样，并分别生成0.2 m和0.4 m的虚拟路径；全部数据均为人为设定。只有当噪声小于0.03时，指标才保持稳定，参见占位引文[3,4]。我们未观察到稳定性随路径长度单调增加的现象，因而不能写成“路径越长越可靠”，也不能删掉噪声阈值。",
+      "candidate": "为测试改写后的条件范围，我们构造了不存在于真实文献中的雾灯指标。玩具模拟采用 10 Hz 采样，并分别生成 0.2 m 和 0.4 m 的虚拟路径；全部数据均为人为设定。仅当噪声小于 0.03 时，该雾灯指标才保持稳定（参见占位引文 [3,4]）。由于未观察到稳定性随路径长度单调增加的现象，故不能表述为“路径越长越可靠”，亦不可删去噪声阈值。",
+      "old_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "protected_terms",
+            "severity": "error",
+            "before": "{\"雾灯指标\": 1}",
+            "after": "{\"雾灯指标\": 2}"
+          },
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 1, \"不能\": 2, \"未\": 1}",
+            "after": "{\"不\": 2, \"不能\": 1, \"未\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "protected_terms",
+            "severity": "error",
+            "before": "{\"雾灯指标\": 1}",
+            "after": "{\"雾灯指标\": 2}"
+          },
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 1, \"不能\": 2, \"未\": 1}",
+            "after": "{\"不\": 2, \"不能\": 1, \"未\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "zh-04",
+      "segment": 0,
+      "attempt": 0,
+      "source": "在原创玩具实验中，纸舟规则用于分配12艘虚构纸船的出发顺序。六艘采用固定顺序，六艘采用随机顺序；前者到达率为75%，后者为50%，并非真实航运数据。记录表以[5]作为占位引用，又以[5]标记同一操作说明。重复引用需要完整保留。虽然本次设定下两组出现差异，我们仍不能断言顺序导致结果变化，因为风速没有被控制。",
+      "candidate": "在原创玩具实验中，纸舟规则用于分配 12 艘虚构纸船的出发顺序：六艘按固定顺序排列，六艘按随机顺序排列；前者到达率为 75%，后者为 50%，并非真实航运数据。记录表以 [5] 作为占位引用，并以 [5] 标记同一操作说明。重复引用需完整保留。尽管本次设定下两组出现差异，但尚不能断言顺序导致结果变化，因为风速未被控制。",
+      "old_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不能\": 1, \"并非\": 1, \"没有\": 1}",
+            "after": "{\"不能\": 1, \"并非\": 1, \"未\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不能\": 1, \"并非\": 1, \"没有\": 1}",
+            "after": "{\"不能\": 1, \"并非\": 1, \"未\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "zh-04",
+      "segment": 0,
+      "attempt": 1,
+      "source": "在原创玩具实验中，纸舟规则用于分配12艘虚构纸船的出发顺序。六艘采用固定顺序，六艘采用随机顺序；前者到达率为75%，后者为50%，并非真实航运数据。记录表以[5]作为占位引用，又以[5]标记同一操作说明。重复引用需要完整保留。虽然本次设定下两组出现差异，我们仍不能断言顺序导致结果变化，因为风速没有被控制。",
+      "candidate": "在原创玩具实验中，“纸舟规则”用于分配 12 艘虚构纸船的出发顺序：六艘按固定顺序排列，六艘按随机顺序；前者的到达率为 75%，后者为 50%，并非真实航运数据。记录表以 [5] 作为占位引用，并以 [5] 标记同一操作说明，需完整保留重复引用。尽管在当前设定下两组出现差异，我们仍不能断言顺序导致结果变化，因为风速未被控制。",
+      "old_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不能\": 1, \"并非\": 1, \"没有\": 1}",
+            "after": "{\"不能\": 1, \"并非\": 1, \"未\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不能\": 1, \"并非\": 1, \"没有\": 1}",
+            "after": "{\"不能\": 1, \"并非\": 1, \"未\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "zh-05",
+      "segment": 0,
+      "attempt": 0,
+      "source": "本项目编写的虚构双门缓存测试仅使用内存中的整数序列。双门缓存每次存储32个元素，单门版本每次存储16个元素，在100次玩具请求中分别命中80次和60次。容量与命中率不是同一个量，不能把32个元素改成32次请求。我们按照占位文献（测试作者，2099）记录结果；该文献并不存在。这些设定只检验术语重复与数值单位是否保留，不证明实际缓存性能。",
+      "candidate": "本项目编写的虚构“双门缓存”测试仅使用内存中的整数序列。“双门缓存”每次存储 32 个元素，单门版本每次存储 16 个元素；在 100 次玩具请求中，前者命中 80 次，后者命中 60 次。容量与命中率并非同一量度，因此不可将\"32 个元素”改为\"32 次请求”。结果记录依据占位文献（测试作者，2099）；该文献并不存在。这些设定仅用于检验术语重复与数值单位是否保留，不证明实际缓存性能。",
+      "old_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "numbers",
+            "severity": "error",
+            "before": "{\"100次\": 1, \"16个\": 1, \"2099\": 1, \"32个\": 2, \"32次\": 1, \"60次\": 1, \"80次\": 1, \"一个\": 1}",
+            "after": "{\"100次\": 1, \"16个\": 1, \"2099\": 1, \"32个\": 2, \"32次\": 1, \"60次\": 1, \"80次\": 1}"
+          },
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 3, \"不能\": 1}",
+            "after": "{\"不\": 3, \"并非\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "numbers",
+            "severity": "error",
+            "before": "{\"100次\": 1, \"16个\": 1, \"1个\": 1, \"2099\": 1, \"32个\": 2, \"32次\": 1, \"60次\": 1, \"80次\": 1}",
+            "after": "{\"100次\": 1, \"16个\": 1, \"2099\": 1, \"32个\": 2, \"32次\": 1, \"60次\": 1, \"80次\": 1}"
+          },
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 3, \"不能\": 1}",
+            "after": "{\"不\": 3, \"并非\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "zh-05",
+      "segment": 0,
+      "attempt": 1,
+      "source": "本项目编写的虚构双门缓存测试仅使用内存中的整数序列。双门缓存每次存储32个元素，单门版本每次存储16个元素，在100次玩具请求中分别命中80次和60次。容量与命中率不是同一个量，不能把32个元素改成32次请求。我们按照占位文献（测试作者，2099）记录结果；该文献并不存在。这些设定只检验术语重复与数值单位是否保留，不证明实际缓存性能。",
+      "candidate": "本项目编写的虚构双门缓存测试仅使用内存中的整数序列。双门缓存每次存储 32 个元素，单门版本每次存储 16 个元素；在 100 次玩具请求中，双门缓存命中 80 次，单门版本命中 60 次。容量与命中率并非同一概念，不能将\"32 个元素”改为\"32 次请求”。我们依据占位文献（测试作者，2099）记录结果；该文献并不存在。这些设定仅用于检验术语重复与数值单位是否保留，不证明实际缓存性能。",
+      "old_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "numbers",
+            "severity": "error",
+            "before": "{\"100次\": 1, \"16个\": 1, \"2099\": 1, \"32个\": 2, \"32次\": 1, \"60次\": 1, \"80次\": 1, \"一个\": 1}",
+            "after": "{\"100次\": 1, \"16个\": 1, \"2099\": 1, \"32个\": 2, \"32次\": 1, \"60次\": 1, \"80次\": 1}"
+          },
+          {
+            "code": "protected_terms",
+            "severity": "error",
+            "before": "{\"双门缓存\": 2}",
+            "after": "{\"双门缓存\": 3}"
+          },
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 3, \"不能\": 1}",
+            "after": "{\"不\": 2, \"不能\": 1, \"并非\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "numbers",
+            "severity": "error",
+            "before": "{\"100次\": 1, \"16个\": 1, \"1个\": 1, \"2099\": 1, \"32个\": 2, \"32次\": 1, \"60次\": 1, \"80次\": 1}",
+            "after": "{\"100次\": 1, \"16个\": 1, \"2099\": 1, \"32个\": 2, \"32次\": 1, \"60次\": 1, \"80次\": 1}"
+          },
+          {
+            "code": "protected_terms",
+            "severity": "error",
+            "before": "{\"双门缓存\": 2}",
+            "after": "{\"双门缓存\": 3}"
+          },
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 3, \"不能\": 1}",
+            "after": "{\"不\": 2, \"不能\": 1, \"并非\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "zh-06",
+      "segment": 0,
+      "attempt": 0,
+      "source": "原创的微环模型是用于回归测试的虚构系统，不对应已发表论文。令玩具输入为$x=2$，输出由$y=3x-1$给出，所以此处$y=5$。我们在两次模拟中得到相同输出，却没有验证其他输入是否满足该关系。占位说明[6]中的网址https://example.org/toy只指向示例域名。模型可能对扰动敏感；这一不确定表述不能被改成“模型必然失效”或“模型完全稳定”。",
+      "candidate": "原创的微环模型是用于回归测试的虚构系统，不对应已发表论文。当玩具输入为$x=2$时，由公式$y=3x-1$给出输出，因此此处$y=5$。我们在两次模拟中得到了相同的输出，但未验证其他输入是否满足该关系。占位说明 [6] 中的网址 https://example.org/toy 仅指向示例域名。模型可能对扰动敏感；这一不确定表述不能被改为“模型必然失效”或“模型完全稳定”。",
+      "old_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "urls",
+            "severity": "error",
+            "before": "{\"https://example.org/toy只指向示例域名。模型可能对扰动敏感；这一不确定表述不能被改成“模型必然失效”或“模型完全稳定”\": 1}",
+            "after": "{\"https://example.org/toy\": 1}"
+          },
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 2, \"不能\": 1, \"没有\": 1}",
+            "after": "{\"不\": 2, \"不能\": 1, \"未\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "urls",
+            "severity": "error",
+            "before": "{\"https://example.org/toy只指向示例域名\": 1}",
+            "after": "{\"https://example.org/toy\": 1}"
+          },
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 2, \"不能\": 1, \"没有\": 1}",
+            "after": "{\"不\": 2, \"不能\": 1, \"未\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "zh-06",
+      "segment": 0,
+      "attempt": 1,
+      "source": "原创的微环模型是用于回归测试的虚构系统，不对应已发表论文。令玩具输入为$x=2$，输出由$y=3x-1$给出，所以此处$y=5$。我们在两次模拟中得到相同输出，却没有验证其他输入是否满足该关系。占位说明[6]中的网址https://example.org/toy只指向示例域名。模型可能对扰动敏感；这一不确定表述不能被改成“模型必然失效”或“模型完全稳定”。",
+      "candidate": "原创的微环模型是一个用于回归测试的虚构系统，不对应已发表论文。当玩具输入为$x=2$时，输出由公式$y=3x-1$给出，因此此处$y=5$。尽管在两次模拟中得到了相同的输出，但并未验证其他输入是否满足该关系。占位说明[6]中的网址https://example.org/toy仅指向示例域名。该模型可能对扰动敏感；此不确定性表述不得改为“模型必然失效”或“模型完全稳定”。",
+      "old_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "numbers",
+            "severity": "error",
+            "before": "{\"-1\": 1, \"2\": 1, \"3\": 1, \"5\": 1, \"6\": 1, \"两次\": 1}",
+            "after": "{\"-1\": 1, \"2\": 1, \"3\": 1, \"5\": 1, \"6\": 1, \"一个\": 1, \"两次\": 1}"
+          },
+          {
+            "code": "urls",
+            "severity": "error",
+            "before": "{\"https://example.org/toy只指向示例域名。模型可能对扰动敏感；这一不确定表述不能被改成“模型必然失效”或“模型完全稳定”\": 1}",
+            "after": "{\"https://example.org/toy仅指向示例域名。该模型可能对扰动敏感；此不确定性表述不得改为“模型必然失效”或“模型完全稳定”\": 1}"
+          },
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 2, \"不能\": 1, \"没有\": 1}",
+            "after": "{\"不\": 3, \"未\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "numbers",
+            "severity": "error",
+            "before": "{\"-1\": 1, \"2\": 1, \"2次\": 1, \"3\": 1, \"5\": 1, \"6\": 1}",
+            "after": "{\"-1\": 1, \"1个\": 1, \"2\": 1, \"2次\": 1, \"3\": 1, \"5\": 1, \"6\": 1}"
+          },
+          {
+            "code": "urls",
+            "severity": "error",
+            "before": "{\"https://example.org/toy只指向示例域名\": 1}",
+            "after": "{\"https://example.org/toy仅指向示例域名\": 1}"
+          },
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 2, \"不能\": 1, \"没有\": 1}",
+            "after": "{\"不\": 3, \"未\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "zh-07",
+      "segment": 0,
+      "attempt": 0,
+      "source": "为了构造中文数词的测试案例，我们虚构了静珠法实验。十六颗塑料珠被划分为四组，每组四颗，模拟观察持续三分钟。第二组出现两次滑动，第一组没有出现滑动；这不表示其他组也没有滑动。这里的引文[7–9]仅是格式占位符，不代表真实来源。实验范围限于平面纸板，不能将结论扩展到倾斜表面，也不能把“没有观察到”替换为“无法发生”。",
+      "candidate": "为构造中文数词的测试案例，我们虚构了静珠法实验：十六颗塑料珠被分为四组（每组四颗），模拟持续三分钟的观察。第二组出现两次滑动，第一组未出现滑动；这并不意味着其他组无滑动。此处引文 [7–9] 仅为格式占位符，不代表真实来源。实验范围限于平面纸板，结论不可扩展至倾斜表面，亦不能将“未观察到”替换为“无法发生”。",
+      "old_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 2, \"不能\": 2, \"无法\": 1, \"没有\": 3}",
+            "after": "{\"不\": 3, \"不能\": 1, \"无\": 1, \"无法\": 1, \"未\": 2}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 2, \"不能\": 2, \"无法\": 1, \"没有\": 3}",
+            "after": "{\"不\": 3, \"不能\": 1, \"无\": 1, \"无法\": 1, \"未\": 2}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "zh-07",
+      "segment": 0,
+      "attempt": 1,
+      "source": "为了构造中文数词的测试案例，我们虚构了静珠法实验。十六颗塑料珠被划分为四组，每组四颗，模拟观察持续三分钟。第二组出现两次滑动，第一组没有出现滑动；这不表示其他组也没有滑动。这里的引文[7–9]仅是格式占位符，不代表真实来源。实验范围限于平面纸板，不能将结论扩展到倾斜表面，也不能把“没有观察到”替换为“无法发生”。",
+      "candidate": "为构造中文数词测试案例，我们虚构了静珠法实验。十六颗塑料珠被分为四组，每组四颗，模拟观察持续三分钟：第二组滑动两次，第一组未滑动；这表明其他组未必也未发生滑动。此处引文 [7–9] 仅为格式占位符，不代表真实来源。该实验仅限于平面纸板，结论不可扩展至倾斜表面，亦不能将“没有观察到”替换为“无法发生”。",
+      "old_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 2, \"不能\": 2, \"无法\": 1, \"没有\": 3}",
+            "after": "{\"不\": 2, \"不能\": 1, \"无法\": 1, \"未\": 3, \"没有\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 2, \"不能\": 2, \"无法\": 1, \"没有\": 3}",
+            "after": "{\"不\": 2, \"不能\": 1, \"无法\": 1, \"未\": 3, \"没有\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "zh-08",
+      "segment": 0,
+      "attempt": 0,
+      "source": "灰桥判据是本项目原创的虚构比较规则。我们为软件冒烟测试设定A值为4.8 mg、B值为6.2 mg，并明确规定$A<B$；这些数字不是实测数据。若只保留数字却将比较方向反转，结论仍会出错。根据占位引文[10]，该玩具判据只在室温且无额外载荷时使用。当前模拟提示A可能较轻，但没有证据证明A更耐用；耐用性与质量必须分开表述。",
+      "candidate": "灰桥判据为本项目原创的虚构比较规则。我们为软件冒烟测试设定 A 值为 4.8 mg、B 值为 6.2 mg，并明确规定$A<B$；这些数字并非实测数据。若仅保留数字而反转比较方向，结论仍会出错。依据占位引文 [10]，该玩具判据仅在室温且无额外载荷时适用。当前模拟提示 A 可能较轻，但尚无证据证明 A 更耐用；耐用性与质量须分别表述。",
+      "old_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 1, \"无\": 1, \"没有\": 1}",
+            "after": "{\"并非\": 1, \"无\": 2}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 1, \"无\": 1, \"没有\": 1}",
+            "after": "{\"并非\": 1, \"无\": 2}"
+          },
+          {
+            "code": "obligation",
+            "severity": "warning",
+            "before": "{\"必须\": 1}",
+            "after": "{}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "zh-08",
+      "segment": 0,
+      "attempt": 1,
+      "source": "灰桥判据是本项目原创的虚构比较规则。我们为软件冒烟测试设定A值为4.8 mg、B值为6.2 mg，并明确规定$A<B$；这些数字不是实测数据。若只保留数字却将比较方向反转，结论仍会出错。根据占位引文[10]，该玩具判据只在室温且无额外载荷时使用。当前模拟提示A可能较轻，但没有证据证明A更耐用；耐用性与质量必须分开表述。",
+      "candidate": "灰桥判据是本项目原创的虚构比较规则。我们为软件冒烟测试设定 A 值为 4.8 mg、B 值为 6.2 mg，并明确规定$A<B$；这些数字并非实测数据。若仅保留数值却将比较方向反转，结论仍会出错。根据占位引文 [10]，该玩具判据仅在室温且无额外载荷时适用。当前模拟提示 A 可能较轻，但尚无证据证明 A 更耐用；耐用性与质量必须分开表述。",
+      "old_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 1, \"无\": 1, \"没有\": 1}",
+            "after": "{\"并非\": 1, \"无\": 2}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 1, \"无\": 1, \"没有\": 1}",
+            "after": "{\"并非\": 1, \"无\": 2}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "en-01",
+      "segment": 0,
+      "attempt": 0,
+      "source": "This original synthetic toy experiment assigns 20 imaginary tokens to the Amber Gate protocol. Group A retains 8 tokens and group B retains 6 after 30 s [11]. The numbers are invented for software regression testing. The result does not establish that A works better at every interval, because only one interval was simulated. The placeholder citation [11] names no real paper.",
+      "candidate": "This original synthetic toy experiment assigns 20 imaginary tokens to the Amber Gate protocol. After 30 s, Group A retains 8 tokens and Group B retains 6 [11]. The numbers are invented for software regression testing. The result does not establish that A works better at every interval, because only one interval was simulated. The placeholder citation [11] names no real paper.",
+      "old_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "previously_clear": true,
+      "now_clear": true,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "en-02",
+      "segment": 0,
+      "attempt": 0,
+      "source": "We invented the Mirror Queue as a toy system for this project. Under a 2 Hz input, its hypothetical delay is 5 ms rather than 5 s. The test relation is $d=2n+1$, with $n=2$ [12]. These settings are synthetic, and the citation is a placeholder. A lower delay may occur only when the queue is empty; we have not shown that throughput increases or that the relation holds for larger queues.",
+      "candidate": "We introduced the Mirror Queue as a toy system for this project. Under 2 Hz input, its hypothetical delay is 5 ms rather than 5 s. The test relation is $d=2n+1$, with $n=2$ [12]. These settings are synthetic, and the citation is a placeholder. A lower delay may occur only when the queue is empty; we have not shown that throughput increases or that the relation holds for larger queues.",
+      "old_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "provenance",
+            "severity": "warning",
+            "before": "{\"invented\": 1, \"placeholder\": 1, \"synthetic\": 1}",
+            "after": "{\"placeholder\": 1, \"synthetic\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": true,
+      "now_clear": false,
+      "clearance_changed": true
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "en-03",
+      "segment": 0,
+      "attempt": 0,
+      "source": "In our original fictional Copper Tile trial, three imaginary trays contain 12 tiles each. The synthetic mean is 1.5 g in tray A and 1.8 g in tray B, while tray C is excluded [13,14]. We did not observe a change after cooling, which does not imply that change is impossible. The scope is restricted to this toy trial. No participant, real experiment, or published source is represented by these values.",
+      "candidate": "In our original fictional Copper Tile trial, three imaginary trays contain 12 tiles each: tray A has a synthetic mean of 1.5 g and tray B has 1.8 g, while tray C is excluded [13,14]. We observed no change after cooling; however, this does not imply that change is impossible. The scope is restricted to this toy trial, representing neither real participants, experiments, nor published sources.",
+      "old_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"no\": 1, \"not\": 2}",
+            "after": "{\"neither\": 1, \"no\": 1, \"not\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"no\": 1, \"not\": 2}",
+            "after": "{\"neither\": 1, \"no\": 1, \"not\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "en-03",
+      "segment": 0,
+      "attempt": 1,
+      "source": "In our original fictional Copper Tile trial, three imaginary trays contain 12 tiles each. The synthetic mean is 1.5 g in tray A and 1.8 g in tray B, while tray C is excluded [13,14]. We did not observe a change after cooling, which does not imply that change is impossible. The scope is restricted to this toy trial. No participant, real experiment, or published source is represented by these values.",
+      "candidate": "In our original fictional Copper Tile trial, three imaginary trays contain 12 tiles each: tray A has a synthetic mean of 1.5 g and tray B has 1.8 g, while tray C is excluded [13,14]. No change was observed after cooling, though this does not imply that change is impossible. The scope remains restricted to this toy trial. No participant, real experiment, or published source is represented by these values.",
+      "old_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"no\": 1, \"not\": 2}",
+            "after": "{\"no\": 2, \"not\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"no\": 1, \"not\": 2}",
+            "after": "{\"no\": 2, \"not\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "en-04",
+      "segment": 0,
+      "attempt": 0,
+      "source": "The Quiet Loop is a project-authored synthetic algorithm, not a method taken from a paper. Its toy threshold is 0.25, and the deliberately invented error rates are 10% and 15% [15]. We keep the comparison $e_A<e_B$ visible. The implementation note at https://example.org/quiet is a placeholder. This exercise tests preservation of scope, symbols, and negation; it provides no evidence of commercial detector effectiveness.",
+      "candidate": "The Quiet Loop is a project-authored synthetic algorithm, not a method taken from a paper. Its toy threshold is 0.25, and the deliberately invented error rates are 10% and 15% [15]. We keep the comparison $e_A<e_B$ visible. The implementation note at https://example.org/quiet is a placeholder. This exercise tests preservation of scope, symbols, and negation; it provides no evidence of commercial detector effectiveness.",
+      "old_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "previously_clear": true,
+      "now_clear": true,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "en-04",
+      "segment": 0,
+      "attempt": 1,
+      "source": "The Quiet Loop is a project-authored synthetic algorithm, not a method taken from a paper. Its toy threshold is 0.25, and the deliberately invented error rates are 10% and 15% [15]. We keep the comparison $e_A<e_B$ visible. The implementation note at https://example.org/quiet is a placeholder. This exercise tests preservation of scope, symbols, and negation; it provides no evidence of commercial detector effectiveness.",
+      "candidate": "The Quiet Loop is a project-authored synthetic algorithm, not a method derived from a paper. Its toy threshold is 0.25, and the deliberately invented error rates are 10% and 15% [15]. The comparison $e_A<e_B$ remains visible. The implementation note at https://example.org/quiet serves as a placeholder. This exercise tests preservation of scope, symbols, and negation; it provides no evidence of commercial detector effectiveness.",
+      "old_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "previously_clear": true,
+      "now_clear": true,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "en-05",
+      "segment": 0,
+      "attempt": 0,
+      "source": "For this original fictional Silver Seed experiment, we define a toy sample of 16 beads and split it into two groups of 8. The invented radius is 2 mm in group A and 3 mm in group B [16]. A larger radius does not imply a higher density; neither density nor mass was measured. The hypothetical comparison applies only to dry beads at 22 ℃. The citation is a placeholder, and the entire scenario exists solely to test faithful software rewriting.",
+      "candidate": "For this original fictional Silver Seed experiment, we define a toy sample of 16 beads split into two groups of 8. The invented radius is 2 mm in group A and 3 mm in group B [16]. A larger radius does not imply a higher density; neither density nor mass was measured. The hypothetical comparison applies only to dry beads at 22 ℃.",
+      "old_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "provenance",
+            "severity": "warning",
+            "before": "{\"fictional\": 1, \"invented\": 1, \"placeholder\": 1}",
+            "after": "{\"fictional\": 1, \"invented\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": true,
+      "now_clear": false,
+      "clearance_changed": true
+    },
+    {
+      "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "case": "en-06",
+      "segment": 0,
+      "attempt": 0,
+      "source": "We created the Dotted Clock as a synthetic toy device for regression testing. Its invented counter starts at 4 and advances by 2 on each step, giving $c_t=4+2t$. After 3 steps, the count is 10; it is not 10 s [17,17]. The repeated citation marks are deliberate placeholders. We observed no reset in this fictional trace, but that observation cannot establish that resets never occur. No real device, dataset, or published experiment supports these claims.",
+      "candidate": "We created the Dotted Clock as a synthetic toy device for regression testing. Its invented counter starts at 4 and advances by 2 on each step, yielding $c_t=4+2t$. After 3 steps, the count is 10; it is not 10 s [17,17]. The repeated citation marks are deliberate placeholders. We observed no reset in this fictional trace, but that observation cannot establish that resets never occur. No real device, dataset, or published experiment supports these claims.",
+      "old_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "previously_clear": true,
+      "now_clear": true,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "case": "prose-zh-01",
+      "segment": 0,
+      "attempt": 0,
+      "source": "本方案拟围绕检索增强生成的证据使用方式建立评估流程，将检索是否找到相关材料与回答是否忠实使用材料分别记录。评审者需要对照问题、检索片段和最终回答，指出结论所依赖的具体信息，并说明材料不足时应如何表达不确定性。通过这样的设计，我们希望进一步区分检索环节与生成环节的问题，为后续系统改进提供较为明确的依据。",
+      "candidate": "本方案拟围绕“检索增强生成”的证据使用方式建立评估流程，将检索是否找到相关材料与回答是否忠实使用材料分别记录。评审者需对照问题、检索片段和最终回答，指出结论所依赖的具体信息，并说明材料不足时应如何表达不确定性。通过该设计，旨在进一步区分检索环节与生成环节的问题，为后续系统改进提供较为明确的依据。",
+      "old_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "previously_clear": true,
+      "now_clear": true,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "case": "prose-zh-02",
+      "segment": 0,
+      "attempt": 0,
+      "source": "针对模型在不同文本来源之间的适用性，研究设计拟采用交叉验证，并以来源而非单篇文本作为划分训练与验证集合的基本单位。来自同一作者或同一系列的材料应放在同一分组，以降低风格相似性对评估的影响。方案还计划单独记录各来源的文本长度和任务类型，使总体表现与分组表现能够相互参照，而不将总体指标直接解释为所有场景下的适用程度。",
+      "candidate": "为评估模型在不同文本来源间的适用性，本研究拟采用交叉验证，并以来源而非单篇文本作为划分训练与验证集的基本单位。来自同一作者或同一系列的材料应归入同一分组，以降低风格相似性对评估的影响。方案还计划单独记录各来源的文本长度和任务类型，以便将总体表现与分组表现相互参照，避免将总体指标直接解释为所有场景下的适用程度。",
+      "old_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 2}",
+            "after": "{\"不\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "negation",
+            "severity": "warning",
+            "before": "{\"不\": 2}",
+            "after": "{\"不\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "case": "prose-zh-02",
+      "segment": 0,
+      "attempt": 1,
+      "source": "针对模型在不同文本来源之间的适用性，研究设计拟采用交叉验证，并以来源而非单篇文本作为划分训练与验证集合的基本单位。来自同一作者或同一系列的材料应放在同一分组，以降低风格相似性对评估的影响。方案还计划单独记录各来源的文本长度和任务类型，使总体表现与分组表现能够相互参照，而不将总体指标直接解释为所有场景下的适用程度。",
+      "candidate": "针对模型在不同文本来源间的适用性，本研究拟采用交叉验证，并以来源而非单篇文本作为划分训练与验证集的基本单位。来自同一作者或同一系列的文本应归入同一分组，以降低风格相似性对评估的影响。方案还计划单独记录各来源的文本长度和任务类型，使总体表现能与分组表现相互参照，而不将总体指标直接解释为所有场景下的适用程度。",
+      "old_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "previously_clear": true,
+      "now_clear": true,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "case": "prose-zh-03",
+      "segment": 0,
+      "attempt": 0,
+      "source": "为了使标注一致性的评价过程更加清晰，本方案计划由3名评审者独立判断每段回答是否受到所附材料支持，并为每项判断提供简短理由。正式标注前拟安排20段练习材料，用于讨论概念边界；练习材料将与后续评价集合分开。对于存在分歧的项目，方案拟保留全部初始意见，再通过讨论形成处理记录，以便分析分歧来自规则理解还是材料本身。",
+      "candidate": "为使“标注一致性”评价过程更清晰，本方案计划由3名评审者独立判断每段回答是否受所附材料支持，并为每项判断提供简短理由。正式标注前拟安排20段练习材料以讨论概念边界；练习材料与后续评价集合将分开处理。对于存在分歧的项目，方案拟保留全部初始意见，再通过讨论形成处理记录，以便分析分歧源于规则理解还是材料本身。",
+      "old_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "previously_clear": true,
+      "now_clear": true,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "case": "prose-zh-04",
+      "segment": 0,
+      "attempt": 0,
+      "source": "工具调用的可靠性拟从任务完成和操作过程两个角度考察。我们计划为每个任务预先定义可核对的终止条件，并记录系统选择工具、解释输入以及处理返回信息的过程。若任务包含多个依赖步骤，评估应检查后续操作是否仍依据有效的前序结果。这样的设计旨在把最终答案的合理性与执行路径的可追溯性联系起来，为错误定位提供更完整的材料。",
+      "candidate": "工具调用的可靠性拟从任务完成和操作过程两个角度考察。我们计划为每个任务预先定义可核对的终止条件，并记录系统选择工具、解释输入以及处理返回信息的过程。若任务包含多个依赖步骤，评估应检查后续操作是否仍依据有效的前序结果。这样的设计旨在将最终答案的合理性与执行路径的可追溯性联系起来，为错误定位提供更完整的材料。",
+      "old_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "previously_clear": true,
+      "now_clear": true,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "case": "prose-zh-05",
+      "segment": 0,
+      "attempt": 0,
+      "source": "响应延迟的比较拟在相同请求长度与并发设置下进行，测试方案计划分别安排1个和4个并发请求，并将各设置下的中位数与第95百分位同时报告。计时范围拟从请求发出持续到完整回答接收，模型加载时间另行记录。我们希望通过明确计时边界，使速度比较能够对应实际使用过程；这些设置属于待执行的测量计划，尚不能支持任何模型更快的结论。",
+      "candidate": "响应延迟的比较将在相同请求长度与并发设置下进行，测试方案拟安排 1 个和 4 个并发请求，并分别报告各设置下的中位数与第 95 百分位。计时范围从请求发出持续至完整回答接收，模型加载时间另行记录。明确计时边界旨在使速度比较对应实际使用过程；这些设置属于待执行的测量计划，尚不能支持任何关于模型更快的结论。",
+      "old_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "protected_terms",
+            "severity": "error",
+            "before": "{\"响应延迟\": 1, \"第95百分位\": 1}",
+            "after": "{\"响应延迟\": 1}"
+          },
+          {
+            "code": "certainty",
+            "severity": "warning",
+            "before": "{\"拟\": 2, \"计划\": 2}",
+            "after": "{\"拟\": 1, \"计划\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "protected_terms",
+            "severity": "error",
+            "before": "{\"响应延迟\": 1, \"第95百分位\": 1}",
+            "after": "{\"响应延迟\": 1}"
+          },
+          {
+            "code": "certainty",
+            "severity": "warning",
+            "before": "{\"拟\": 2, \"计划\": 2}",
+            "after": "{\"拟\": 1, \"计划\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "case": "prose-zh-05",
+      "segment": 0,
+      "attempt": 1,
+      "source": "响应延迟的比较拟在相同请求长度与并发设置下进行，测试方案计划分别安排1个和4个并发请求，并将各设置下的中位数与第95百分位同时报告。计时范围拟从请求发出持续到完整回答接收，模型加载时间另行记录。我们希望通过明确计时边界，使速度比较能够对应实际使用过程；这些设置属于待执行的测量计划，尚不能支持任何模型更快的结论。",
+      "candidate": "响应延迟的比较拟在相同请求长度与并发设置下进行：测试方案计划分别安排 1 个和 4 个并发请求，并将各设置下的中位数与第 95 百分位同时报告。计时范围拟从请求发出持续到完整回答接收，模型加载时间另行记录。我们希望通过明确计时边界，使速度比较能够对应实际使用过程；这些设置属于待执行的测量计划，尚不能支持任何模型更快的结论。",
+      "old_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "protected_terms",
+            "severity": "error",
+            "before": "{\"响应延迟\": 1, \"第95百分位\": 1}",
+            "after": "{\"响应延迟\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "protected_terms",
+            "severity": "error",
+            "before": "{\"响应延迟\": 1, \"第95百分位\": 1}",
+            "after": "{\"响应延迟\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "case": "prose-zh-06",
+      "segment": 0,
+      "attempt": 0,
+      "source": "数据最小化原则拟贯穿研究材料的收集、处理与共享环节。方案计划优先使用经参与者确认可以提供的内容，并在进入分析流程前移除与研究问题无关的身份信息。对于必须保留的背景字段，需要分别说明其分析用途及访问范围。共享材料的形式拟根据复核需求确定，同时提供字段说明与处理步骤，使外部评审能够理解分析依据及其边界。",
+      "candidate": "数据最小化原则将贯穿研究材料的收集、处理与共享全过程。方案拟优先采用经参与者确认提供的内容，并在进入分析流程前剔除与研究问题无关的身份信息。对于必须保留的背景字段，需分别阐明其分析用途及访问范围。共享材料的形式将根据复核需求确定，同时附上字段说明与处理步骤，以便外部评审理解分析依据及其边界。",
+      "old_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "certainty",
+            "severity": "warning",
+            "before": "{\"拟\": 2, \"确定\": 1, \"计划\": 1}",
+            "after": "{\"拟\": 1, \"确定\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "certainty",
+            "severity": "warning",
+            "before": "{\"拟\": 2, \"确定\": 1, \"计划\": 1}",
+            "after": "{\"拟\": 1, \"确定\": 1}"
+          },
+          {
+            "code": "permission",
+            "severity": "warning",
+            "before": "{\"可以\": 1}",
+            "after": "{}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "case": "prose-zh-06",
+      "segment": 0,
+      "attempt": 1,
+      "source": "数据最小化原则拟贯穿研究材料的收集、处理与共享环节。方案计划优先使用经参与者确认可以提供的内容，并在进入分析流程前移除与研究问题无关的身份信息。对于必须保留的背景字段，需要分别说明其分析用途及访问范围。共享材料的形式拟根据复核需求确定，同时提供字段说明与处理步骤，使外部评审能够理解分析依据及其边界。",
+      "candidate": "数据最小化原则将贯穿研究材料的收集、处理与共享环节。方案计划优先使用经参与者确认提供的信息，并在进入分析流程前移除与研究问题无关的身份信息；对于必须保留的背景字段，需分别阐明其分析用途及访问范围。共享材料的形式将根据复核需求确定，同时提供字段说明与处理步骤，使外部评审能够理解分析依据及其边界。",
+      "old_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "certainty",
+            "severity": "warning",
+            "before": "{\"拟\": 2, \"确定\": 1, \"计划\": 1}",
+            "after": "{\"确定\": 1, \"计划\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [
+          {
+            "code": "certainty",
+            "severity": "warning",
+            "before": "{\"拟\": 2, \"确定\": 1, \"计划\": 1}",
+            "after": "{\"确定\": 1, \"计划\": 1}"
+          },
+          {
+            "code": "permission",
+            "severity": "warning",
+            "before": "{\"可以\": 1}",
+            "after": "{}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "case": "prose-en-01",
+      "segment": 0,
+      "attempt": 0,
+      "source": "The proposed study would examine how retrieval augmentation changes the evidence available to a language model. The evaluation would separate the relevance of retrieved passages from the support they provide for individual claims in an answer. Reviewers would identify the passage supporting each claim and describe ambiguities where the available material permits several interpretations. This arrangement is intended to make the assessment more informative for system development, while preserving a clear account of what the evidence can support.",
+      "candidate": "The proposed study would examine how retrieval augmentation changes the evidence available to a language model. The evaluation would separate the relevance of retrieved passages from their support for individual claims in an answer. Reviewers would identify the passage supporting each claim and describe ambiguities where the available material permits several interpretations. This arrangement is intended to make the assessment more informative for system development while preserving a clear account of what the evidence can support.",
+      "old_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "previously_clear": true,
+      "now_clear": true,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "case": "prose-en-02",
+      "segment": 0,
+      "attempt": 0,
+      "source": "To assess annotation agreement, the protocol would ask 3 reviewers to evaluate each response independently before discussing disagreements. A set of 20 practice items would be used to clarify the decision rules and would remain separate from the evaluation material. Each judgment would include a short rationale linking the decision to the supplied evidence. The proposed analysis would retain initial judgments alongside the discussion record, allowing disagreements about the rules to be distinguished from uncertainty within the material itself.",
+      "candidate": "To assess annotation agreement, the protocol would ask three reviewers to evaluate each response independently before discussing disagreements. A set of 20 practice items would clarify decision rules and would remain separate from the evaluation material. Each judgment would include a short rationale linking the decision to the supplied evidence. The proposed analysis would retain initial judgments alongside the discussion record, allowing disagreements about the rules to be distinguished from uncertainty within the material itself.",
+      "old_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "numbers",
+            "severity": "error",
+            "before": "{\"20\": 1, \"3\": 1}",
+            "after": "{\"20\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": true,
+      "clearance_changed": true
+    },
+    {
+      "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "case": "prose-en-02",
+      "segment": 0,
+      "attempt": 1,
+      "source": "To assess annotation agreement, the protocol would ask 3 reviewers to evaluate each response independently before discussing disagreements. A set of 20 practice items would be used to clarify the decision rules and would remain separate from the evaluation material. Each judgment would include a short rationale linking the decision to the supplied evidence. The proposed analysis would retain initial judgments alongside the discussion record, allowing disagreements about the rules to be distinguished from uncertainty within the material itself.",
+      "candidate": "To assess annotation agreement, the protocol would ask three reviewers to evaluate each response independently before discussing disagreements. A set of 20 practice items would be used to clarify decision rules and would remain separate from the evaluation material. Each judgment would include a short rationale linking the decision to the supplied evidence. The proposed analysis would retain initial judgments alongside the discussion record, allowing disagreements about the rules to be distinguished from uncertainty within the material itself.",
+      "old_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "numbers",
+            "severity": "error",
+            "before": "{\"20\": 1, \"3\": 1}",
+            "after": "{\"20\": 1}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": true,
+      "clearance_changed": true
+    },
+    {
+      "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "case": "prose-en-03",
+      "segment": 0,
+      "attempt": 0,
+      "source": "The assessment of tool use would consider both the completion of a task and the sequence of actions taken to reach that outcome. Each task would have an explicit completion criterion established before evaluation. The protocol would preserve the requested inputs, tool responses, and subsequent decisions so that reviewers could trace how intermediate information affected later actions. This proposed design would provide a structured basis for distinguishing errors in planning from errors in interpreting information returned by a tool.",
+      "candidate": "The assessment of tool use would consider both task completion and the sequence of actions taken to achieve that outcome. Each task would have an explicit completion criterion established prior to evaluation. The protocol would preserve requested inputs, tool responses, and subsequent decisions, enabling reviewers to trace how intermediate information influenced later actions. This proposed design would provide a structured basis for distinguishing planning errors from errors in interpreting information returned by the [tool use].",
+      "old_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "protected_terms",
+            "severity": "error",
+            "before": "{\"tool use\": 1}",
+            "after": "{\"tool use\": 2}"
+          },
+          {
+            "code": "certainty",
+            "severity": "warning",
+            "before": "{\"could\": 1, \"would\": 4}",
+            "after": "{\"would\": 4}"
+          }
+        ],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": true,
+        "issues": [
+          {
+            "code": "protected_terms",
+            "severity": "error",
+            "before": "{\"tool use\": 1}",
+            "after": "{\"tool use\": 2}"
+          },
+          {
+            "code": "certainty",
+            "severity": "warning",
+            "before": "{\"could\": 1, \"would\": 4}",
+            "after": "{\"would\": 4}"
+          }
+        ],
+        "requires_review": true
+      },
+      "previously_clear": false,
+      "now_clear": false,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "case": "prose-en-03",
+      "segment": 0,
+      "attempt": 1,
+      "source": "The assessment of tool use would consider both the completion of a task and the sequence of actions taken to reach that outcome. Each task would have an explicit completion criterion established before evaluation. The protocol would preserve the requested inputs, tool responses, and subsequent decisions so that reviewers could trace how intermediate information affected later actions. This proposed design would provide a structured basis for distinguishing errors in planning from errors in interpreting information returned by a tool.",
+      "candidate": "The assessment of tool use would consider both the completion of a task and the sequence of actions taken to reach that outcome. Each task would have an explicit completion criterion established before evaluation. The protocol would preserve the requested inputs, tool responses, and subsequent decisions so that reviewers could trace how intermediate information affected later actions. This proposed design would provide a structured basis for distinguishing errors in planning from errors in interpreting information returned by a tool.",
+      "old_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "previously_clear": true,
+      "now_clear": true,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "case": "prose-en-04",
+      "segment": 0,
+      "attempt": 0,
+      "source": "The response latency comparison would use matched request lengths under 1 and 4 concurrent requests. For each setting, the reporting plan would include the median and the 95th percentile, measured from request submission to receipt of the complete answer. Model loading would be recorded separately because its duration reflects a different stage of use. These proposed measurement boundaries are intended to clarify the comparison; they describe a future protocol and do not establish that any model is currently faster.",
+      "candidate": "The response latency comparison would use matched request lengths under 1 and 4 concurrent requests. For each setting, the reporting plan would include the median and the 95th percentile, measured from request submission to receipt of the complete answer. Model loading would be recorded separately because its duration reflects a different stage of use. These proposed measurement boundaries are intended to clarify the comparison; they describe a future protocol and do not establish that any model is currently faster.",
+      "old_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "previously_clear": true,
+      "now_clear": true,
+      "clearance_changed": false
+    },
+    {
+      "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
+      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "case": "prose-en-04",
+      "segment": 0,
+      "attempt": 1,
+      "source": "The response latency comparison would use matched request lengths under 1 and 4 concurrent requests. For each setting, the reporting plan would include the median and the 95th percentile, measured from request submission to receipt of the complete answer. Model loading would be recorded separately because its duration reflects a different stage of use. These proposed measurement boundaries are intended to clarify the comparison; they describe a future protocol and do not establish that any model is currently faster.",
+      "candidate": "The response latency comparison would use matched request lengths under 1 and 4 concurrent requests. For each setting, the reporting plan would include the median and the 95th percentile, measured from request submission to receipt of the complete answer. Model loading would be recorded separately because its duration reflects a different stage of use. These proposed measurement boundaries are intended to clarify the comparison; they describe a future protocol and do not establish that any model is currently faster.",
+      "old_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "new_audit": {
+        "blocked": false,
+        "issues": [],
+        "requires_review": true
+      },
+      "previously_clear": true,
+      "now_clear": true,
+      "clearance_changed": false
+    }
+  ]
+}

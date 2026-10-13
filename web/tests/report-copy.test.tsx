@@ -96,11 +96,30 @@ it('explains candidates requiring manual review in both interface languages', as
   render(<App />);
   fireEvent.change(screen.getByLabelText('原文'), { target: { value: report.source } });
   await userEvent.click(screen.getByRole('button', { name: '开始改写' }));
-  expect(await screen.findByText('部分候选涉及否定或结论强弱变化，已保留供人工核对。')).toBeInTheDocument();
+  expect(await screen.findByText('部分候选存在措辞或声明变化，已保留供人工核对。')).toBeInTheDocument();
   expect(screen.queryByText('candidates_require_manual_review')).not.toBeInTheDocument();
   await userEvent.click(screen.getByRole('button', { name: 'English' }));
-  expect(screen.getByText('Some candidates change negation or the strength of conclusions and have been kept for manual review.')).toBeInTheDocument();
+  expect(screen.getByText('Some candidates change wording or disclosures and have been kept for manual review.')).toBeInTheDocument();
   expect(screen.queryByText('candidates_require_manual_review')).not.toBeInTheDocument();
+});
+
+it('explains permission, obligation and provenance warnings in both languages', async () => {
+  const cues = { ...report, segments: [{ ...report.segments[0], audit: {
+    blocked: false, requires_review: true, issues: ['permission', 'obligation', 'provenance', 'purpose'].map(code => ({ code, severity: 'warning', before: '{}', after: '{}' })),
+  } }] };
+  vi.stubGlobal('fetch', async (url: string) => new Response(JSON.stringify(url === '/api/health'
+    ? { model_ready: true, model: 'local-test', detector_configured: false, version: '0.1.0', default_language: 'zh' }
+    : cues)));
+  render(<App />);
+  fireEvent.change(screen.getByLabelText('原文'), { target: { value: report.source } });
+  await userEvent.click(screen.getByRole('button', { name: '开始改写' }));
+  expect(await screen.findByText('许可或能力措辞发生变化')).toBeInTheDocument();
+  expect(screen.getByText('要求性措辞发生变化')).toBeInTheDocument();
+  expect(screen.getByText('来源或虚构声明发生变化')).toBeInTheDocument();
+  expect(screen.getByText('用途表达发生变化')).toBeInTheDocument();
+  await userEvent.click(screen.getByRole('button', { name: 'English' }));
+  for (const label of ['Permission or ability wording changed', 'Requirement wording changed', 'Provenance or fictional-data disclosure changed', 'Purpose wording changed']) expect(screen.getByText(label)).toBeInTheDocument();
+  expect(screen.getByLabelText('Rewrite')).toHaveValue(report.output);
 });
 
 it('explains rejected reasoning output in Chinese and English', async () => {
