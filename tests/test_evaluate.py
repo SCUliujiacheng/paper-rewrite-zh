@@ -184,7 +184,7 @@ def test_qwen_evaluation_metadata_uses_backend_default_and_actual_instruction(
     assert result["model"] == "qwen3.5-4b"
     assert result["backend"] == "qwen"
     assert result["temperature"] == 0.7
-    assert result["prompt_profile"] == "qwen_academic_editing_chat_v2"
+    assert result["prompt_profile"] == "qwen_academic_editing_chat_v3_literal"
     assert result["prompt_instruction_sha256"] == (
         "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
     )

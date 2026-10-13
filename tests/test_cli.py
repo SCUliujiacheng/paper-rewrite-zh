@@ -60,7 +60,7 @@ def test_cli_backend_option_selects_qwen_and_exports_model_identity(tmp_path, mo
         assert request.url.path == "/v1/chat/completions"
         body = json.loads(request.content)
         assert body["temperature"] == 0.7
-        assert '"protected_terms": ["BM25"]' in body["messages"][1]["content"]
+        assert "Protected terms:\nBM25\n\n" in body["messages"][1]["content"]
         return httpx.Response(
             200,
             json={

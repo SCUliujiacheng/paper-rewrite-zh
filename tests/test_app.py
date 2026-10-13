@@ -154,7 +154,7 @@ def test_app_uses_configured_qwen_factory_and_passes_terms(monkeypatch):
         assert request.url.path == "/v1/chat/completions"
         body = json.loads(request.content)
         assert body["model"] == "qwen-test-alias"
-        assert '"protected_terms": ["BM25"]' in body["messages"][1]["content"]
+        assert "Protected terms:\nBM25\n\n" in body["messages"][1]["content"]
         return httpx.Response(
             200,
             json={

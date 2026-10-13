@@ -1,0 +1,973 @@
+{
+  "scope": "synthetic_smoke_not_detector_benchmark",
+  "measured_at": "2026-10-13T17:10:30.081549+00:00",
+  "corpus_sha256": "8722f7994fb8a8e160a976c7c778b35033937d58fbc3e79bc38ca77152b96059",
+  "model_artifact": {
+    "file": "Qwen3.5-4B-Q5_K_M.gguf",
+    "repo": "unsloth/Qwen3.5-4B-GGUF",
+    "revision": "e87f176479d0855a907a41277aca2f8ee7a09523",
+    "sha256": "8814232b85594dcd46c50e5b8b29324a7efe9e746edbe8a3d1df3d3fce7aad39",
+    "size_bytes": 3143656608,
+    "provenance": "local_file_verified_server_binding_not_verified"
+  },
+  "model": "qwen3.5-4b",
+  "backend": "qwen",
+  "runtime": "llama.cpp b11583; RTX 4050 Laptop 6GB; ctx4096; np1; ngl99",
+  "temperature": 0.7,
+  "backend_identity_verification": "not_verified",
+  "detector_evaluation": "not_run_no_commercial_credentials",
+  "human_semantic_review": "not_performed",
+  "candidates": 2,
+  "selection_policy": "no_audit_issues_v1",
+  "prompt_profile": "qwen_academic_editing_chat_v3_literal",
+  "prompt_instruction_sha256": "a1c1e9e3bb46f447eefd5ff2133da90e0aaac85f2c2d5746810bdfb14b885b64",
+  "totals": {
+    "zh": {
+      "cases": 8,
+      "changed_cases": 2,
+      "statuses": {
+        "completed": 2,
+        "partial": 0,
+        "failed": 0,
+        "unchanged": 6
+      },
+      "rejected_candidates": 4,
+      "hard_blocked_candidates": 4,
+      "warning_only_withheld_candidates": 8,
+      "warning_cases": 6,
+      "total_seconds": 39.516
+    },
+    "en": {
+      "cases": 6,
+      "changed_cases": 4,
+      "statuses": {
+        "completed": 4,
+        "partial": 0,
+        "failed": 0,
+        "unchanged": 2
+      },
+      "rejected_candidates": 1,
+      "hard_blocked_candidates": 1,
+      "warning_only_withheld_candidates": 3,
+      "warning_cases": 2,
+      "total_seconds": 23.687
+    }
+  },
+  "cases": [
+    {
+      "id": "zh-01",
+      "synthetic": true,
+      "report": {
+        "source": "在本项目虚构的蓝盒协议实验中，我们将24枚木片随机放入两个容器，并在20 ℃下记录其滚动时间。甲组均值为12.5 s，乙组为15.0 s；这些数值仅用于软件测试。按照占位引文[1]定义的计时步骤，结果不支持甲组在所有温度下都更快。由于没有进行高温测试，当前结论只适用于该玩具装置，不能推及真实材料的性能。",
+        "output": "在本项目虚构的蓝盒协议实验中，我们将24枚木片随机放入两个容器，并在20 ℃下记录其滚动时间。甲组均值为12.5 s，乙组为15.0 s；这些数值仅用于软件测试。按照占位引文[1]定义的计时步骤，结果不支持甲组在所有温度下都更快。由于没有进行高温测试，当前结论只适用于该玩具装置，不能推及真实材料的性能。",
+        "segments": [
+          {
+            "id": 0,
+            "original": "在本项目虚构的蓝盒协议实验中，我们将24枚木片随机放入两个容器，并在20 ℃下记录其滚动时间。甲组均值为12.5 s，乙组为15.0 s；这些数值仅用于软件测试。按照占位引文[1]定义的计时步骤，结果不支持甲组在所有温度下都更快。由于没有进行高温测试，当前结论只适用于该玩具装置，不能推及真实材料的性能。",
+            "output": "在本项目虚构的蓝盒协议实验中，我们将24枚木片随机放入两个容器，并在20 ℃下记录其滚动时间。甲组均值为12.5 s，乙组为15.0 s；这些数值仅用于软件测试。按照占位引文[1]定义的计时步骤，结果不支持甲组在所有温度下都更快。由于没有进行高温测试，当前结论只适用于该玩具装置，不能推及真实材料的性能。",
+            "status": "retained",
+            "audit": {
+              "blocked": false,
+              "issues": [
+                {
+                  "code": "negation",
+                  "severity": "warning",
+                  "before": "{\"不\": 1, \"不能\": 1, \"没有\": 1}",
+                  "after": "{\"不\": 1, \"不能\": 1, \"未\": 1}"
+                }
+              ],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "在本项目虚构的蓝盒协议实验中，将 24 枚木片随机分配至两个容器，并于 20 ℃下记录其滚动时间：甲组均值为 12.5 s，乙组为 15.0 s；这些数值仅用于软件测试。依据占位引文 [1] 定义的计时步骤，结果不支持“甲组在所有温度下均更快”的结论。由于未开展高温测试，当前结论仅适用于该玩具装置，无法推及真实材料的性能。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "negation",
+                      "severity": "warning",
+                      "before": "{\"不\": 1, \"不能\": 1, \"没有\": 1}",
+                      "after": "{\"不\": 1, \"无法\": 1, \"未\": 1}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              },
+              {
+                "text": "在本项目虚构的蓝盒协议实验中，我们将 24 枚木片随机放入两个容器，并于 20 ℃下记录其滚动时间：甲组均值为 12.5 s，乙组为 15.0 s；这些数值仅用于软件测试。依据占位引文 [1] 定义的计时步骤，结果不支持“甲组在所有温度下都更快”的结论。由于未进行高温测试，当前结论仅适用于该玩具装置，不能推及真实材料的性能。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "negation",
+                      "severity": "warning",
+                      "before": "{\"不\": 1, \"不能\": 1, \"没有\": 1}",
+                      "after": "{\"不\": 1, \"不能\": 1, \"未\": 1}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required",
+          "original_retained_in_some_segments",
+          "candidates_require_manual_review"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "zh",
+        "elapsed_seconds": 5.844,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "a7212308639663b26bb6ef8fe8b71702a0ccf2abbbe8a5ad985fbecadbc31464",
+        "output_sha256": "a7212308639663b26bb6ef8fe8b71702a0ccf2abbbe8a5ad985fbecadbc31464",
+        "status": "unchanged"
+      }
+    },
+    {
+      "id": "zh-02",
+      "synthetic": true,
+      "report": {
+        "source": "本段描述原创的虚构方格计数器研究。我们设置三个纸面棋盘，每个棋盘包含八行标记，计数规则记为$S=\\sum_{i=1}^{8}x_i$。模拟结果显示，方案A识别18个标记，方案B识别16个标记[2]。这并不意味着A能减少错误，因为误报次数尚未统计。样本范围仅包括黑白格；彩色格与旋转格被排除，因此比较必须保留这一适用条件。",
+        "output": "本段描述原创的虚构方格计数器研究。我们设置了三个纸面棋盘，每个棋盘包含八行标记，计数规则记为$S=\\sum_{i=1}^{8}x_i$。模拟结果显示，方案 A 识别 18 个标记，方案 B 识别 16 个标记 [2]。但这并不意味着方案 A 能减少错误，因为误报次数尚未统计。样本范围仅包括黑白格；彩色格与旋转格被排除，因此比较必须保留这一适用条件。",
+        "segments": [
+          {
+            "id": 0,
+            "original": "本段描述原创的虚构方格计数器研究。我们设置三个纸面棋盘，每个棋盘包含八行标记，计数规则记为$S=\\sum_{i=1}^{8}x_i$。模拟结果显示，方案A识别18个标记，方案B识别16个标记[2]。这并不意味着A能减少错误，因为误报次数尚未统计。样本范围仅包括黑白格；彩色格与旋转格被排除，因此比较必须保留这一适用条件。",
+            "output": "本段描述原创的虚构方格计数器研究。我们设置了三个纸面棋盘，每个棋盘包含八行标记，计数规则记为$S=\\sum_{i=1}^{8}x_i$。模拟结果显示，方案 A 识别 18 个标记，方案 B 识别 16 个标记 [2]。但这并不意味着方案 A 能减少错误，因为误报次数尚未统计。样本范围仅包括黑白格；彩色格与旋转格被排除，因此比较必须保留这一适用条件。",
+            "status": "rewritten",
+            "audit": {
+              "blocked": false,
+              "issues": [],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "本段描述原创的虚构方格计数器研究。我们设置了三个纸面棋盘，每个棋盘包含八行标记，计数规则记为$S=\\sum_{i=1}^{8}x_i$。模拟结果显示，方案 A 识别 18 个标记，方案 B 识别 16 个标记 [2]。但这并不意味着方案 A 能减少错误，因为误报次数尚未统计。样本范围仅包括黑白格；彩色格与旋转格被排除，因此比较必须保留这一适用条件。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "zh",
+        "elapsed_seconds": 2.812,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "61cbe821ae1bc780882c59c8e322265f7c06e979327f1cc8f8fe46c57da1ae8e",
+        "output_sha256": "70bb81f51e2ec3330bd75be5b1dc5058710674673db3a651b8473af2c23fe5df",
+        "status": "completed"
+      }
+    },
+    {
+      "id": "zh-03",
+      "synthetic": true,
+      "report": {
+        "source": "为测试改写后的条件范围，我们构造了不存在于真实文献中的雾灯指标。玩具模拟采用10 Hz采样，并分别生成0.2 m和0.4 m的虚拟路径；全部数据均为人为设定。只有当噪声小于0.03时，指标才保持稳定，参见占位引文[3,4]。我们未观察到稳定性随路径长度单调增加的现象，因而不能写成“路径越长越可靠”，也不能删掉噪声阈值。",
+        "output": "为测试改写后的条件范围，我们构造了不存在于真实文献中的雾灯指标。玩具模拟采用 10 Hz 采样，分别生成 0.2 m 和 0.4 m 的虚拟路径；全部数据均为人为设定。只有当噪声小于 0.03 时，该指标才保持稳定，参见占位引文 [3,4]。我们未观察到稳定性随路径长度单调增加的现象，因此不能将其表述为“路径越长越可靠”，也不能删去噪声阈值这一条件。",
+        "segments": [
+          {
+            "id": 0,
+            "original": "为测试改写后的条件范围，我们构造了不存在于真实文献中的雾灯指标。玩具模拟采用10 Hz采样，并分别生成0.2 m和0.4 m的虚拟路径；全部数据均为人为设定。只有当噪声小于0.03时，指标才保持稳定，参见占位引文[3,4]。我们未观察到稳定性随路径长度单调增加的现象，因而不能写成“路径越长越可靠”，也不能删掉噪声阈值。",
+            "output": "为测试改写后的条件范围，我们构造了不存在于真实文献中的雾灯指标。玩具模拟采用 10 Hz 采样，分别生成 0.2 m 和 0.4 m 的虚拟路径；全部数据均为人为设定。只有当噪声小于 0.03 时，该指标才保持稳定，参见占位引文 [3,4]。我们未观察到稳定性随路径长度单调增加的现象，因此不能将其表述为“路径越长越可靠”，也不能删去噪声阈值这一条件。",
+            "status": "rewritten",
+            "audit": {
+              "blocked": false,
+              "issues": [],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "为测试改写后的条件范围，我们构造了不存在于真实文献中的雾灯指标。玩具模拟采用 10 Hz 采样，分别生成 0.2 m 和 0.4 m 的虚拟路径；全部数据均为人为设定。只有当噪声小于 0.03 时，该指标才保持稳定，参见占位引文 [3,4]。我们未观察到稳定性随路径长度单调增加的现象，因此不能将其表述为“路径越长越可靠”，也不能删去噪声阈值这一条件。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "zh",
+        "elapsed_seconds": 2.86,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "634c8adc36d659ea8db46b18c9e7af95d08c37eb3003d566ed4356255fc69ec7",
+        "output_sha256": "8bddad8a12fccc9961f2b8429a968b4650d191c5d2053831b37c57d6ab54a7ea",
+        "status": "completed"
+      }
+    },
+    {
+      "id": "zh-04",
+      "synthetic": true,
+      "report": {
+        "source": "在原创玩具实验中，纸舟规则用于分配12艘虚构纸船的出发顺序。六艘采用固定顺序，六艘采用随机顺序；前者到达率为75%，后者为50%，并非真实航运数据。记录表以[5]作为占位引用，又以[5]标记同一操作说明。重复引用需要完整保留。虽然本次设定下两组出现差异，我们仍不能断言顺序导致结果变化，因为风速没有被控制。",
+        "output": "在原创玩具实验中，纸舟规则用于分配12艘虚构纸船的出发顺序。六艘采用固定顺序，六艘采用随机顺序；前者到达率为75%，后者为50%，并非真实航运数据。记录表以[5]作为占位引用，又以[5]标记同一操作说明。重复引用需要完整保留。虽然本次设定下两组出现差异，我们仍不能断言顺序导致结果变化，因为风速没有被控制。",
+        "segments": [
+          {
+            "id": 0,
+            "original": "在原创玩具实验中，纸舟规则用于分配12艘虚构纸船的出发顺序。六艘采用固定顺序，六艘采用随机顺序；前者到达率为75%，后者为50%，并非真实航运数据。记录表以[5]作为占位引用，又以[5]标记同一操作说明。重复引用需要完整保留。虽然本次设定下两组出现差异，我们仍不能断言顺序导致结果变化，因为风速没有被控制。",
+            "output": "在原创玩具实验中，纸舟规则用于分配12艘虚构纸船的出发顺序。六艘采用固定顺序，六艘采用随机顺序；前者到达率为75%，后者为50%，并非真实航运数据。记录表以[5]作为占位引用，又以[5]标记同一操作说明。重复引用需要完整保留。虽然本次设定下两组出现差异，我们仍不能断言顺序导致结果变化，因为风速没有被控制。",
+            "status": "retained",
+            "audit": {
+              "blocked": false,
+              "issues": [
+                {
+                  "code": "negation",
+                  "severity": "warning",
+                  "before": "{\"不能\": 1, \"并非\": 1, \"没有\": 1}",
+                  "after": "{\"不能\": 1, \"并非\": 1, \"未\": 1}"
+                }
+              ],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "在原创玩具实验中，纸舟规则用于分配 12 艘虚构纸船的出发顺序：六艘按固定顺序排列，六艘随机排列；前者的到达率为 75%，后者为 50%，并非真实航运数据。记录表以 [5] 作为占位引用，并以 [5] 标记同一操作说明，重复引用需完整保留。尽管本次设定下两组出现差异，仍不能断言顺序导致结果变化，因为风速未被控制。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "negation",
+                      "severity": "warning",
+                      "before": "{\"不能\": 1, \"并非\": 1, \"没有\": 1}",
+                      "after": "{\"不能\": 1, \"并非\": 1, \"未\": 1}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              },
+              {
+                "text": "在原创玩具实验中，纸舟规则用于分配 12 艘虚构纸船的出发顺序：六艘按固定顺序排列，六艘按随机顺序排列；前者的到达率为 75%，后者为 50%，这些数据并非真实航运数据。记录表以 [5] 作为占位引用，并以 [5] 标记同一操作说明，需完整保留重复引用。尽管在本次设定下两组结果出现差异，仍不能断言顺序导致结果变化，因为风速未被控制。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "negation",
+                      "severity": "warning",
+                      "before": "{\"不能\": 1, \"并非\": 1, \"没有\": 1}",
+                      "after": "{\"不能\": 1, \"并非\": 1, \"未\": 1}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required",
+          "original_retained_in_some_segments",
+          "candidates_require_manual_review"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "zh",
+        "elapsed_seconds": 5.343,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "d3b493dd4c2e943cf31a0d8ca6d700cf28ca3b4b68cba018a15e8a39dad9605a",
+        "output_sha256": "d3b493dd4c2e943cf31a0d8ca6d700cf28ca3b4b68cba018a15e8a39dad9605a",
+        "status": "unchanged"
+      }
+    },
+    {
+      "id": "zh-05",
+      "synthetic": true,
+      "report": {
+        "source": "本项目编写的虚构双门缓存测试仅使用内存中的整数序列。双门缓存每次存储32个元素，单门版本每次存储16个元素，在100次玩具请求中分别命中80次和60次。容量与命中率不是同一个量，不能把32个元素改成32次请求。我们按照占位文献（测试作者，2099）记录结果；该文献并不存在。这些设定只检验术语重复与数值单位是否保留，不证明实际缓存性能。",
+        "output": "本项目编写的虚构双门缓存测试仅使用内存中的整数序列。双门缓存每次存储32个元素，单门版本每次存储16个元素，在100次玩具请求中分别命中80次和60次。容量与命中率不是同一个量，不能把32个元素改成32次请求。我们按照占位文献（测试作者，2099）记录结果；该文献并不存在。这些设定只检验术语重复与数值单位是否保留，不证明实际缓存性能。",
+        "segments": [
+          {
+            "id": 0,
+            "original": "本项目编写的虚构双门缓存测试仅使用内存中的整数序列。双门缓存每次存储32个元素，单门版本每次存储16个元素，在100次玩具请求中分别命中80次和60次。容量与命中率不是同一个量，不能把32个元素改成32次请求。我们按照占位文献（测试作者，2099）记录结果；该文献并不存在。这些设定只检验术语重复与数值单位是否保留，不证明实际缓存性能。",
+            "output": "本项目编写的虚构双门缓存测试仅使用内存中的整数序列。双门缓存每次存储32个元素，单门版本每次存储16个元素，在100次玩具请求中分别命中80次和60次。容量与命中率不是同一个量，不能把32个元素改成32次请求。我们按照占位文献（测试作者，2099）记录结果；该文献并不存在。这些设定只检验术语重复与数值单位是否保留，不证明实际缓存性能。",
+            "status": "retained",
+            "audit": {
+              "blocked": true,
+              "issues": [
+                {
+                  "code": "numbers",
+                  "severity": "error",
+                  "before": "{\"100次\": 1, \"16个\": 1, \"1个\": 1, \"2099\": 1, \"32个\": 2, \"32次\": 1, \"60次\": 1, \"80次\": 1}",
+                  "after": "{\"100次\": 1, \"16个\": 1, \"2099\": 1, \"32个\": 2, \"32次\": 1, \"60次\": 1, \"80次\": 1}"
+                },
+                {
+                  "code": "negation",
+                  "severity": "warning",
+                  "before": "{\"不\": 3, \"不能\": 1}",
+                  "after": "{\"不\": 3, \"并非\": 1}"
+                }
+              ],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "本项目编写的虚构双门缓存测试仅使用内存中的整数序列。双门缓存每次存储 32 个元素，单门版本每次存储 16 个元素；在 100 次玩具请求中，双门缓存命中 80 次，单门版本命中 60 次。容量与命中率并非同一量度，不能将\"32 个元素”改为\"32 次请求”。结果记录依据占位文献（测试作者，2099）；该文献并不存在。这些设定仅用于检验术语重复与数值单位是否保留，不证明实际缓存性能。",
+                "audit": {
+                  "blocked": true,
+                  "issues": [
+                    {
+                      "code": "numbers",
+                      "severity": "error",
+                      "before": "{\"100次\": 1, \"16个\": 1, \"1个\": 1, \"2099\": 1, \"32个\": 2, \"32次\": 1, \"60次\": 1, \"80次\": 1}",
+                      "after": "{\"100次\": 1, \"16个\": 1, \"2099\": 1, \"32个\": 2, \"32次\": 1, \"60次\": 1, \"80次\": 1}"
+                    },
+                    {
+                      "code": "protected_terms",
+                      "severity": "error",
+                      "before": "{\"双门缓存\": 2}",
+                      "after": "{\"双门缓存\": 3}"
+                    },
+                    {
+                      "code": "negation",
+                      "severity": "warning",
+                      "before": "{\"不\": 3, \"不能\": 1}",
+                      "after": "{\"不\": 2, \"不能\": 1, \"并非\": 1}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              },
+              {
+                "text": "本项目编写的虚构双门缓存测试仅使用内存中的整数序列。双门缓存每次存储 32 个元素，单门版本每次存储 16 个元素，在 100 次玩具请求中分别命中 80 次和 60 次。容量与命中率并非同一量纲，不可将\"32 个元素”替换为\"32 次请求”。我们依据占位文献（测试作者，2099）记录结果；该文献并不存在。这些设定仅用于检验术语重复与数值单位是否保留，不证明实际缓存性能。",
+                "audit": {
+                  "blocked": true,
+                  "issues": [
+                    {
+                      "code": "numbers",
+                      "severity": "error",
+                      "before": "{\"100次\": 1, \"16个\": 1, \"1个\": 1, \"2099\": 1, \"32个\": 2, \"32次\": 1, \"60次\": 1, \"80次\": 1}",
+                      "after": "{\"100次\": 1, \"16个\": 1, \"2099\": 1, \"32个\": 2, \"32次\": 1, \"60次\": 1, \"80次\": 1}"
+                    },
+                    {
+                      "code": "negation",
+                      "severity": "warning",
+                      "before": "{\"不\": 3, \"不能\": 1}",
+                      "after": "{\"不\": 3, \"并非\": 1}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required",
+          "original_retained_in_some_segments",
+          "candidates_require_manual_review"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "zh",
+        "elapsed_seconds": 6.532,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "f904f422c40b385fe687d433306d7e4cacc3ccebad66d94259e7bf87b25b9472",
+        "output_sha256": "f904f422c40b385fe687d433306d7e4cacc3ccebad66d94259e7bf87b25b9472",
+        "status": "unchanged"
+      }
+    },
+    {
+      "id": "zh-06",
+      "synthetic": true,
+      "report": {
+        "source": "原创的微环模型是用于回归测试的虚构系统，不对应已发表论文。令玩具输入为$x=2$，输出由$y=3x-1$给出，所以此处$y=5$。我们在两次模拟中得到相同输出，却没有验证其他输入是否满足该关系。占位说明[6]中的网址https://example.org/toy只指向示例域名。模型可能对扰动敏感；这一不确定表述不能被改成“模型必然失效”或“模型完全稳定”。",
+        "output": "原创的微环模型是用于回归测试的虚构系统，不对应已发表论文。令玩具输入为$x=2$，输出由$y=3x-1$给出，所以此处$y=5$。我们在两次模拟中得到相同输出，却没有验证其他输入是否满足该关系。占位说明[6]中的网址https://example.org/toy只指向示例域名。模型可能对扰动敏感；这一不确定表述不能被改成“模型必然失效”或“模型完全稳定”。",
+        "segments": [
+          {
+            "id": 0,
+            "original": "原创的微环模型是用于回归测试的虚构系统，不对应已发表论文。令玩具输入为$x=2$，输出由$y=3x-1$给出，所以此处$y=5$。我们在两次模拟中得到相同输出，却没有验证其他输入是否满足该关系。占位说明[6]中的网址https://example.org/toy只指向示例域名。模型可能对扰动敏感；这一不确定表述不能被改成“模型必然失效”或“模型完全稳定”。",
+            "output": "原创的微环模型是用于回归测试的虚构系统，不对应已发表论文。令玩具输入为$x=2$，输出由$y=3x-1$给出，所以此处$y=5$。我们在两次模拟中得到相同输出，却没有验证其他输入是否满足该关系。占位说明[6]中的网址https://example.org/toy只指向示例域名。模型可能对扰动敏感；这一不确定表述不能被改成“模型必然失效”或“模型完全稳定”。",
+            "status": "retained",
+            "audit": {
+              "blocked": true,
+              "issues": [
+                {
+                  "code": "urls",
+                  "severity": "error",
+                  "before": "{\"https://example.org/toy只指向示例域名\": 1}",
+                  "after": "{\"https://example.org/toy\": 1}"
+                },
+                {
+                  "code": "negation",
+                  "severity": "warning",
+                  "before": "{\"不\": 2, \"不能\": 1, \"没有\": 1}",
+                  "after": "{\"不\": 2, \"不能\": 1, \"未\": 1}"
+                }
+              ],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "原创的微环模型是用于回归测试的虚构系统，不对应已发表论文。当玩具输入为$x=2$时，输出由公式$y=3x-1$给出，此时$y=5$。我们在两次模拟中得到了相同的输出，但并未验证其他输入是否满足该关系。占位说明 [6] 中的网址 https://example.org/toy 仅指向示例域名。模型可能对扰动敏感；这一不确定表述不能被改为“模型必然失效”或“模型完全稳定”。",
+                "audit": {
+                  "blocked": true,
+                  "issues": [
+                    {
+                      "code": "urls",
+                      "severity": "error",
+                      "before": "{\"https://example.org/toy只指向示例域名\": 1}",
+                      "after": "{\"https://example.org/toy\": 1}"
+                    },
+                    {
+                      "code": "negation",
+                      "severity": "warning",
+                      "before": "{\"不\": 2, \"不能\": 1, \"没有\": 1}",
+                      "after": "{\"不\": 2, \"不能\": 1, \"未\": 1}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              },
+              {
+                "text": "原创的微环模型是用于回归测试的虚构系统，不对应已发表论文。当玩具输入为$x=2$时，输出由$y=3x-1$给出，因此此处$y=5$。我们在两次模拟中得到了相同的输出，但并未验证其他输入是否满足该关系。占位说明[6]中的网址 https://example.org/toy 仅指向示例域名。模型可能对扰动敏感；这一不确定表述不能被改为“模型必然失效”或“模型完全稳定”。",
+                "audit": {
+                  "blocked": true,
+                  "issues": [
+                    {
+                      "code": "urls",
+                      "severity": "error",
+                      "before": "{\"https://example.org/toy只指向示例域名\": 1}",
+                      "after": "{\"https://example.org/toy\": 1}"
+                    },
+                    {
+                      "code": "negation",
+                      "severity": "warning",
+                      "before": "{\"不\": 2, \"不能\": 1, \"没有\": 1}",
+                      "after": "{\"不\": 2, \"不能\": 1, \"未\": 1}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required",
+          "original_retained_in_some_segments",
+          "candidates_require_manual_review"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "zh",
+        "elapsed_seconds": 5.422,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "af5aedcb1cf230007f2b62779c24ce7600217cf8b5e0dc73e3a679983e9bfab0",
+        "output_sha256": "af5aedcb1cf230007f2b62779c24ce7600217cf8b5e0dc73e3a679983e9bfab0",
+        "status": "unchanged"
+      }
+    },
+    {
+      "id": "zh-07",
+      "synthetic": true,
+      "report": {
+        "source": "为了构造中文数词的测试案例，我们虚构了静珠法实验。十六颗塑料珠被划分为四组，每组四颗，模拟观察持续三分钟。第二组出现两次滑动，第一组没有出现滑动；这不表示其他组也没有滑动。这里的引文[7–9]仅是格式占位符，不代表真实来源。实验范围限于平面纸板，不能将结论扩展到倾斜表面，也不能把“没有观察到”替换为“无法发生”。",
+        "output": "为了构造中文数词的测试案例，我们虚构了静珠法实验。十六颗塑料珠被划分为四组，每组四颗，模拟观察持续三分钟。第二组出现两次滑动，第一组没有出现滑动；这不表示其他组也没有滑动。这里的引文[7–9]仅是格式占位符，不代表真实来源。实验范围限于平面纸板，不能将结论扩展到倾斜表面，也不能把“没有观察到”替换为“无法发生”。",
+        "segments": [
+          {
+            "id": 0,
+            "original": "为了构造中文数词的测试案例，我们虚构了静珠法实验。十六颗塑料珠被划分为四组，每组四颗，模拟观察持续三分钟。第二组出现两次滑动，第一组没有出现滑动；这不表示其他组也没有滑动。这里的引文[7–9]仅是格式占位符，不代表真实来源。实验范围限于平面纸板，不能将结论扩展到倾斜表面，也不能把“没有观察到”替换为“无法发生”。",
+            "output": "为了构造中文数词的测试案例，我们虚构了静珠法实验。十六颗塑料珠被划分为四组，每组四颗，模拟观察持续三分钟。第二组出现两次滑动，第一组没有出现滑动；这不表示其他组也没有滑动。这里的引文[7–9]仅是格式占位符，不代表真实来源。实验范围限于平面纸板，不能将结论扩展到倾斜表面，也不能把“没有观察到”替换为“无法发生”。",
+            "status": "retained",
+            "audit": {
+              "blocked": false,
+              "issues": [
+                {
+                  "code": "negation",
+                  "severity": "warning",
+                  "before": "{\"不\": 2, \"不能\": 2, \"无法\": 1, \"没有\": 3}",
+                  "after": "{\"不\": 2, \"不能\": 1, \"无\": 1, \"无法\": 1, \"未\": 2, \"没有\": 1}"
+                }
+              ],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "为了构造中文数词的测试案例，我们虚构了静珠法实验：十六颗塑料珠被分为四组，每组四颗，模拟观察持续三分钟；第二组出现两次滑动，第一组未出现滑动，但这并不意味着其他组无滑动。引文 [7–9] 仅为格式占位符，不代表真实来源。实验范围限于平面纸板，结论不可推广至倾斜表面，亦不能将“未观察到”替换为“无法发生”。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "negation",
+                      "severity": "warning",
+                      "before": "{\"不\": 2, \"不能\": 2, \"无法\": 1, \"没有\": 3}",
+                      "after": "{\"不\": 3, \"不能\": 1, \"无\": 1, \"无法\": 1, \"未\": 2}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              },
+              {
+                "text": "为构造中文数词测试案例，我们虚构了静珠法实验：十六颗塑料珠被分为四组，每组四颗，模拟观察持续三分钟。第二组出现两次滑动，第一组未出现；这表明其他组未必无滑动。此处引文 [7–9] 仅为格式占位符，不代表真实来源。实验范围限于平面纸板，结论不可推广至倾斜表面，亦不能将“没有观察到”替换为“无法发生”。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "negation",
+                      "severity": "warning",
+                      "before": "{\"不\": 2, \"不能\": 2, \"无法\": 1, \"没有\": 3}",
+                      "after": "{\"不\": 2, \"不能\": 1, \"无\": 1, \"无法\": 1, \"未\": 2, \"没有\": 1}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required",
+          "original_retained_in_some_segments",
+          "candidates_require_manual_review"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "zh",
+        "elapsed_seconds": 4.968,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "d4df9e814bc6e15da7fc837a026748c8bb28f121657953d1abf12dd4d0b478bd",
+        "output_sha256": "d4df9e814bc6e15da7fc837a026748c8bb28f121657953d1abf12dd4d0b478bd",
+        "status": "unchanged"
+      }
+    },
+    {
+      "id": "zh-08",
+      "synthetic": true,
+      "report": {
+        "source": "灰桥判据是本项目原创的虚构比较规则。我们为软件冒烟测试设定A值为4.8 mg、B值为6.2 mg，并明确规定$A<B$；这些数字不是实测数据。若只保留数字却将比较方向反转，结论仍会出错。根据占位引文[10]，该玩具判据只在室温且无额外载荷时使用。当前模拟提示A可能较轻，但没有证据证明A更耐用；耐用性与质量必须分开表述。",
+        "output": "灰桥判据是本项目原创的虚构比较规则。我们为软件冒烟测试设定A值为4.8 mg、B值为6.2 mg，并明确规定$A<B$；这些数字不是实测数据。若只保留数字却将比较方向反转，结论仍会出错。根据占位引文[10]，该玩具判据只在室温且无额外载荷时使用。当前模拟提示A可能较轻，但没有证据证明A更耐用；耐用性与质量必须分开表述。",
+        "segments": [
+          {
+            "id": 0,
+            "original": "灰桥判据是本项目原创的虚构比较规则。我们为软件冒烟测试设定A值为4.8 mg、B值为6.2 mg，并明确规定$A<B$；这些数字不是实测数据。若只保留数字却将比较方向反转，结论仍会出错。根据占位引文[10]，该玩具判据只在室温且无额外载荷时使用。当前模拟提示A可能较轻，但没有证据证明A更耐用；耐用性与质量必须分开表述。",
+            "output": "灰桥判据是本项目原创的虚构比较规则。我们为软件冒烟测试设定A值为4.8 mg、B值为6.2 mg，并明确规定$A<B$；这些数字不是实测数据。若只保留数字却将比较方向反转，结论仍会出错。根据占位引文[10]，该玩具判据只在室温且无额外载荷时使用。当前模拟提示A可能较轻，但没有证据证明A更耐用；耐用性与质量必须分开表述。",
+            "status": "retained",
+            "audit": {
+              "blocked": false,
+              "issues": [
+                {
+                  "code": "negation",
+                  "severity": "warning",
+                  "before": "{\"不\": 1, \"无\": 1, \"没有\": 1}",
+                  "after": "{\"并非\": 1, \"无\": 2}"
+                }
+              ],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "灰桥判据为本项目原创的虚构比较规则。在软件冒烟测试中，我们设定 A 值为 4.8 mg、B 值为 6.2 mg，并明确规定$A<B$；这些数值并非实测数据。若仅保留数字却反转比较方向，结论仍会出错。依据占位引文 [10]，该判据仅在室温且无额外载荷条件下适用。当前模拟虽提示 A 可能较轻，但尚无证据证明 A 更耐用；耐用性与质量须分别表述。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "negation",
+                      "severity": "warning",
+                      "before": "{\"不\": 1, \"无\": 1, \"没有\": 1}",
+                      "after": "{\"并非\": 1, \"无\": 2}"
+                    },
+                    {
+                      "code": "obligation",
+                      "severity": "warning",
+                      "before": "{\"必须\": 1}",
+                      "after": "{}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              },
+              {
+                "text": "灰桥判据是本项目原创的虚构比较规则。我们为软件冒烟测试设定 A 值为 4.8 mg、B 值为 6.2 mg，并明确规定$A<B$；这些数字并非实测数据。若仅保留数值却反转比较方向，结论仍会出错。根据占位引文 [10]，该判据仅在室温且无额外载荷时使用。当前模拟提示 A 可能较轻，但并无证据证明其更耐用；耐用性与质量必须分别表述。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "negation",
+                      "severity": "warning",
+                      "before": "{\"不\": 1, \"无\": 1, \"没有\": 1}",
+                      "after": "{\"并非\": 1, \"无\": 2}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required",
+          "original_retained_in_some_segments",
+          "candidates_require_manual_review"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "zh",
+        "elapsed_seconds": 5.735,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "612b00be4fa511c02970a9de76e1a70164700e4b16f15de627bc8cae5e569595",
+        "output_sha256": "612b00be4fa511c02970a9de76e1a70164700e4b16f15de627bc8cae5e569595",
+        "status": "unchanged"
+      }
+    },
+    {
+      "id": "en-01",
+      "synthetic": true,
+      "report": {
+        "source": "This original synthetic toy experiment assigns 20 imaginary tokens to the Amber Gate protocol. Group A retains 8 tokens and group B retains 6 after 30 s [11]. The numbers are invented for software regression testing. The result does not establish that A works better at every interval, because only one interval was simulated. The placeholder citation [11] names no real paper.",
+        "output": "This original synthetic toy experiment assigns 20 imaginary tokens to the Amber Gate protocol: Group A retains 8 and Group B retains 6 after 30 s [11]. The numbers are invented for software regression testing. The result does not establish that A works better at every interval because only one interval was simulated. The placeholder citation [11] names no real paper.",
+        "segments": [
+          {
+            "id": 0,
+            "original": "This original synthetic toy experiment assigns 20 imaginary tokens to the Amber Gate protocol. Group A retains 8 tokens and group B retains 6 after 30 s [11]. The numbers are invented for software regression testing. The result does not establish that A works better at every interval, because only one interval was simulated. The placeholder citation [11] names no real paper.",
+            "output": "This original synthetic toy experiment assigns 20 imaginary tokens to the Amber Gate protocol: Group A retains 8 and Group B retains 6 after 30 s [11]. The numbers are invented for software regression testing. The result does not establish that A works better at every interval because only one interval was simulated. The placeholder citation [11] names no real paper.",
+            "status": "rewritten",
+            "audit": {
+              "blocked": false,
+              "issues": [],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "This original synthetic toy experiment assigns 20 imaginary tokens to the Amber Gate protocol: Group A retains 8 and Group B retains 6 after 30 s [11]. The numbers are invented for software regression testing. The result does not establish that A works better at every interval because only one interval was simulated. The placeholder citation [11] names no real paper.",
+                "audit": {
+                  "blocked": false,
+                  "issues": [],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "en",
+        "elapsed_seconds": 2.312,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "bab333826daada0d62c705c6ceb5e4a3dd456f2d7fb4112fdd178814a6f3ece4",
+        "output_sha256": "91fc8674888154f89e0753da002e27b9345146090372c3c1974355f169088772",
+        "status": "completed"
+      }
+    },
+    {
+      "id": "en-02",
+      "synthetic": true,
+      "report": {
+        "source": "We invented the Mirror Queue as a toy system for this project. Under a 2 Hz input, its hypothetical delay is 5 ms rather than 5 s. The test relation is $d=2n+1$, with $n=2$ [12]. These settings are synthetic, and the citation is a placeholder. A lower delay may occur only when the queue is empty; we have not shown that throughput increases or that the relation holds for larger queues.",
+        "output": "We invented the Mirror Queue as a toy system for this project. Under 2 Hz input, its hypothetical delay is 5 ms rather than 5 s. The test relation is $d=2n+1$, with $n=2$ [12]. These settings are synthetic, and the citation is a placeholder. A lower delay may occur only when the queue is empty; we have not shown that throughput increases or that the relation holds for larger queues.",
+        "segments": [
+          {
+            "id": 0,
+            "original": "We invented the Mirror Queue as a toy system for this project. Under a 2 Hz input, its hypothetical delay is 5 ms rather than 5 s. The test relation is $d=2n+1$, with $n=2$ [12]. These settings are synthetic, and the citation is a placeholder. A lower delay may occur only when the queue is empty; we have not shown that throughput increases or that the relation holds for larger queues.",
+            "output": "We invented the Mirror Queue as a toy system for this project. Under 2 Hz input, its hypothetical delay is 5 ms rather than 5 s. The test relation is $d=2n+1$, with $n=2$ [12]. These settings are synthetic, and the citation is a placeholder. A lower delay may occur only when the queue is empty; we have not shown that throughput increases or that the relation holds for larger queues.",
+            "status": "rewritten",
+            "audit": {
+              "blocked": false,
+              "issues": [],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "We invented the Mirror Queue as a toy system for this project. Under 2 Hz input, its hypothetical delay is 5 ms rather than 5 s. The test relation is $d=2n+1$, with $n=2$ [12]. These settings are synthetic, and the citation is a placeholder. A lower delay may occur only when the queue is empty; we have not shown that throughput increases or that the relation holds for larger queues.",
+                "audit": {
+                  "blocked": false,
+                  "issues": [],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "en",
+        "elapsed_seconds": 2.469,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "2fe40f5cbd1b5590ac328cfc1583b64a0764fc7cd2259feeea6b96a709a30c8d",
+        "output_sha256": "151f069cb2a72e0f4851e3c7fd17a48097775b8c43302a406cd8e1ea3b3a3919",
+        "status": "completed"
+      }
+    },
+    {
+      "id": "en-03",
+      "synthetic": true,
+      "report": {
+        "source": "In our original fictional Copper Tile trial, three imaginary trays contain 12 tiles each. The synthetic mean is 1.5 g in tray A and 1.8 g in tray B, while tray C is excluded [13,14]. We did not observe a change after cooling, which does not imply that change is impossible. The scope is restricted to this toy trial. No participant, real experiment, or published source is represented by these values.",
+        "output": "In our original fictional Copper Tile trial, three imaginary trays contain 12 tiles each. The synthetic mean is 1.5 g in tray A and 1.8 g in tray B, while tray C is excluded [13,14]. We did not observe a change after cooling, which does not imply that change is impossible. The scope is restricted to this toy trial. No participant, real experiment, or published source is represented by these values.",
+        "segments": [
+          {
+            "id": 0,
+            "original": "In our original fictional Copper Tile trial, three imaginary trays contain 12 tiles each. The synthetic mean is 1.5 g in tray A and 1.8 g in tray B, while tray C is excluded [13,14]. We did not observe a change after cooling, which does not imply that change is impossible. The scope is restricted to this toy trial. No participant, real experiment, or published source is represented by these values.",
+            "output": "In our original fictional Copper Tile trial, three imaginary trays contain 12 tiles each. The synthetic mean is 1.5 g in tray A and 1.8 g in tray B, while tray C is excluded [13,14]. We did not observe a change after cooling, which does not imply that change is impossible. The scope is restricted to this toy trial. No participant, real experiment, or published source is represented by these values.",
+            "status": "retained",
+            "audit": {
+              "blocked": false,
+              "issues": [
+                {
+                  "code": "negation",
+                  "severity": "warning",
+                  "before": "{\"no\": 1, \"not\": 2}",
+                  "after": "{\"no\": 2, \"not\": 1}"
+                }
+              ],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "In our original fictional Copper Tile trial, three imaginary trays contain 12 tiles each: tray A has a synthetic mean of 1.5 g, tray B has 1.8 g, and tray C is excluded [13,14]. We observed no change after cooling; however, this does not imply that change is impossible. The scope is restricted to this toy trial. No participant, real experiment, or published source is represented by these values.",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "negation",
+                      "severity": "warning",
+                      "before": "{\"no\": 1, \"not\": 2}",
+                      "after": "{\"no\": 2, \"not\": 1}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              },
+              {
+                "text": "In our original fictional Copper Tile trial, three imaginary trays contain 12 tiles each: tray A has a synthetic mean of 1.5 g and tray B has 1.8 g, while tray C is excluded [13,14]. No change was observed after cooling, though this does not imply that change is impossible. The scope is restricted to this toy trial. No participant, real experiment, or published source is represented by these values.",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "negation",
+                      "severity": "warning",
+                      "before": "{\"no\": 1, \"not\": 2}",
+                      "after": "{\"no\": 2, \"not\": 1}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required",
+          "original_retained_in_some_segments",
+          "candidates_require_manual_review"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "en",
+        "elapsed_seconds": 5.406,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "1aca965518923ed050bbcf9e33a88f43d618205b3ad35370888fac9f2d90416a",
+        "output_sha256": "1aca965518923ed050bbcf9e33a88f43d618205b3ad35370888fac9f2d90416a",
+        "status": "unchanged"
+      }
+    },
+    {
+      "id": "en-04",
+      "synthetic": true,
+      "report": {
+        "source": "The Quiet Loop is a project-authored synthetic algorithm, not a method taken from a paper. Its toy threshold is 0.25, and the deliberately invented error rates are 10% and 15% [15]. We keep the comparison $e_A<e_B$ visible. The implementation note at https://example.org/quiet is a placeholder. This exercise tests preservation of scope, symbols, and negation; it provides no evidence of commercial detector effectiveness.",
+        "output": "The Quiet Loop is a project-authored synthetic algorithm, not a method drawn from a paper. Its toy threshold is 0.25, and the deliberately invented error rates are 10% and 15% [15]. We keep the comparison $e_A<e_B$ visible. The implementation note at https://example.org/quiet remains a placeholder. This exercise tests preservation of scope, symbols, and negation; it provides no evidence of commercial detector effectiveness.",
+        "segments": [
+          {
+            "id": 0,
+            "original": "The Quiet Loop is a project-authored synthetic algorithm, not a method taken from a paper. Its toy threshold is 0.25, and the deliberately invented error rates are 10% and 15% [15]. We keep the comparison $e_A<e_B$ visible. The implementation note at https://example.org/quiet is a placeholder. This exercise tests preservation of scope, symbols, and negation; it provides no evidence of commercial detector effectiveness.",
+            "output": "The Quiet Loop is a project-authored synthetic algorithm, not a method drawn from a paper. Its toy threshold is 0.25, and the deliberately invented error rates are 10% and 15% [15]. We keep the comparison $e_A<e_B$ visible. The implementation note at https://example.org/quiet remains a placeholder. This exercise tests preservation of scope, symbols, and negation; it provides no evidence of commercial detector effectiveness.",
+            "status": "rewritten",
+            "audit": {
+              "blocked": false,
+              "issues": [],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "The Quiet Loop is a project-authored synthetic algorithm, not a method taken from a paper. Its toy threshold is 0.25, and the deliberately invented error rates are 10% and 15% [15]. We keep the comparison $e_A<e_B$ visible. The implementation note at https://example.org/quiet is a placeholder. This exercise tests preservation of scope, symbols, and negation; it provides no evidence of commercial detector effectiveness.",
+                "audit": {
+                  "blocked": false,
+                  "issues": [],
+                  "requires_review": true
+                },
+                "error": null
+              },
+              {
+                "text": "The Quiet Loop is a project-authored synthetic algorithm, not a method drawn from a paper. Its toy threshold is 0.25, and the deliberately invented error rates are 10% and 15% [15]. We keep the comparison $e_A<e_B$ visible. The implementation note at https://example.org/quiet remains a placeholder. This exercise tests preservation of scope, symbols, and negation; it provides no evidence of commercial detector effectiveness.",
+                "audit": {
+                  "blocked": false,
+                  "issues": [],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "en",
+        "elapsed_seconds": 5.36,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "669c3b7824bf32c00edbb0ced902c580976859d92c82d952b98ad3e5a82cc27e",
+        "output_sha256": "754bc85b723ca89c3b13174b59a27c69cb13f8eee2c652df7f3f660cb4a82d7e",
+        "status": "completed"
+      }
+    },
+    {
+      "id": "en-05",
+      "synthetic": true,
+      "report": {
+        "source": "For this original fictional Silver Seed experiment, we define a toy sample of 16 beads and split it into two groups of 8. The invented radius is 2 mm in group A and 3 mm in group B [16]. A larger radius does not imply a higher density; neither density nor mass was measured. The hypothetical comparison applies only to dry beads at 22 ℃. The citation is a placeholder, and the entire scenario exists solely to test faithful software rewriting.",
+        "output": "For this original fictional Silver Seed experiment, we define a toy sample of 16 beads and split it into two groups of 8. The invented radius is 2 mm in group A and 3 mm in group B [16]. A larger radius does not imply a higher density; neither density nor mass was measured. The hypothetical comparison applies only to dry beads at 22 ℃. The citation is a placeholder, and the entire scenario exists solely to test faithful software rewriting.",
+        "segments": [
+          {
+            "id": 0,
+            "original": "For this original fictional Silver Seed experiment, we define a toy sample of 16 beads and split it into two groups of 8. The invented radius is 2 mm in group A and 3 mm in group B [16]. A larger radius does not imply a higher density; neither density nor mass was measured. The hypothetical comparison applies only to dry beads at 22 ℃. The citation is a placeholder, and the entire scenario exists solely to test faithful software rewriting.",
+            "output": "For this original fictional Silver Seed experiment, we define a toy sample of 16 beads and split it into two groups of 8. The invented radius is 2 mm in group A and 3 mm in group B [16]. A larger radius does not imply a higher density; neither density nor mass was measured. The hypothetical comparison applies only to dry beads at 22 ℃. The citation is a placeholder, and the entire scenario exists solely to test faithful software rewriting.",
+            "status": "retained",
+            "audit": {
+              "blocked": false,
+              "issues": [
+                {
+                  "code": "provenance",
+                  "severity": "warning",
+                  "before": "{\"fictional\": 1, \"invented\": 1, \"placeholder\": 1}",
+                  "after": "{\"fictional\": 1, \"invented\": 1}"
+                }
+              ],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "For this original fictional Silver Seed experiment, we define a toy sample of 16 beads split into two groups of 8. The invented radius is 2 mm in group A and 3 mm in group B [16]. A larger radius does not imply a higher density; neither density nor mass was measured. The hypothetical comparison applies only to dry Silver Seed beads at 22 ℃. The citation is a placeholder, and the entire scenario exists solely to test faithful software rewriting.",
+                "audit": {
+                  "blocked": true,
+                  "issues": [
+                    {
+                      "code": "protected_terms",
+                      "severity": "error",
+                      "before": "{\"Silver Seed\": 1}",
+                      "after": "{\"Silver Seed\": 2}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              },
+              {
+                "text": "For this original fictional Silver Seed experiment, we define a toy sample of 16 beads split into two groups of 8: group A has an invented radius of 2 mm, and group B has 3 mm [16]. A larger radius does not imply higher density; neither density nor mass was measured. The hypothetical comparison applies only to dry beads at 22 ℃.",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "provenance",
+                      "severity": "warning",
+                      "before": "{\"fictional\": 1, \"invented\": 1, \"placeholder\": 1}",
+                      "after": "{\"fictional\": 1, \"invented\": 1}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required",
+          "original_retained_in_some_segments",
+          "candidates_require_manual_review"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "en",
+        "elapsed_seconds": 5.031,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "1767b7ecb71f02c23b72b3ef31bee86f1ca4280b59b453e342c5119c66f8fe80",
+        "output_sha256": "1767b7ecb71f02c23b72b3ef31bee86f1ca4280b59b453e342c5119c66f8fe80",
+        "status": "unchanged"
+      }
+    },
+    {
+      "id": "en-06",
+      "synthetic": true,
+      "report": {
+        "source": "We created the Dotted Clock as a synthetic toy device for regression testing. Its invented counter starts at 4 and advances by 2 on each step, giving $c_t=4+2t$. After 3 steps, the count is 10; it is not 10 s [17,17]. The repeated citation marks are deliberate placeholders. We observed no reset in this fictional trace, but that observation cannot establish that resets never occur. No real device, dataset, or published experiment supports these claims.",
+        "output": "We created the Dotted Clock as a synthetic toy device for regression testing. Its invented counter starts at 4 and advances by 2 on each step, yielding $c_t=4+2t$. After 3 steps, the count is 10; it is not 10 s [17,17]. The repeated citation marks are deliberate placeholders. We observed no reset in this fictional trace, but that observation cannot establish that resets never occur. No real device, dataset, or published experiment supports these claims.",
+        "segments": [
+          {
+            "id": 0,
+            "original": "We created the Dotted Clock as a synthetic toy device for regression testing. Its invented counter starts at 4 and advances by 2 on each step, giving $c_t=4+2t$. After 3 steps, the count is 10; it is not 10 s [17,17]. The repeated citation marks are deliberate placeholders. We observed no reset in this fictional trace, but that observation cannot establish that resets never occur. No real device, dataset, or published experiment supports these claims.",
+            "output": "We created the Dotted Clock as a synthetic toy device for regression testing. Its invented counter starts at 4 and advances by 2 on each step, yielding $c_t=4+2t$. After 3 steps, the count is 10; it is not 10 s [17,17]. The repeated citation marks are deliberate placeholders. We observed no reset in this fictional trace, but that observation cannot establish that resets never occur. No real device, dataset, or published experiment supports these claims.",
+            "status": "rewritten",
+            "audit": {
+              "blocked": false,
+              "issues": [],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "We created the Dotted Clock as a synthetic toy device for regression testing. Its invented counter starts at 4 and advances by 2 on each step, yielding $c_t=4+2t$. After 3 steps, the count is 10; it is not 10 s [17,17]. The repeated citation marks are deliberate placeholders. We observed no reset in this fictional trace, but that observation cannot establish that resets never occur. No real device, dataset, or published experiment supports these claims.",
+                "audit": {
+                  "blocked": false,
+                  "issues": [],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "en",
+        "elapsed_seconds": 3.109,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "0ce27e3801f778d742b91a1b67e3cf5ce4744a028818590e5c8bbf19dca7d7d3",
+        "output_sha256": "ff6632ea3987dcb6c2d3edbe45701afdda2d3ae69a31a8dd831cabba07ea5277",
+        "status": "completed"
+      }
+    }
+  ]
+}

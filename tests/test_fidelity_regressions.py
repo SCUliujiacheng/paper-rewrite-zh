@@ -116,3 +116,27 @@ def test_chinese_sentence_punctuation_ends_url_without_ignoring_unicode_path():
         "见https://example.org/path。后文很长。", "见https://example.org/path。简写说明。"
     ).blocked
     assert audit("见https://example.org/中文。", "见https://example.org/英文。").blocked
+
+
+@pytest.mark.parametrize(
+    "source,candidate",
+    [
+        ("为后续改进提供较为明确的依据。", "为后续改进提供明确依据。"),
+        ("The model was relatively stable.", "The model was stable."),
+    ],
+)
+def test_warns_when_degree_hedge_disappears(source, candidate):
+    assert any(issue.code == "certainty" for issue in audit(source, candidate).issues)
+
+
+@pytest.mark.parametrize(
+    "source,candidate",
+    [
+        ("We used twenty-one groups.", "We used one groups."),
+        ("A dose of one point five mg.", "A dose of five mg."),
+        ("The offset was negative five mg.", "The offset was five mg."),
+        ("One hundred and five samples.", "Five samples."),
+    ],
+)
+def test_unsupported_compound_number_is_not_reduced_to_its_last_word(source, candidate):
+    assert any(issue.code == "numbers" for issue in audit(source, candidate).issues)

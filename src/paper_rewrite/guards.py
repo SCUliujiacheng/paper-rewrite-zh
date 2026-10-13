@@ -53,6 +53,16 @@ _EN_INTEGERS = dict(
 )
 _EN_VALUE = {word: str(value) for value, word in _EN_INTEGERS.items()}
 _EN_INTEGER = r"(?i:\b(?:" + "|".join(_EN_VALUE) + r")\b)"
+_EN_NUMBER_WORD = (
+    "(?:"
+    + "|".join(_EN_VALUE)
+    + "|thirty|forty|fifty|sixty|seventy|eighty|ninety|hundred|thousand|million|billion)"
+)
+# Capture unsupported compounds whole, so twenty-one cannot silently become one.
+_EN_QUANTITY = (
+    rf"(?i:\b(?:(?:minus|negative|positive|plus)\s+)?{_EN_NUMBER_WORD}"
+    rf"(?:[\s-]+(?:(?:and|point)\s+)?{_EN_NUMBER_WORD})*\b)"
+)
 _UNITS = (
     r"(?:percent|per mille|milligrams?|kilograms?|grams?|milliliters?|liters?|"
     r"millimet(?:er|re)s?|centimet(?:er|re)s?|met(?:er|re)s?|seconds?|minutes?|hours?|"
@@ -68,7 +78,7 @@ _NUMBER = re.compile(
     rf"(?:{_ARABIC}|{_CHINESE})\s*(?:至|到|[–—~-])\s*"
     rf"(?:{_ARABIC}|{_CHINESE})(?:\s*{_UNITS})?"
     rf"|{_CHINESE}分之{_CHINESE}(?:\s*{_UNITS})?"
-    rf"|{_EN_INTEGER}\s+{_UNITS}"
+    rf"|{_EN_QUANTITY}\s+{_UNITS}"
     rf"|{_ARABIC}(?:\s*{_UNITS})?|(?:百分之|千分之){_CHINESE}"
     rf"|{_CHINESE}\s*{_UNITS}|(?<=[为有共约是至第]){_CHINESE}"
 )
@@ -110,10 +120,10 @@ _NEGATION = re.compile(
     re.IGNORECASE,
 )
 _CERTAINTY = re.compile(
-    r"可能|或许|也许|似乎|提示|推测|倾向|必然|一定|确定|证明|证实|显然"
+    r"可能|或许|也许|似乎|提示|推测|倾向|必然|一定|确定|证明|证实|显然|较为"
     r"|计划|打算|(?<![模虚])拟(?![合人声])"
     r"|\b(?:may|might|could|would|should|possibly|perhaps|suggests?|indicates?|likely|"
-    r"certainly|definitely|always|proves?|demonstrates?|establishes?)\b",
+    r"certainly|definitely|always|proves?|demonstrates?|establishes?|relatively)\b",
     re.IGNORECASE,
 )
 _PERMISSION = re.compile(r"可以|允许|许可|\b(?:can|allowed|permitted)\b", re.IGNORECASE)

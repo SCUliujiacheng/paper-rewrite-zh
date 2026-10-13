@@ -1,0 +1,714 @@
+{
+  "scope": "synthetic_smoke_not_detector_benchmark",
+  "measured_at": "2026-10-13T17:15:57.886727+00:00",
+  "corpus_sha256": "0ef9ed8d526d53d1e4b2d9f0672107e10c1c966ceea28d2b8b3117e1f2334fd7",
+  "model_artifact": {
+    "file": "Qwen3.5-4B-Q5_K_M.gguf",
+    "repo": "unsloth/Qwen3.5-4B-GGUF",
+    "revision": "e87f176479d0855a907a41277aca2f8ee7a09523",
+    "sha256": "8814232b85594dcd46c50e5b8b29324a7efe9e746edbe8a3d1df3d3fce7aad39",
+    "size_bytes": 3143656608,
+    "provenance": "local_file_verified_server_binding_not_verified"
+  },
+  "model": "qwen3.5-4b",
+  "backend": "qwen",
+  "runtime": "llama.cpp b11583; RTX 4050 Laptop 6GB; ctx4096; np1; ngl99",
+  "temperature": 0.7,
+  "backend_identity_verification": "not_verified",
+  "detector_evaluation": "not_run_no_commercial_credentials",
+  "human_semantic_review": "not_performed",
+  "candidates": 2,
+  "selection_policy": "no_audit_issues_v1",
+  "prompt_profile": "qwen_academic_editing_chat_v3_literal",
+  "prompt_instruction_sha256": "a1c1e9e3bb46f447eefd5ff2133da90e0aaac85f2c2d5746810bdfb14b885b64",
+  "totals": {
+    "zh": {
+      "cases": 6,
+      "changed_cases": 3,
+      "statuses": {
+        "completed": 3,
+        "partial": 0,
+        "failed": 0,
+        "unchanged": 3
+      },
+      "rejected_candidates": 2,
+      "hard_blocked_candidates": 2,
+      "warning_only_withheld_candidates": 5,
+      "warning_cases": 3,
+      "total_seconds": 24.25
+    },
+    "en": {
+      "cases": 4,
+      "changed_cases": 2,
+      "statuses": {
+        "completed": 2,
+        "partial": 0,
+        "failed": 0,
+        "unchanged": 2
+      },
+      "rejected_candidates": 0,
+      "hard_blocked_candidates": 0,
+      "warning_only_withheld_candidates": 3,
+      "warning_cases": 1,
+      "total_seconds": 16.656
+    }
+  },
+  "cases": [
+    {
+      "id": "prose-zh-01",
+      "synthetic": true,
+      "report": {
+        "source": "本方案拟围绕检索增强生成的证据使用方式建立评估流程，将检索是否找到相关材料与回答是否忠实使用材料分别记录。评审者需要对照问题、检索片段和最终回答，指出结论所依赖的具体信息，并说明材料不足时应如何表达不确定性。通过这样的设计，我们希望进一步区分检索环节与生成环节的问题，为后续系统改进提供较为明确的依据。",
+        "output": "本方案拟围绕检索增强生成的证据使用方式建立评估流程，将检索是否找到相关材料与回答是否忠实使用材料分别记录。评审者需要对照问题、检索片段和最终回答，指出结论所依赖的具体信息，并说明材料不足时应如何表达不确定性。通过这样的设计，我们希望进一步区分检索环节与生成环节的问题，为后续系统改进提供较为明确的依据。",
+        "segments": [
+          {
+            "id": 0,
+            "original": "本方案拟围绕检索增强生成的证据使用方式建立评估流程，将检索是否找到相关材料与回答是否忠实使用材料分别记录。评审者需要对照问题、检索片段和最终回答，指出结论所依赖的具体信息，并说明材料不足时应如何表达不确定性。通过这样的设计，我们希望进一步区分检索环节与生成环节的问题，为后续系统改进提供较为明确的依据。",
+            "output": "本方案拟围绕检索增强生成的证据使用方式建立评估流程，将检索是否找到相关材料与回答是否忠实使用材料分别记录。评审者需要对照问题、检索片段和最终回答，指出结论所依赖的具体信息，并说明材料不足时应如何表达不确定性。通过这样的设计，我们希望进一步区分检索环节与生成环节的问题，为后续系统改进提供较为明确的依据。",
+            "status": "retained",
+            "audit": {
+              "blocked": false,
+              "issues": [
+                {
+                  "code": "certainty",
+                  "severity": "warning",
+                  "before": "{\"拟\": 1, \"确定\": 1, \"较为\": 1}",
+                  "after": "{\"拟\": 1, \"确定\": 1}"
+                }
+              ],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "本方案拟围绕检索增强生成的证据使用方式建立评估流程，将检索是否找到相关材料与回答是否忠实使用材料分别记录。评审者需对照问题、检索片段和最终回答，指出结论所依赖的具体信息，并说明在材料不足时应如何表达不确定性。通过此设计，旨在进一步区分检索环节与生成环节的问题，为后续系统改进提供明确依据。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "certainty",
+                      "severity": "warning",
+                      "before": "{\"拟\": 1, \"确定\": 1, \"较为\": 1}",
+                      "after": "{\"拟\": 1, \"确定\": 1}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              },
+              {
+                "text": "本方案拟围绕检索增强生成的证据使用方式建立评估流程：分别记录检索是否找到相关材料以及回答是否忠实使用材料。评审者需对照问题、检索片段和最终回答，指出结论所依赖的具体信息，并说明在材料不足时应如何表达不确定性。通过该设计，旨在进一步区分检索环节与生成环节的问题，为后续系统改进提供明确依据。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "certainty",
+                      "severity": "warning",
+                      "before": "{\"拟\": 1, \"确定\": 1, \"较为\": 1}",
+                      "after": "{\"拟\": 1, \"确定\": 1}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required",
+          "original_retained_in_some_segments",
+          "candidates_require_manual_review"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "zh",
+        "elapsed_seconds": 5.172,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "675598d9127f89a760f17e25a2f257824eed0e89d4f22dbbbd7326394a9d501f",
+        "output_sha256": "675598d9127f89a760f17e25a2f257824eed0e89d4f22dbbbd7326394a9d501f",
+        "status": "unchanged"
+      }
+    },
+    {
+      "id": "prose-zh-02",
+      "synthetic": true,
+      "report": {
+        "source": "针对模型在不同文本来源之间的适用性，研究设计拟采用交叉验证，并以来源而非单篇文本作为划分训练与验证集合的基本单位。来自同一作者或同一系列的材料应放在同一分组，以降低风格相似性对评估的影响。方案还计划单独记录各来源的文本长度和任务类型，使总体表现与分组表现能够相互参照，而不将总体指标直接解释为所有场景下的适用程度。",
+        "output": "针对模型在不同文本来源间的适用性，本研究拟采用交叉验证，并以来源而非单篇文本作为划分训练与验证集的基本单位。来自同一作者或同一系列的材料应归入同一分组，以降低风格相似性对评估的影响。方案还计划单独记录各来源的文本长度和任务类型，使总体表现能与分组表现相互参照，而不将总体指标直接解释为所有场景下的适用程度。",
+        "segments": [
+          {
+            "id": 0,
+            "original": "针对模型在不同文本来源之间的适用性，研究设计拟采用交叉验证，并以来源而非单篇文本作为划分训练与验证集合的基本单位。来自同一作者或同一系列的材料应放在同一分组，以降低风格相似性对评估的影响。方案还计划单独记录各来源的文本长度和任务类型，使总体表现与分组表现能够相互参照，而不将总体指标直接解释为所有场景下的适用程度。",
+            "output": "针对模型在不同文本来源间的适用性，本研究拟采用交叉验证，并以来源而非单篇文本作为划分训练与验证集的基本单位。来自同一作者或同一系列的材料应归入同一分组，以降低风格相似性对评估的影响。方案还计划单独记录各来源的文本长度和任务类型，使总体表现能与分组表现相互参照，而不将总体指标直接解释为所有场景下的适用程度。",
+            "status": "rewritten",
+            "audit": {
+              "blocked": false,
+              "issues": [],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "针对模型在不同文本来源间的适用性，本研究拟采用交叉验证方法，并以来源而非单篇文本作为划分训练集与验证集的基本单位。来自同一作者或同一系列的材料将被归入同一分组，以减弱风格相似性对评估结果的影响。此外，方案还计划分别记录各来源的文本长度和任务类型，以便将总体表现与各分组表现相互参照，避免直接将总体指标解释为模型在所有场景下的适用程度。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "negation",
+                      "severity": "warning",
+                      "before": "{\"不\": 2}",
+                      "after": "{\"不\": 1}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              },
+              {
+                "text": "针对模型在不同文本来源间的适用性，本研究拟采用交叉验证，并以来源而非单篇文本作为划分训练与验证集的基本单位。来自同一作者或同一系列的材料应归入同一分组，以降低风格相似性对评估的影响。方案还计划单独记录各来源的文本长度和任务类型，使总体表现能与分组表现相互参照，而不将总体指标直接解释为所有场景下的适用程度。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required",
+          "candidates_require_manual_review"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "zh",
+        "elapsed_seconds": 4.875,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "9a8493c117d2ba19dc807a39d774aa6b14f1cd501e301de340250fdf846a1b12",
+        "output_sha256": "114fb0349b9f81980917abcc02ceaee1e51fde309bac68acaee4419cc7d716e8",
+        "status": "completed"
+      }
+    },
+    {
+      "id": "prose-zh-03",
+      "synthetic": true,
+      "report": {
+        "source": "为了使标注一致性的评价过程更加清晰，本方案计划由3名评审者独立判断每段回答是否受到所附材料支持，并为每项判断提供简短理由。正式标注前拟安排20段练习材料，用于讨论概念边界；练习材料将与后续评价集合分开。对于存在分歧的项目，方案拟保留全部初始意见，再通过讨论形成处理记录，以便分析分歧来自规则理解还是材料本身。",
+        "output": "为使标注一致性评价过程更清晰，本方案计划由3名评审者独立判断每段回答是否得到所附材料支持，并为每项判断提供简短理由。正式标注前拟安排20段练习材料以讨论概念边界；该练习材料集将与后续评价集分开。针对存在分歧的项目，方案拟保留全部初始意见，再通过讨论形成处理记录，以便分析分歧源于规则理解还是材料本身。",
+        "segments": [
+          {
+            "id": 0,
+            "original": "为了使标注一致性的评价过程更加清晰，本方案计划由3名评审者独立判断每段回答是否受到所附材料支持，并为每项判断提供简短理由。正式标注前拟安排20段练习材料，用于讨论概念边界；练习材料将与后续评价集合分开。对于存在分歧的项目，方案拟保留全部初始意见，再通过讨论形成处理记录，以便分析分歧来自规则理解还是材料本身。",
+            "output": "为使标注一致性评价过程更清晰，本方案计划由3名评审者独立判断每段回答是否得到所附材料支持，并为每项判断提供简短理由。正式标注前拟安排20段练习材料以讨论概念边界；该练习材料集将与后续评价集分开。针对存在分歧的项目，方案拟保留全部初始意见，再通过讨论形成处理记录，以便分析分歧源于规则理解还是材料本身。",
+            "status": "rewritten",
+            "audit": {
+              "blocked": false,
+              "issues": [],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "为使标注一致性评价过程更清晰，本方案计划由3名评审者独立判断每段回答是否得到所附材料支持，并为每项判断提供简短理由。正式标注前拟安排20段练习材料以讨论概念边界；该练习材料集将与后续评价集分开。针对存在分歧的项目，方案拟保留全部初始意见，再通过讨论形成处理记录，以便分析分歧源于规则理解还是材料本身。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "zh",
+        "elapsed_seconds": 2.343,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "caa361f6f29acd5cfe4fd921115d22ac717bff60e292bc13f41989cfe065c26d",
+        "output_sha256": "101f6929dfc9406a8e32aa224f57eda241f97413e3ecad6c871246f0e957baa3",
+        "status": "completed"
+      }
+    },
+    {
+      "id": "prose-zh-04",
+      "synthetic": true,
+      "report": {
+        "source": "工具调用的可靠性拟从任务完成和操作过程两个角度考察。我们计划为每个任务预先定义可核对的终止条件，并记录系统选择工具、解释输入以及处理返回信息的过程。若任务包含多个依赖步骤，评估应检查后续操作是否仍依据有效的前序结果。这样的设计旨在把最终答案的合理性与执行路径的可追溯性联系起来，为错误定位提供更完整的材料。",
+        "output": "工具调用的可靠性拟从任务完成和操作过程两个角度进行考察：我们计划为每个任务预先定义可核对的终止条件，并记录系统选择工具、解释输入以及处理返回信息的过程。若任务包含多个依赖步骤，评估应检查后续操作是否仍依据有效的前序结果。该设计旨在将最终答案的合理性与执行路径的可追溯性联系起来，从而为错误定位提供更完整的材料。",
+        "segments": [
+          {
+            "id": 0,
+            "original": "工具调用的可靠性拟从任务完成和操作过程两个角度考察。我们计划为每个任务预先定义可核对的终止条件，并记录系统选择工具、解释输入以及处理返回信息的过程。若任务包含多个依赖步骤，评估应检查后续操作是否仍依据有效的前序结果。这样的设计旨在把最终答案的合理性与执行路径的可追溯性联系起来，为错误定位提供更完整的材料。",
+            "output": "工具调用的可靠性拟从任务完成和操作过程两个角度进行考察：我们计划为每个任务预先定义可核对的终止条件，并记录系统选择工具、解释输入以及处理返回信息的过程。若任务包含多个依赖步骤，评估应检查后续操作是否仍依据有效的前序结果。该设计旨在将最终答案的合理性与执行路径的可追溯性联系起来，从而为错误定位提供更完整的材料。",
+            "status": "rewritten",
+            "audit": {
+              "blocked": false,
+              "issues": [],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "工具调用的可靠性拟从任务完成和操作过程两个角度进行考察：我们计划为每个任务预先定义可核对的终止条件，并记录系统选择工具、解释输入以及处理返回信息的过程。若任务包含多个依赖步骤，评估应检查后续操作是否仍依据有效的前序结果。该设计旨在将最终答案的合理性与执行路径的可追溯性联系起来，从而为错误定位提供更完整的材料。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "zh",
+        "elapsed_seconds": 2.36,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "ed41420eb309c323389aac4a0b91bdc83ccfd7d91c8faad97fd547a8e4f47ca7",
+        "output_sha256": "d7e934e605a8744a45afe0d55e3fecca5f4d503ee59f7b03f8e8dcfe804e14a7",
+        "status": "completed"
+      }
+    },
+    {
+      "id": "prose-zh-05",
+      "synthetic": true,
+      "report": {
+        "source": "响应延迟的比较拟在相同请求长度与并发设置下进行，测试方案计划分别安排1个和4个并发请求，并将各设置下的中位数与第95百分位同时报告。计时范围拟从请求发出持续到完整回答接收，模型加载时间另行记录。我们希望通过明确计时边界，使速度比较能够对应实际使用过程；这些设置属于待执行的测量计划，尚不能支持任何模型更快的结论。",
+        "output": "响应延迟的比较拟在相同请求长度与并发设置下进行，测试方案计划分别安排1个和4个并发请求，并将各设置下的中位数与第95百分位同时报告。计时范围拟从请求发出持续到完整回答接收，模型加载时间另行记录。我们希望通过明确计时边界，使速度比较能够对应实际使用过程；这些设置属于待执行的测量计划，尚不能支持任何模型更快的结论。",
+        "segments": [
+          {
+            "id": 0,
+            "original": "响应延迟的比较拟在相同请求长度与并发设置下进行，测试方案计划分别安排1个和4个并发请求，并将各设置下的中位数与第95百分位同时报告。计时范围拟从请求发出持续到完整回答接收，模型加载时间另行记录。我们希望通过明确计时边界，使速度比较能够对应实际使用过程；这些设置属于待执行的测量计划，尚不能支持任何模型更快的结论。",
+            "output": "响应延迟的比较拟在相同请求长度与并发设置下进行，测试方案计划分别安排1个和4个并发请求，并将各设置下的中位数与第95百分位同时报告。计时范围拟从请求发出持续到完整回答接收，模型加载时间另行记录。我们希望通过明确计时边界，使速度比较能够对应实际使用过程；这些设置属于待执行的测量计划，尚不能支持任何模型更快的结论。",
+            "status": "retained",
+            "audit": {
+              "blocked": true,
+              "issues": [
+                {
+                  "code": "protected_terms",
+                  "severity": "error",
+                  "before": "{\"响应延迟\": 1, \"第95百分位\": 1}",
+                  "after": "{\"响应延迟\": 1}"
+                },
+                {
+                  "code": "negation",
+                  "severity": "warning",
+                  "before": "{\"不能\": 1}",
+                  "after": "{\"不\": 1}"
+                },
+                {
+                  "code": "certainty",
+                  "severity": "warning",
+                  "before": "{\"拟\": 2, \"计划\": 2}",
+                  "after": "{\"拟\": 1, \"计划\": 2}"
+                }
+              ],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "响应延迟的比较将在相同请求长度与并发设置下进行，测试方案拟安排 1 个和 4 个并发请求，并分别报告各设置下的中位数与第 95 百分位。计时范围拟从请求发出持续到完整回答接收，模型加载时间将另行记录。明确计时边界旨在使速度比较对应实际使用过程；上述设置属于待执行的测量计划，尚不足以支持任何关于模型更快结论的判断。",
+                "audit": {
+                  "blocked": true,
+                  "issues": [
+                    {
+                      "code": "protected_terms",
+                      "severity": "error",
+                      "before": "{\"响应延迟\": 1, \"第95百分位\": 1}",
+                      "after": "{\"响应延迟\": 1}"
+                    },
+                    {
+                      "code": "negation",
+                      "severity": "warning",
+                      "before": "{\"不能\": 1}",
+                      "after": "{\"不\": 1}"
+                    },
+                    {
+                      "code": "certainty",
+                      "severity": "warning",
+                      "before": "{\"拟\": 2, \"计划\": 2}",
+                      "after": "{\"拟\": 2, \"计划\": 1}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              },
+              {
+                "text": "响应延迟的比较将在相同请求长度与并发设置下进行：测试方案计划分别安排 1 个和 4 个并发请求，并报告各设置下的中位数与第 95 百分位；计时范围拟从请求发出持续到完整回答接收，模型加载时间另行记录。通过明确计时边界，速度比较将对应实际使用过程；这些设置仅为待执行的测量计划，尚不足以支持关于任何模型更快的结论。",
+                "audit": {
+                  "blocked": true,
+                  "issues": [
+                    {
+                      "code": "protected_terms",
+                      "severity": "error",
+                      "before": "{\"响应延迟\": 1, \"第95百分位\": 1}",
+                      "after": "{\"响应延迟\": 1}"
+                    },
+                    {
+                      "code": "negation",
+                      "severity": "warning",
+                      "before": "{\"不能\": 1}",
+                      "after": "{\"不\": 1}"
+                    },
+                    {
+                      "code": "certainty",
+                      "severity": "warning",
+                      "before": "{\"拟\": 2, \"计划\": 2}",
+                      "after": "{\"拟\": 1, \"计划\": 2}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required",
+          "original_retained_in_some_segments",
+          "candidates_require_manual_review"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "zh",
+        "elapsed_seconds": 5.015,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "b04a7923d8cdf0ab3d06a92f504a4f775847ee4a8e7fb1ec367ec76a42fbc0f9",
+        "output_sha256": "b04a7923d8cdf0ab3d06a92f504a4f775847ee4a8e7fb1ec367ec76a42fbc0f9",
+        "status": "unchanged"
+      }
+    },
+    {
+      "id": "prose-zh-06",
+      "synthetic": true,
+      "report": {
+        "source": "数据最小化原则拟贯穿研究材料的收集、处理与共享环节。方案计划优先使用经参与者确认可以提供的内容，并在进入分析流程前移除与研究问题无关的身份信息。对于必须保留的背景字段，需要分别说明其分析用途及访问范围。共享材料的形式拟根据复核需求确定，同时提供字段说明与处理步骤，使外部评审能够理解分析依据及其边界。",
+        "output": "数据最小化原则拟贯穿研究材料的收集、处理与共享环节。方案计划优先使用经参与者确认可以提供的内容，并在进入分析流程前移除与研究问题无关的身份信息。对于必须保留的背景字段，需要分别说明其分析用途及访问范围。共享材料的形式拟根据复核需求确定，同时提供字段说明与处理步骤，使外部评审能够理解分析依据及其边界。",
+        "segments": [
+          {
+            "id": 0,
+            "original": "数据最小化原则拟贯穿研究材料的收集、处理与共享环节。方案计划优先使用经参与者确认可以提供的内容，并在进入分析流程前移除与研究问题无关的身份信息。对于必须保留的背景字段，需要分别说明其分析用途及访问范围。共享材料的形式拟根据复核需求确定，同时提供字段说明与处理步骤，使外部评审能够理解分析依据及其边界。",
+            "output": "数据最小化原则拟贯穿研究材料的收集、处理与共享环节。方案计划优先使用经参与者确认可以提供的内容，并在进入分析流程前移除与研究问题无关的身份信息。对于必须保留的背景字段，需要分别说明其分析用途及访问范围。共享材料的形式拟根据复核需求确定，同时提供字段说明与处理步骤，使外部评审能够理解分析依据及其边界。",
+            "status": "retained",
+            "audit": {
+              "blocked": false,
+              "issues": [
+                {
+                  "code": "certainty",
+                  "severity": "warning",
+                  "before": "{\"拟\": 2, \"确定\": 1, \"计划\": 1}",
+                  "after": "{\"确定\": 1, \"计划\": 1}"
+                },
+                {
+                  "code": "permission",
+                  "severity": "warning",
+                  "before": "{\"可以\": 1}",
+                  "after": "{}"
+                }
+              ],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "数据最小化原则将贯穿研究材料的收集、处理与共享环节。方案计划优先使用经参与者确认提供的信息，并在进入分析流程前移除与研究问题无关的身份信息。对于必须保留的背景字段，需分别说明其分析用途及访问范围。共享材料的形式将根据复核需求确定，同时提供字段说明与处理步骤，以便外部评审理解分析依据及其边界。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "certainty",
+                      "severity": "warning",
+                      "before": "{\"拟\": 2, \"确定\": 1, \"计划\": 1}",
+                      "after": "{\"确定\": 1, \"计划\": 1}"
+                    },
+                    {
+                      "code": "permission",
+                      "severity": "warning",
+                      "before": "{\"可以\": 1}",
+                      "after": "{}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              },
+              {
+                "text": "数据最小化原则将贯穿研究材料的收集、处理与共享全过程。方案计划优先采用经参与者确认的内容，并在进入分析流程前剔除与研究问题无关的身份信息。针对必须保留的背景字段，需分别阐明其分析用途及访问范围。共享材料的形式将根据复核需求确定，同时提供字段说明与处理步骤，以协助外部评审理解分析依据及其边界。",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "certainty",
+                      "severity": "warning",
+                      "before": "{\"拟\": 2, \"确定\": 1, \"计划\": 1}",
+                      "after": "{\"确定\": 1, \"计划\": 1}"
+                    },
+                    {
+                      "code": "permission",
+                      "severity": "warning",
+                      "before": "{\"可以\": 1}",
+                      "after": "{}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required",
+          "original_retained_in_some_segments",
+          "candidates_require_manual_review"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "zh",
+        "elapsed_seconds": 4.485,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "2549f26afa15769c7e1ea4cc1dc84b8de2578be3b731d971e99f4d83960e40ca",
+        "output_sha256": "2549f26afa15769c7e1ea4cc1dc84b8de2578be3b731d971e99f4d83960e40ca",
+        "status": "unchanged"
+      }
+    },
+    {
+      "id": "prose-en-01",
+      "synthetic": true,
+      "report": {
+        "source": "The proposed study would examine how retrieval augmentation changes the evidence available to a language model. The evaluation would separate the relevance of retrieved passages from the support they provide for individual claims in an answer. Reviewers would identify the passage supporting each claim and describe ambiguities where the available material permits several interpretations. This arrangement is intended to make the assessment more informative for system development, while preserving a clear account of what the evidence can support.",
+        "output": "The proposed study would examine how retrieval augmentation alters the evidence available to a language model. The evaluation would separate the relevance of retrieved passages from the support they provide for individual claims in an answer. Reviewers would identify the passage supporting each claim and describe ambiguities where the available material permits several interpretations. This arrangement is intended to make the assessment more informative for system development while preserving a clear account of what the evidence can support.",
+        "segments": [
+          {
+            "id": 0,
+            "original": "The proposed study would examine how retrieval augmentation changes the evidence available to a language model. The evaluation would separate the relevance of retrieved passages from the support they provide for individual claims in an answer. Reviewers would identify the passage supporting each claim and describe ambiguities where the available material permits several interpretations. This arrangement is intended to make the assessment more informative for system development, while preserving a clear account of what the evidence can support.",
+            "output": "The proposed study would examine how retrieval augmentation alters the evidence available to a language model. The evaluation would separate the relevance of retrieved passages from the support they provide for individual claims in an answer. Reviewers would identify the passage supporting each claim and describe ambiguities where the available material permits several interpretations. This arrangement is intended to make the assessment more informative for system development while preserving a clear account of what the evidence can support.",
+            "status": "rewritten",
+            "audit": {
+              "blocked": false,
+              "issues": [],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "The proposed study would examine how retrieval augmentation alters the evidence available to a language model. The evaluation would separate the relevance of retrieved passages from the support they provide for individual claims in an answer. Reviewers would identify the passage supporting each claim and describe ambiguities where the available material permits several interpretations. This arrangement is intended to make the assessment more informative for system development while preserving a clear account of what the evidence can support.",
+                "audit": {
+                  "blocked": false,
+                  "issues": [],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "en",
+        "elapsed_seconds": 2.312,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "a533bc36b311ac4583d77a680d4f13f3d450547a709fbc772f753ff402dfad02",
+        "output_sha256": "e8ba3b6d7022854fa23e473d185d3bbf00ff398c951d7c1239f01201b63cc5d6",
+        "status": "completed"
+      }
+    },
+    {
+      "id": "prose-en-02",
+      "synthetic": true,
+      "report": {
+        "source": "To assess annotation agreement, the protocol would ask 3 reviewers to evaluate each response independently before discussing disagreements. A set of 20 practice items would be used to clarify the decision rules and would remain separate from the evaluation material. Each judgment would include a short rationale linking the decision to the supplied evidence. The proposed analysis would retain initial judgments alongside the discussion record, allowing disagreements about the rules to be distinguished from uncertainty within the material itself.",
+        "output": "To assess annotation agreement, the protocol would ask three reviewers to evaluate each response independently before discussing disagreements. A set of 20 practice items would be used to clarify decision rules and would remain separate from the evaluation material. Each judgment would include a short rationale linking the decision to the supplied evidence. The proposed analysis would retain initial judgments alongside the discussion record, allowing disagreements about the rules to be distinguished from uncertainty within the material itself.",
+        "segments": [
+          {
+            "id": 0,
+            "original": "To assess annotation agreement, the protocol would ask 3 reviewers to evaluate each response independently before discussing disagreements. A set of 20 practice items would be used to clarify the decision rules and would remain separate from the evaluation material. Each judgment would include a short rationale linking the decision to the supplied evidence. The proposed analysis would retain initial judgments alongside the discussion record, allowing disagreements about the rules to be distinguished from uncertainty within the material itself.",
+            "output": "To assess annotation agreement, the protocol would ask three reviewers to evaluate each response independently before discussing disagreements. A set of 20 practice items would be used to clarify decision rules and would remain separate from the evaluation material. Each judgment would include a short rationale linking the decision to the supplied evidence. The proposed analysis would retain initial judgments alongside the discussion record, allowing disagreements about the rules to be distinguished from uncertainty within the material itself.",
+            "status": "rewritten",
+            "audit": {
+              "blocked": false,
+              "issues": [],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "To assess annotation agreement, the protocol would ask three reviewers to evaluate each response independently before discussing disagreements. A set of 20 practice items would clarify decision rules and would remain separate from the evaluation material. Each judgment would include a short rationale linking the decision to the supplied evidence. The proposed analysis would retain initial judgments alongside the discussion record, allowing disagreements about the rules to be distinguished from uncertainty within the material itself.",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "purpose",
+                      "severity": "warning",
+                      "before": "{\"be used to\": 1}",
+                      "after": "{}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              },
+              {
+                "text": "To assess annotation agreement, the protocol would ask three reviewers to evaluate each response independently before discussing disagreements. A set of 20 practice items would be used to clarify decision rules and would remain separate from the evaluation material. Each judgment would include a short rationale linking the decision to the supplied evidence. The proposed analysis would retain initial judgments alongside the discussion record, allowing disagreements about the rules to be distinguished from uncertainty within the material itself.",
+                "audit": {
+                  "blocked": false,
+                  "issues": [],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required",
+          "candidates_require_manual_review"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "en",
+        "elapsed_seconds": 4.735,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "c21def36a4ca4800e480150ac1547847408647d677c8b9b667f83ac8f2ea731e",
+        "output_sha256": "3e90e9e40c3135214bdd23fab96698024d5693da88e3e6df8c5a1037b6fa54c5",
+        "status": "completed"
+      }
+    },
+    {
+      "id": "prose-en-03",
+      "synthetic": true,
+      "report": {
+        "source": "The assessment of tool use would consider both the completion of a task and the sequence of actions taken to reach that outcome. Each task would have an explicit completion criterion established before evaluation. The protocol would preserve the requested inputs, tool responses, and subsequent decisions so that reviewers could trace how intermediate information affected later actions. This proposed design would provide a structured basis for distinguishing errors in planning from errors in interpreting information returned by a tool.",
+        "output": "The assessment of tool use would consider both the completion of a task and the sequence of actions taken to reach that outcome. Each task would have an explicit completion criterion established before evaluation. The protocol would preserve the requested inputs, tool responses, and subsequent decisions so that reviewers could trace how intermediate information affected later actions. This proposed design would provide a structured basis for distinguishing errors in planning from errors in interpreting information returned by a tool.",
+        "segments": [
+          {
+            "id": 0,
+            "original": "The assessment of tool use would consider both the completion of a task and the sequence of actions taken to reach that outcome. Each task would have an explicit completion criterion established before evaluation. The protocol would preserve the requested inputs, tool responses, and subsequent decisions so that reviewers could trace how intermediate information affected later actions. This proposed design would provide a structured basis for distinguishing errors in planning from errors in interpreting information returned by a tool.",
+            "output": "The assessment of tool use would consider both the completion of a task and the sequence of actions taken to reach that outcome. Each task would have an explicit completion criterion established before evaluation. The protocol would preserve the requested inputs, tool responses, and subsequent decisions so that reviewers could trace how intermediate information affected later actions. This proposed design would provide a structured basis for distinguishing errors in planning from errors in interpreting information returned by a tool.",
+            "status": "retained",
+            "audit": {
+              "blocked": false,
+              "issues": [
+                {
+                  "code": "certainty",
+                  "severity": "warning",
+                  "before": "{\"could\": 1, \"would\": 4}",
+                  "after": "{\"could\": 1, \"would\": 3}"
+                }
+              ],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "The assessment of tool use would consider both task completion and the sequence of actions taken to reach that outcome. Each task would have an explicit completion criterion established prior to evaluation. The protocol would preserve requested inputs, tool responses, and subsequent decisions, enabling reviewers to trace how intermediate information influenced later actions. This proposed design would provide a structured basis for distinguishing errors in planning from errors in interpreting information returned by the tool.",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "certainty",
+                      "severity": "warning",
+                      "before": "{\"could\": 1, \"would\": 4}",
+                      "after": "{\"would\": 4}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              },
+              {
+                "text": "The assessment of tool use would consider both task completion and the sequence of actions taken to reach that outcome. Each task would have an explicit completion criterion established prior to evaluation. The protocol would preserve requested inputs, tool responses, and subsequent decisions so reviewers could trace how intermediate information affected later actions. This proposed design provides a structured basis for distinguishing errors in planning from those in interpreting information returned by a tool.",
+                "audit": {
+                  "blocked": false,
+                  "issues": [
+                    {
+                      "code": "certainty",
+                      "severity": "warning",
+                      "before": "{\"could\": 1, \"would\": 4}",
+                      "after": "{\"could\": 1, \"would\": 3}"
+                    }
+                  ],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required",
+          "original_retained_in_some_segments",
+          "candidates_require_manual_review"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "en",
+        "elapsed_seconds": 4.547,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "525439d34a0723de4204273aea3a94b81b9e13dcdb75ce548564b020e6b210a5",
+        "output_sha256": "525439d34a0723de4204273aea3a94b81b9e13dcdb75ce548564b020e6b210a5",
+        "status": "unchanged"
+      }
+    },
+    {
+      "id": "prose-en-04",
+      "synthetic": true,
+      "report": {
+        "source": "The response latency comparison would use matched request lengths under 1 and 4 concurrent requests. For each setting, the reporting plan would include the median and the 95th percentile, measured from request submission to receipt of the complete answer. Model loading would be recorded separately because its duration reflects a different stage of use. These proposed measurement boundaries are intended to clarify the comparison; they describe a future protocol and do not establish that any model is currently faster.",
+        "output": "The response latency comparison would use matched request lengths under 1 and 4 concurrent requests. For each setting, the reporting plan would include the median and the 95th percentile, measured from request submission to receipt of the complete answer. Model loading would be recorded separately because its duration reflects a different stage of use. These proposed measurement boundaries are intended to clarify the comparison; they describe a future protocol and do not establish that any model is currently faster.",
+        "segments": [
+          {
+            "id": 0,
+            "original": "The response latency comparison would use matched request lengths under 1 and 4 concurrent requests. For each setting, the reporting plan would include the median and the 95th percentile, measured from request submission to receipt of the complete answer. Model loading would be recorded separately because its duration reflects a different stage of use. These proposed measurement boundaries are intended to clarify the comparison; they describe a future protocol and do not establish that any model is currently faster.",
+            "output": "The response latency comparison would use matched request lengths under 1 and 4 concurrent requests. For each setting, the reporting plan would include the median and the 95th percentile, measured from request submission to receipt of the complete answer. Model loading would be recorded separately because its duration reflects a different stage of use. These proposed measurement boundaries are intended to clarify the comparison; they describe a future protocol and do not establish that any model is currently faster.",
+            "status": "retained",
+            "audit": {
+              "blocked": false,
+              "issues": [],
+              "requires_review": true
+            },
+            "attempts": [
+              {
+                "text": "The response latency comparison would use matched request lengths under 1 and 4 concurrent requests. For each setting, the reporting plan would include the median and the 95th percentile, measured from request submission to receipt of the complete answer. Model loading would be recorded separately because its duration reflects a different stage of use. These proposed measurement boundaries are intended to clarify the comparison; they describe a future protocol and do not establish that any model is currently faster.",
+                "audit": {
+                  "blocked": false,
+                  "issues": [],
+                  "requires_review": true
+                },
+                "error": null
+              },
+              {
+                "text": "The response latency comparison would use matched request lengths under 1 and 4 concurrent requests. For each setting, the reporting plan would include the median and the 95th percentile, measured from request submission to receipt of the complete answer. Model loading would be recorded separately because its duration reflects a different stage of use. These proposed measurement boundaries are intended to clarify the comparison; they describe a future protocol and do not establish that any model is currently faster.",
+                "audit": {
+                  "blocked": false,
+                  "issues": [],
+                  "requires_review": true
+                },
+                "error": null
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "human_review_required",
+          "original_retained_in_some_segments"
+        ],
+        "model": "qwen3.5-4b",
+        "language": "en",
+        "elapsed_seconds": 5.062,
+        "requires_review": true,
+        "detector_status": "not_run",
+        "source_sha256": "7c5aac7db56d5588024c59925c1ad0e097add88cb2fd1bf10d622a09f3cf8274",
+        "output_sha256": "7c5aac7db56d5588024c59925c1ad0e097add88cb2fd1bf10d622a09f3cf8274",
+        "status": "unchanged"
+      }
+    }
+  ]
+}
