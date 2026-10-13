@@ -4,7 +4,7 @@
   "rows": [
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "zh-01",
       "segment": 0,
       "attempt": 0,
@@ -36,11 +36,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "zh-01",
       "segment": 0,
       "attempt": 1,
@@ -72,11 +73,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "zh-02",
       "segment": 0,
       "attempt": 0,
@@ -120,11 +122,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "zh-02",
       "segment": 0,
       "attempt": 1,
@@ -162,11 +165,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "zh-03",
       "segment": 0,
       "attempt": 0,
@@ -198,11 +202,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "zh-03",
       "segment": 0,
       "attempt": 1,
@@ -246,11 +251,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "zh-04",
       "segment": 0,
       "attempt": 0,
@@ -282,11 +288,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "zh-04",
       "segment": 0,
       "attempt": 1,
@@ -318,11 +325,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "zh-05",
       "segment": 0,
       "attempt": 0,
@@ -366,11 +374,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "zh-05",
       "segment": 0,
       "attempt": 1,
@@ -426,11 +435,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "zh-06",
       "segment": 0,
       "attempt": 0,
@@ -474,11 +484,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "zh-06",
       "segment": 0,
       "attempt": 1,
@@ -534,11 +545,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "zh-07",
       "segment": 0,
       "attempt": 0,
@@ -570,11 +582,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "zh-07",
       "segment": 0,
       "attempt": 1,
@@ -606,11 +619,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "zh-08",
       "segment": 0,
       "attempt": 0,
@@ -648,11 +662,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "zh-08",
       "segment": 0,
       "attempt": 1,
@@ -684,11 +699,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "en-01",
       "segment": 0,
       "attempt": 0,
@@ -706,11 +722,12 @@
       },
       "previously_clear": true,
       "now_clear": true,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "en-02",
       "segment": 0,
       "attempt": 0,
@@ -735,11 +752,12 @@
       },
       "previously_clear": true,
       "now_clear": false,
-      "clearance_changed": true
+      "clearance_changed": true,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "en-03",
       "segment": 0,
       "attempt": 0,
@@ -771,11 +789,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "en-03",
       "segment": 0,
       "attempt": 1,
@@ -807,11 +826,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "en-04",
       "segment": 0,
       "attempt": 0,
@@ -829,11 +849,12 @@
       },
       "previously_clear": true,
       "now_clear": true,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "en-04",
       "segment": 0,
       "attempt": 1,
@@ -851,11 +872,12 @@
       },
       "previously_clear": true,
       "now_clear": true,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "en-05",
       "segment": 0,
       "attempt": 0,
@@ -880,11 +902,12 @@
       },
       "previously_clear": true,
       "now_clear": false,
-      "clearance_changed": true
+      "clearance_changed": true,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/smoke-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9",
+      "artifact_sha256": "35fd2933728441a0a56ae144945c0105aabaaed6cbacd4fc01dbe5f42ba04407",
       "case": "en-06",
       "segment": 0,
       "attempt": 0,
@@ -902,11 +925,12 @@
       },
       "previously_clear": true,
       "now_clear": true,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "04ec95e058a91eab32f74ad3fae496f70243ce23063b028d748f4cb8716fe1d9"
     },
     {
       "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "artifact_sha256": "f744c7bc8d9f4562ec044f39ec3321a6ec02ab30d7cef260fa864a04802dd0b7",
       "case": "prose-zh-01",
       "segment": 0,
       "attempt": 0,
@@ -924,11 +948,12 @@
       },
       "previously_clear": true,
       "now_clear": true,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf"
     },
     {
       "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "artifact_sha256": "f744c7bc8d9f4562ec044f39ec3321a6ec02ab30d7cef260fa864a04802dd0b7",
       "case": "prose-zh-02",
       "segment": 0,
       "attempt": 0,
@@ -960,11 +985,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf"
     },
     {
       "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "artifact_sha256": "f744c7bc8d9f4562ec044f39ec3321a6ec02ab30d7cef260fa864a04802dd0b7",
       "case": "prose-zh-02",
       "segment": 0,
       "attempt": 1,
@@ -982,11 +1008,12 @@
       },
       "previously_clear": true,
       "now_clear": true,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf"
     },
     {
       "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "artifact_sha256": "f744c7bc8d9f4562ec044f39ec3321a6ec02ab30d7cef260fa864a04802dd0b7",
       "case": "prose-zh-03",
       "segment": 0,
       "attempt": 0,
@@ -1004,11 +1031,12 @@
       },
       "previously_clear": true,
       "now_clear": true,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf"
     },
     {
       "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "artifact_sha256": "f744c7bc8d9f4562ec044f39ec3321a6ec02ab30d7cef260fa864a04802dd0b7",
       "case": "prose-zh-04",
       "segment": 0,
       "attempt": 0,
@@ -1026,11 +1054,12 @@
       },
       "previously_clear": true,
       "now_clear": true,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf"
     },
     {
       "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "artifact_sha256": "f744c7bc8d9f4562ec044f39ec3321a6ec02ab30d7cef260fa864a04802dd0b7",
       "case": "prose-zh-05",
       "segment": 0,
       "attempt": 0,
@@ -1074,11 +1103,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf"
     },
     {
       "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "artifact_sha256": "f744c7bc8d9f4562ec044f39ec3321a6ec02ab30d7cef260fa864a04802dd0b7",
       "case": "prose-zh-05",
       "segment": 0,
       "attempt": 1,
@@ -1110,11 +1140,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf"
     },
     {
       "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "artifact_sha256": "f744c7bc8d9f4562ec044f39ec3321a6ec02ab30d7cef260fa864a04802dd0b7",
       "case": "prose-zh-06",
       "segment": 0,
       "attempt": 0,
@@ -1152,11 +1183,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf"
     },
     {
       "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "artifact_sha256": "f744c7bc8d9f4562ec044f39ec3321a6ec02ab30d7cef260fa864a04802dd0b7",
       "case": "prose-zh-06",
       "segment": 0,
       "attempt": 1,
@@ -1194,11 +1226,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf"
     },
     {
       "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "artifact_sha256": "f744c7bc8d9f4562ec044f39ec3321a6ec02ab30d7cef260fa864a04802dd0b7",
       "case": "prose-en-01",
       "segment": 0,
       "attempt": 0,
@@ -1216,11 +1249,12 @@
       },
       "previously_clear": true,
       "now_clear": true,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf"
     },
     {
       "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "artifact_sha256": "f744c7bc8d9f4562ec044f39ec3321a6ec02ab30d7cef260fa864a04802dd0b7",
       "case": "prose-en-02",
       "segment": 0,
       "attempt": 0,
@@ -1252,11 +1286,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf"
     },
     {
       "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "artifact_sha256": "f744c7bc8d9f4562ec044f39ec3321a6ec02ab30d7cef260fa864a04802dd0b7",
       "case": "prose-en-02",
       "segment": 0,
       "attempt": 1,
@@ -1281,11 +1316,12 @@
       },
       "previously_clear": false,
       "now_clear": true,
-      "clearance_changed": true
+      "clearance_changed": true,
+      "captured_working_copy_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf"
     },
     {
       "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "artifact_sha256": "f744c7bc8d9f4562ec044f39ec3321a6ec02ab30d7cef260fa864a04802dd0b7",
       "case": "prose-en-03",
       "segment": 0,
       "attempt": 0,
@@ -1329,11 +1365,12 @@
       },
       "previously_clear": false,
       "now_clear": false,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf"
     },
     {
       "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "artifact_sha256": "f744c7bc8d9f4562ec044f39ec3321a6ec02ab30d7cef260fa864a04802dd0b7",
       "case": "prose-en-03",
       "segment": 0,
       "attempt": 1,
@@ -1351,11 +1388,12 @@
       },
       "previously_clear": true,
       "now_clear": true,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf"
     },
     {
       "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "artifact_sha256": "f744c7bc8d9f4562ec044f39ec3321a6ec02ab30d7cef260fa864a04802dd0b7",
       "case": "prose-en-04",
       "segment": 0,
       "attempt": 0,
@@ -1373,11 +1411,12 @@
       },
       "previously_clear": true,
       "now_clear": true,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf"
     },
     {
       "artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
-      "artifact_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+      "artifact_sha256": "f744c7bc8d9f4562ec044f39ec3321a6ec02ab30d7cef260fa864a04802dd0b7",
       "case": "prose-en-04",
       "segment": 0,
       "attempt": 1,
@@ -1395,7 +1434,9 @@
       },
       "previously_clear": true,
       "now_clear": true,
-      "clearance_changed": false
+      "clearance_changed": false,
+      "captured_working_copy_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf"
     }
-  ]
+  ],
+  "artifact_sha256_basis": "Git blob bytes (LF). captured_working_copy_sha256 preserves Windows CRLF capture digest."
 }

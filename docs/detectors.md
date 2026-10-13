@@ -1,8 +1,8 @@
 # 外部检测 / External detection
 
-本项目尚未测试商业检测器的检测效果或改写前后降分效果。传输层测试使用本地 HTTP 响应夹具，不调用付费 API。检测分数是供应商预测，不能证明作者身份、学术诚信或语义等价。
+首次真实网页观测：GPTZero 对一份中文合成原稿及其改写稿均显示 99%，没有降分；界面同时提示中文被计为 6 words、结果可能不准。英文配对因注册/额度限制未完成。[原始证据与边界](core-iteration-2026-10-14.md)公开。这不验证本项目 API 适配器：传输层测试仍使用本地 HTTP 响应夹具，未调用付费 API。检测分数不能证明作者身份、学术诚信或语义等价。
 
-Commercial detection effectiveness and before/after score changes have not been tested. Transport tests use local HTTP fixtures, without paid API calls. Detector predictions do not prove authorship, academic integrity, or semantic equivalence.
+The first live web observation showed 99% before and after one Chinese synthetic composite, with a six-word/short-text warning. The English pair was blocked by registration/quota. [Evidence and limits](core-iteration-2026-10-14.md) are public. API transport tests still use local HTTP fixtures, without paid API calls; the web observation does not validate the adapter. Detector predictions do not prove authorship, academic integrity, or semantic equivalence.
 
 ## 显式授权 / Explicit consent
 
@@ -28,9 +28,9 @@ Checked on 2026-10-14: the official developer and support pages document the end
 
 ## 中文支持与试用范围 / Chinese support and trial scope
 
-2026-10-14 核对的 [GPTZero 官方语言支持页](https://support.gptzero.me/articles/1682612063-what-languages-does-gptzero-support)明确列出中文。本项目已实现 API 适配，但没有真实中文论文检测或改写降分测量，也没有验证其他论文平台的检测结果。[开发者页面](https://gptzero.me/developers)提醒检测并非完全准确，对较长文本和英文散文表现更好，结果应作为进一步核查的线索。
+2026-10-14 核对的 [GPTZero 官方语言支持页](https://support.gptzero.me/articles/1682612063-what-languages-does-gptzero-support)明确列出中文。本项目只有上述合成材料的网页观察，没有真实中文论文基准，也没有验证其他论文平台的结果。[开发者页面](https://gptzero.me/developers)提醒检测并非完全准确，对较长文本和英文散文表现更好，结果应作为进一步核查的线索。
 
-GPTZero currently lists Chinese among its supported languages. This project implements the API adapter but has no live Chinese-paper detection measurements or before/after score evidence, and has not validated results from other paper platforms. The official developer page warns that detection is imperfect, performs best on longer texts and English prose, and should inform further review.
+GPTZero lists Chinese among its supported languages. The limited synthetic web observation above is not a Chinese-paper benchmark, API validation, or evidence from other paper platforms. The official developer page warns that detection is imperfect, performs best on longer texts and English prose, and should inform further review.
 
 [官方免费试用说明](https://support.gptzero.me/articles/7472477101-can-i-try-the-api-for-free)提到有限次数的免账号、免密钥 API 试用。不过，该说明及文档首页指向的两个试用路由在本次核对时均返回404；尚未核实可用且中文范围明确的官方免密钥检测端点。当前适配器仍要求密钥与用户明确同意，没有接入未验证的试用或网页内部接口。
 

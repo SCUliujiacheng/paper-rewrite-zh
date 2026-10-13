@@ -1,0 +1,167 @@
+{
+  "scope": "two precommitted synthetic composite pairs; only Chinese pair completed",
+  "provider": "GPTZero",
+  "entry_url": "https://gptzero.me/",
+  "result_url": "https://app.gptzero.me/",
+  "transport": "visible official Basic Scan web UI, unauthenticated; not project API adapter",
+  "protocol_commit": "fd74ef45733ed4c31f22850ceb1039127d49f005",
+  "release_artifact": "artifacts/prose-qwen-q5-release-2026-10-14.json",
+  "release_artifact_sha256": "f744c7bc8d9f4562ec044f39ec3321a6ec02ab30d7cef260fa864a04802dd0b7",
+  "license": "CC0-1.0 project-authored synthetic input; vendor UI screenshots are evidence, not project-licensed text",
+  "limitations": [
+    "One composite observation per language, not six or four independent detector tests.",
+    "The Chinese UI reported six words and an under-100-word accuracy warning. Chinese accuracy is not independently validated.",
+    "Scores are displayed document-class probabilities, not a measured fraction of AI-authored sentences.",
+    "Editor paragraph normalization changes displayed character counts; hashes bind exact input strings supplied to UI, not an unobserved server payload.",
+    "English after-scan hit Sign up to Continue. Text changed remained visible; stale 100% and fallback model 3.3b are deliberately not counted as a result.",
+    "No account was created, CAPTCHA solved, payment made or quota bypassed. No private manuscripts submitted.",
+    "All samples were already used in development. No independent human semantic labels or generalization estimate.",
+    "This observes v0.1.0 release output, not the later core-fidelity patch."
+  ],
+  "observations": [
+    {
+      "language": "zh",
+      "variant": "before",
+      "state": "completed",
+      "observed_at_utc": "2026-10-13T16:52:46.044Z",
+      "visible_model": "4.1m",
+      "ai_probability_percent": 99,
+      "mixed_probability_percent": 0,
+      "human_probability_percent": 1,
+      "input_text": "本方案拟围绕检索增强生成的证据使用方式建立评估流程，将检索是否找到相关材料与回答是否忠实使用材料分别记录。评审者需要对照问题、检索片段和最终回答，指出结论所依赖的具体信息，并说明材料不足时应如何表达不确定性。通过这样的设计，我们希望进一步区分检索环节与生成环节的问题，为后续系统改进提供较为明确的依据。\n\n针对模型在不同文本来源之间的适用性，研究设计拟采用交叉验证，并以来源而非单篇文本作为划分训练与验证集合的基本单位。来自同一作者或同一系列的材料应放在同一分组，以降低风格相似性对评估的影响。方案还计划单独记录各来源的文本长度和任务类型，使总体表现与分组表现能够相互参照，而不将总体指标直接解释为所有场景下的适用程度。\n\n为了使标注一致性的评价过程更加清晰，本方案计划由3名评审者独立判断每段回答是否受到所附材料支持，并为每项判断提供简短理由。正式标注前拟安排20段练习材料，用于讨论概念边界；练习材料将与后续评价集合分开。对于存在分歧的项目，方案拟保留全部初始意见，再通过讨论形成处理记录，以便分析分歧来自规则理解还是材料本身。\n\n工具调用的可靠性拟从任务完成和操作过程两个角度考察。我们计划为每个任务预先定义可核对的终止条件，并记录系统选择工具、解释输入以及处理返回信息的过程。若任务包含多个依赖步骤，评估应检查后续操作是否仍依据有效的前序结果。这样的设计旨在把最终答案的合理性与执行路径的可追溯性联系起来，为错误定位提供更完整的材料。\n\n响应延迟的比较拟在相同请求长度与并发设置下进行，测试方案计划分别安排1个和4个并发请求，并将各设置下的中位数与第95百分位同时报告。计时范围拟从请求发出持续到完整回答接收，模型加载时间另行记录。我们希望通过明确计时边界，使速度比较能够对应实际使用过程；这些设置属于待执行的测量计划，尚不能支持任何模型更快的结论。\n\n数据最小化原则拟贯穿研究材料的收集、处理与共享环节。方案计划优先使用经参与者确认可以提供的内容，并在进入分析流程前移除与研究问题无关的身份信息。对于必须保留的背景字段，需要分别说明其分析用途及访问范围。共享材料的形式拟根据复核需求确定，同时提供字段说明与处理步骤，使外部评审能够理解分析依据及其边界。",
+      "input_text_sha256": "00abbbc09394a4498be71a601951a6a3f4928cb3b152b383c521fd404995cf1a",
+      "input_characters": 931,
+      "ui_characters": 931,
+      "ui_words": 6,
+      "case_ids": [
+        "prose-zh-01",
+        "prose-zh-02",
+        "prose-zh-03",
+        "prose-zh-04",
+        "prose-zh-05",
+        "prose-zh-06"
+      ],
+      "warning": "This text is under 100 words; Your result may be less accurate.",
+      "evidence": [
+        {
+          "file": "gptzero-zh-before.dom.txt",
+          "sha256": "36a8d294c11a1b03ad5363fe32cbd308d139f63e63704bb279558069b19cdbb5"
+        },
+        {
+          "file": "gptzero-zh-before.jpg",
+          "sha256": "19c87a09896cafe0c70a305658d452477b5668a7acc618b842594b422b745025"
+        }
+      ]
+    },
+    {
+      "language": "zh",
+      "variant": "after",
+      "state": "completed",
+      "observed_at_utc": "2026-10-13T17:00:36.112Z",
+      "visible_model": "4.1m",
+      "ai_probability_percent": 99,
+      "mixed_probability_percent": 0,
+      "human_probability_percent": 1,
+      "input_text": "本方案拟围绕“检索增强生成”的证据使用方式建立评估流程，将检索是否找到相关材料与回答是否忠实使用材料分别记录。评审者需对照问题、检索片段和最终回答，指出结论所依赖的具体信息，并说明材料不足时应如何表达不确定性。通过该设计，旨在进一步区分检索环节与生成环节的问题，为后续系统改进提供较为明确的依据。\n\n针对模型在不同文本来源间的适用性，本研究拟采用交叉验证，并以来源而非单篇文本作为划分训练与验证集的基本单位。来自同一作者或同一系列的文本应归入同一分组，以降低风格相似性对评估的影响。方案还计划单独记录各来源的文本长度和任务类型，使总体表现能与分组表现相互参照，而不将总体指标直接解释为所有场景下的适用程度。\n\n为使“标注一致性”评价过程更清晰，本方案计划由3名评审者独立判断每段回答是否受所附材料支持，并为每项判断提供简短理由。正式标注前拟安排20段练习材料以讨论概念边界；练习材料与后续评价集合将分开处理。对于存在分歧的项目，方案拟保留全部初始意见，再通过讨论形成处理记录，以便分析分歧源于规则理解还是材料本身。\n\n工具调用的可靠性拟从任务完成和操作过程两个角度考察。我们计划为每个任务预先定义可核对的终止条件，并记录系统选择工具、解释输入以及处理返回信息的过程。若任务包含多个依赖步骤，评估应检查后续操作是否仍依据有效的前序结果。这样的设计旨在将最终答案的合理性与执行路径的可追溯性联系起来，为错误定位提供更完整的材料。\n\n响应延迟的比较拟在相同请求长度与并发设置下进行，测试方案计划分别安排1个和4个并发请求，并将各设置下的中位数与第95百分位同时报告。计时范围拟从请求发出持续到完整回答接收，模型加载时间另行记录。我们希望通过明确计时边界，使速度比较能够对应实际使用过程；这些设置属于待执行的测量计划，尚不能支持任何模型更快的结论。\n\n数据最小化原则拟贯穿研究材料的收集、处理与共享环节。方案计划优先使用经参与者确认可以提供的内容，并在进入分析流程前移除与研究问题无关的身份信息。对于必须保留的背景字段，需要分别说明其分析用途及访问范围。共享材料的形式拟根据复核需求确定，同时提供字段说明与处理步骤，使外部评审能够理解分析依据及其边界。",
+      "input_text_sha256": "91b6bc55552751121891a06de8338bc997bd3150ea73e8e7a5a0235c9eaf70e4",
+      "input_characters": 922,
+      "ui_characters": 917,
+      "ui_words": 6,
+      "case_ids": [
+        "prose-zh-01",
+        "prose-zh-02",
+        "prose-zh-03",
+        "prose-zh-04",
+        "prose-zh-05",
+        "prose-zh-06"
+      ],
+      "warning": "This text is under 100 words; Your result may be less accurate.",
+      "evidence": [
+        {
+          "file": "gptzero-zh-after.dom.txt",
+          "sha256": "c464b0fe960167f8f47089f0c9035a1b3e84622dbfe0fa98759a95c2c4b6eec0"
+        },
+        {
+          "file": "gptzero-zh-after.jpg",
+          "sha256": "f08ff975469ff373174a39f9b85b9f2d2bf87f28c880e513b07bd4c8d7df91a5"
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "variant": "before",
+      "state": "completed",
+      "observed_at_utc": "2026-10-13T17:04:43.511Z",
+      "visible_model": "4.1o",
+      "ai_probability_percent": 100,
+      "mixed_probability_percent": 0,
+      "human_probability_percent": 0,
+      "input_text": "The proposed study would examine how retrieval augmentation changes the evidence available to a language model. The evaluation would separate the relevance of retrieved passages from the support they provide for individual claims in an answer. Reviewers would identify the passage supporting each claim and describe ambiguities where the available material permits several interpretations. This arrangement is intended to make the assessment more informative for system development, while preserving a clear account of what the evidence can support.\n\nTo assess annotation agreement, the protocol would ask 3 reviewers to evaluate each response independently before discussing disagreements. A set of 20 practice items would be used to clarify the decision rules and would remain separate from the evaluation material. Each judgment would include a short rationale linking the decision to the supplied evidence. The proposed analysis would retain initial judgments alongside the discussion record, allowing disagreements about the rules to be distinguished from uncertainty within the material itself.\n\nThe assessment of tool use would consider both the completion of a task and the sequence of actions taken to reach that outcome. Each task would have an explicit completion criterion established before evaluation. The protocol would preserve the requested inputs, tool responses, and subsequent decisions so that reviewers could trace how intermediate information affected later actions. This proposed design would provide a structured basis for distinguishing errors in planning from errors in interpreting information returned by a tool.\n\nThe response latency comparison would use matched request lengths under 1 and 4 concurrent requests. For each setting, the reporting plan would include the median and the 95th percentile, measured from request submission to receipt of the complete answer. Model loading would be recorded separately because its duration reflects a different stage of use. These proposed measurement boundaries are intended to clarify the comparison; they describe a future protocol and do not establish that any model is currently faster.",
+      "input_text_sha256": "df3922b3b69c15d3d69f3a285bd285ed7dfbca94866337eaea53a214bb32b05a",
+      "input_characters": 2164,
+      "ui_characters": 2161,
+      "ui_words": 315,
+      "case_ids": [
+        "prose-en-01",
+        "prose-en-02",
+        "prose-en-03",
+        "prose-en-04"
+      ],
+      "warning": null,
+      "evidence": [
+        {
+          "file": "gptzero-en-before.dom.txt",
+          "sha256": "0577103a5d39910a19db4a7ff366c592d601382ebed2719e2b139f380c19d1d8"
+        },
+        {
+          "file": "gptzero-en-before.jpg",
+          "sha256": "f07ae0eed38470b2cdee078b2aec1e0243a6cc70ef02e6ff500eef2993967591"
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "variant": "after-blocked",
+      "state": "blocked_registration_or_quota",
+      "observed_at_utc": "2026-10-13T17:05:52.911Z",
+      "visible_model": null,
+      "ai_probability_percent": null,
+      "mixed_probability_percent": null,
+      "human_probability_percent": null,
+      "input_text": "The proposed study would examine how retrieval augmentation changes the evidence available to a language model. The evaluation would separate the relevance of retrieved passages from their support for individual claims in an answer. Reviewers would identify the passage supporting each claim and describe ambiguities where the available material permits several interpretations. This arrangement is intended to make the assessment more informative for system development while preserving a clear account of what the evidence can support.\n\nTo assess annotation agreement, the protocol would ask 3 reviewers to evaluate each response independently before discussing disagreements. A set of 20 practice items would be used to clarify the decision rules and would remain separate from the evaluation material. Each judgment would include a short rationale linking the decision to the supplied evidence. The proposed analysis would retain initial judgments alongside the discussion record, allowing disagreements about the rules to be distinguished from uncertainty within the material itself.\n\nThe assessment of tool use would consider both the completion of a task and the sequence of actions taken to reach that outcome. Each task would have an explicit completion criterion established before evaluation. The protocol would preserve the requested inputs, tool responses, and subsequent decisions so that reviewers could trace how intermediate information affected later actions. This proposed design would provide a structured basis for distinguishing errors in planning from errors in interpreting information returned by a tool.\n\nThe response latency comparison would use matched request lengths under 1 and 4 concurrent requests. For each setting, the reporting plan would include the median and the 95th percentile, measured from request submission to receipt of the complete answer. Model loading would be recorded separately because its duration reflects a different stage of use. These proposed measurement boundaries are intended to clarify the comparison; they describe a future protocol and do not establish that any model is currently faster.",
+      "input_text_sha256": "f24c77328704f390cd42b08a884b0c31742e610aab0449fe8e1f4105265382c9",
+      "input_characters": 2152,
+      "ui_characters": 2149,
+      "ui_words": 313,
+      "case_ids": [
+        "prose-en-01",
+        "prose-en-02",
+        "prose-en-03",
+        "prose-en-04"
+      ],
+      "warning": null,
+      "evidence": [
+        {
+          "file": "gptzero-en-after-blocked.dom.txt",
+          "sha256": "7210656803c6eb317a6c5041acd61ff71541ba170ec0859e48b26ed5c24c414b"
+        },
+        {
+          "file": "gptzero-en-after-blocked.jpg",
+          "sha256": "2b1a3aadcfcb39e0689e2fcb3e5dcddb592c564a76f2e03cb3bae2f89c7ca6f4"
+        }
+      ]
+    }
+  ],
+  "paired_outcomes": {
+    "zh": {
+      "completed": true,
+      "ai_probability_delta_percentage_points": 0
+    },
+    "en": {
+      "completed": false,
+      "ai_probability_delta_percentage_points": null
+    }
+  },
+  "captured_release_working_copy_sha256": "602be2f6a760e230f1088b3a9cb64717df96e5f74114f927130da8f91bc607bf",
+  "release_artifact_sha256_basis": "Git blob bytes (LF); raw Windows capture digest retained separately."
+}

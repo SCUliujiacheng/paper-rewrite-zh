@@ -18,7 +18,7 @@ Rewriting a paragraph should not quietly change a measurement or turn a tentativ
 
 Available local backends are the existing [humanizer model](https://huggingface.co/jialinyyzz/humanizer) and the general instruction model [Qwen3.5-4B](https://huggingface.co/Qwen/Qwen3.5-4B). This project did not train those weights; it implements the workbench, orchestration, checks and reports. The Qwen path is not a detector-evasion fine-tune. See [NOTICE](NOTICE) for attribution.
 
-**No commercial-detector score reduction has been measured for this project. It does not guarantee acceptance by any detector.** Rule checks also cannot prove semantic equivalence. Review claims, scope, negation and references yourself, and follow your institution's AI-use and disclosure rules.
+**The first live web comparison showed no reduction: GPTZero displayed 99% for both one Chinese synthetic source and its rewrite.** The UI also warned that the text was under 100 words and might be less accurate. The English pair was blocked by a free-scan/registration limit. [Raw evidence and limitations](docs/core-iteration-2026-10-14.md) are public. This is not a paper-detection pass rate or a guarantee of acceptance. Rule checks cannot prove semantic equivalence; review the content and follow your institution's AI-use and disclosure rules.
 
 ## Run locally
 

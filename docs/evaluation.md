@@ -46,6 +46,10 @@ uv run python scripts/evaluate.py --backend qwen --output artifacts/my-run.json 
 
 ## 已记录的开发实验
 
+2026-10-14 第二轮增加了整数记法、许可、要求、来源及有限用途表达检查，并修正 Qwen 正文输入的转义方式。新配置为 `qwen_academic_editing_chat_v3_literal`；温度和 presence penalty 未改。最终完整开发集重跑结果为中文压力 2/8、中文方法草稿 3/6、英文压力 4/6、英文方法草稿 2/4 个最终文本发生变化。40 个旧候选的离线重放补拦两条来源声明变化、解除一条数字记法误报。详情见[第二轮记录](core-iteration-2026-10-14.md)。这些仍不是保真率或降分成功率。
+
+**下面到外部检测章节之前是 v0.1.0 的历史过程。** 其中的“当前/发布配置”和测试数量均指当时版本，原始报告未覆盖。
+
 本机为 Windows、RTX 4050 Laptop 6 GB，运行 llama.cpp b11583。以下是软件实际运行记录，不是人工评分或检测降分排名。输入集全部公开，文件里的输出没有为展示而润色。记录时间为 UTC，文件名日期按开发机器所在时区。
 
 | 实验 | 中文被自动采用 | 英文被自动采用 | 说明 |
@@ -93,9 +97,11 @@ Qwen 使用固定的 Q5_K_M 文件，温度0.7；完整文件哈希与提示哈�
 
 最终两套语料再次完整运行，结果保存在文件名含 `release` 的报告中，没有覆盖旧文件。最终中文压力集0/8、中文方法草稿4/6、英文压力集5/6、英文方法草稿1/4的最终文本发生变化。用途是确认当前程序、模型与记录流程确实运行；不是质量验收结论。Windows 本地软件检查为247项 Python 测试通过、1项符号链接测试因平台权限跳过；45项前端测试通过，构建与依赖审计通过。跨平台 CI 以各仓库 Actions 的实际结果为准。
 
-## 外部检测仍未实测
+## 首次外部网页检测
 
-当前没有商业检测凭据，也没有本项目的真实前后分数。GPTZero 适配器做过协议夹具测试，但还没有用真实密钥验证。不能据此宣称通过中文论文检测，或把上游模型在别处的结果算作本项目成绩。
+使用 GPTZero 官方网页 Basic Scan 对 v0.1.0 的公开合成方法草稿做了预先约定的观测。六段中文合成一份，原稿和最终稿均显示 AI 文档类别概率 99%（Model 4.1m）；该界面将中文计为 6 words，提示不足 100 words、结果可能不准。四段英文合成原稿显示 100%（4.1o），改写稿提交时要求注册，且仍显示 Text changed，因此未计入有效结果。未绕限额、注册或付费。每种语言只是一份合成文，不把段落数算作独立观测。
+
+[原始文本、输入哈希、UTC 时间、可见结果与截图](../artifacts/gptzero-ui-2026-10-14/observations.json)均已保留。中文配对没有降分；英文没有有效配对结论。这些是网页观察，不是本项目 API 适配器的生产验证；真实密钥调用仍未验证，也没有知网、维普、万方、Turnitin 等平台的结果。
 
 如果后续补充效果评测，应单独列出：检测器和版本、测试时间、文本许可与来源、原文/改写哈希、原始报告、失败样例、语义复核方法和费用。不要只展示几段成功样例，也不要把不同供应商的分数合成一个“通用 AI 率”。
 
@@ -105,8 +111,10 @@ Software correctness, actual rewriting, and detector effectiveness are separate 
 
 The first humanizer IQ2 run accepted a conclusion reversal in `zh-03`; all warnings now withhold automatic selection. Its lower-temperature prose run was more readable in some cases but still repetitive. The first Qwen Q5 runs changed 12/24 outputs, including cosmetic-only edits, lost provenance disclaimers (`en-05`), a requirement turned into a completion statement (`zh-04`), and hypothetical procedures changed to present tense (`prose-en-02`). The last failure prompted `would`/`should` count warnings and a regression test. Other semantic omissions and Chinese URL-boundary false positives remain known limitations.
 
-The Qwen prompt probe uses five selected development cases and two seeds, not an independent benchmark. Developer-agent review is not independent human quality assessment. No commercial detector effectiveness has been measured; checks do not establish semantic equivalence or human authorship. Manual edits are exported separately in `manual_revision`; `checked` means a check ran, not that the text was approved.
+The Qwen prompt probe uses five selected development cases and two seeds, not an independent benchmark. Developer-agent review is not independent human quality assessment. At v0.1.0 publication no commercial detector had been measured; the later limited web observation below does not establish effectiveness. Checks do not establish semantic equivalence or human authorship. Manual edits are exported separately in `manual_revision`; `checked` means a check ran, not that the text was approved.
 
 The released Qwen v2 prompt was rerun on both full corpora. Automatic selections were 0/8 Chinese stress cases, 5/6 Chinese prose cases, 5/6 English stress cases and 1/4 English prose cases. All original v1 files remain available. The disclaimer omission in `en-05` persists; this release does not establish complete semantic preservation or reliably better prose. Its primary verified outcome is a runnable, reviewable local editing workflow, not a detector-bypass product.
 
 After adding bounded Chinese proposal-marker warnings, both corpora were run again with the final release configuration (`*-release-*.json`). The final counts are 0/8 Chinese stress, 4/6 Chinese prose, 5/6 English stress and 1/4 English prose, with `prose-zh-06` now retained. Source/permission omissions are still possible. Local Windows checks passed 247 Python tests (one platform-permission skip), 45 frontend tests, build and dependency audits. Consult each repository's Actions for actual cross-platform CI results.
+
+The second iteration uses literal manuscript input (`qwen_academic_editing_chat_v3_literal`) with unchanged sampling and bounded quantity, permission, requirement, provenance, purpose and degree-hedge checks. Final raw runs selected 2/8 Chinese stress, 3/6 Chinese prose, 4/6 English stress and 2/4 English prose outputs; these are selection counts, not quality scores. Frozen-candidate replay newly withholds two provenance failures and releases one numeric-notation false positive. The official GPTZero web UI showed 99% before and after one Chinese composite, with an under-100-word warning; an English source showed 100%, but the after-scan hit a registration limit and is not a valid result. See the [second-iteration record](core-iteration-2026-10-14.md) for evidence and remaining limits.

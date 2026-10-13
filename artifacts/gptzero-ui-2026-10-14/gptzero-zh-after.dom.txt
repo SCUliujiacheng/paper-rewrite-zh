@@ -1,0 +1,142 @@
+- complementary:
+  - button "GPTZero logo":
+    - img "GPTZero logo"
+  - button "New Scan":
+    - generic: New Scan
+  - button "Custom Review":
+    - generic: Custom Review
+  - navigation "Navigation sidebar":
+    - list:
+      - link "Scans":
+        - /url: /documents-history
+        - generic: Scans
+      - link "Chrome Extension":
+        - /url: https://chromewebstore.google.com/detail/kgobeoibakoahbfnlficpmibdbkdchap?utm_source=dashboard&utm_medium=button&utm_content=sidebar
+        - generic: Chrome Extension
+- main:
+  - paragraph: 本方案拟围绕检索增强生成的证据使用方式建立评估流程，将检索是否找到相关材料与回答是否忠实使用材料分别记录。评审者需要对照问题、检索片段和最终回答，指出结论所依赖的具体信息，并说明材料不足时应如何表达不
+  - button "Tell us what you think":
+    - paragraph: Tell us what you think
+  - button "Sign up"
+  - button "Log in"
+  - button "Expand input view":
+  - button "Copy":
+  - button "Undo":
+  - button "Redo" [disabled]:
+  - button "Text":
+  - button "Bold":
+  - button "Italic":
+  - button "Underline":
+  - button "Add link" [disabled]:
+  - button "More formatting options":
+  - button "Proofread":
+    - text: Proofread
+  - paragraph: 本方案拟围绕“检索增强生成”的证据使用方式建立评估流程，将检索是否找到相关材料与回答是否忠实使用材料分别记录。评审者需对照问题、检索片段和最终回答，指出结论所依赖的具体信息，并说明材料不足时应如何表达不确定性。通过该设计，旨在进一步区分检索环节与生成环节的问题，为后续系统改进提供较为明确的依据。
+  - paragraph: 针对模型在不同文本来源间的适用性，本研究拟采用交叉验证，并以来源而非单篇文本作为划分训练与验证集的基本单位。来自同一作者或同一系列的文本应归入同一分组，以降低风格相似性对评估的影响。方案还计划单独记录各来源的文本长度和任务类型，使总体表现能与分组表现相互参照，而不将总体指标直接解释为所有场景下的适用程度。
+  - paragraph: 为使“标注一致性”评价过程更清晰，本方案计划由3名评审者独立判断每段回答是否受所附材料支持，并为每项判断提供简短理由。正式标注前拟安排20段练习材料以讨论概念边界；练习材料与后续评价集合将分开处理。对于存在分歧的项目，方案拟保留全部初始意见，再通过讨论形成处理记录，以便分析分歧源于规则理解还是材料本身。
+  - paragraph: 工具调用的可靠性拟从任务完成和操作过程两个角度考察。我们计划为每个任务预先定义可核对的终止条件，并记录系统选择工具、解释输入以及处理返回信息的过程。若任务包含多个依赖步骤，评估应检查后续操作是否仍依据有效的前序结果。这样的设计旨在将最终答案的合理性与执行路径的可追溯性联系起来，为错误定位提供更完整的材料。
+  - paragraph: 响应延迟的比较拟在相同请求长度与并发设置下进行，测试方案计划分别安排1个和4个并发请求，并将各设置下的中位数与第95百分位同时报告。计时范围拟从请求发出持续到完整回答接收，模型加载时间另行记录。我们希望通过明确计时边界，使速度比较能够对应实际使用过程；这些设置属于待执行的测量计划，尚不能支持任何模型更快的结论。
+  - paragraph: 数据最小化原则拟贯穿研究材料的收集、处理与共享环节。方案计划优先使用经参与者确认可以提供的内容，并在进入分析流程前移除与研究问题无关的身份信息。对于必须保留的背景字段，需要分别说明其分析用途及访问范围。共享材料的形式拟根据复核需求确定，同时提供字段说明与处理步骤，使外部评审能够理解分析依据及其边界。
+  - generic: Great! You've entered enough text to scan
+  - generic: 917 characters
+  - navigation "Scan type navigation":
+    - button "Basic Scan":
+    - button "Advanced":
+      - generic: Advanced
+    - button "Feedback":
+      - generic: Feedback
+    - button "Plagiarism":
+      - generic: Plagiarism
+    - button "Hallucination":
+      - generic: Hallucination
+  - heading "Basic Scan" [level=1]
+  - button "Share":
+    - generic: Share
+  - button "Export":
+    - generic: Export
+  - paragraph: This text is under 100 words
+  - button "Dismiss":
+  - paragraph: Your result may be less accurate.
+  - generic: GPTZero AI Detection
+  - generic: Model 4.1m
+  - generic: We are highly confident this text was AI generated
+  - generic: Chance this entire text is...
+  - button "AI 99%":
+    - text: AI 99%
+  - button "Mixed 0%":
+    - text: Mixed 0%
+  - button "Human 1%":
+    - text: Human 1%
+  - separator
+  - radiogroup:
+    - radio "AI Sentences" [checked]:
+      - generic: AI Sentences
+    - radio "AI Vocab":
+      - generic: AI Vocab
+  - heading "Your most AI sentences" [level=6]
+  - list:
+    - status "Low impact":
+      - generic: High AI impact
+    - status "Medium impact":
+      - generic: High AI impact
+    - status "High impact":
+      - generic: High AI impact
+    - generic: 通过该设计，旨在进一步区分检索环节与生成环节的问题，为后续系统改进提供较为明确的依据。
+    - status "Low impact":
+      - generic: High AI impact
+    - status "Medium impact":
+      - generic: High AI impact
+    - status "High impact":
+      - generic: High AI impact
+    - generic: 评审者需对照问题、检索片段和最终回答，指出结论所依赖的具体信息，并说明材料不足时应如何表达不确定性。
+    - status "Low impact":
+      - generic: High AI impact
+    - status "Medium impact":
+      - generic: High AI impact
+    - status "High impact":
+      - generic: High AI impact
+    - generic: 针对模型在不同文本来源间的适用性，本研究拟采用交叉验证，并以来源而非单篇文本作为划分训练与验证集的基本单位。
+  - paragraph: Advanced sentence scanning
+  - paragraph: Understand how each sentence impacts AI probabilities.
+  - button "Try for Free"
+  - paragraph: 1/1 free scans left
+  - paragraph: What's next?
+  - button "Writing feedback on your draft Structure, tone, and argument analysis":
+    - paragraph: Writing feedback on your draft
+    - paragraph: Structure, tone, and argument analysis
+  - button "Guidance for Teachers and reviewers":
+    - generic: Guidance for Teachers and reviewers
+  - generic: Text up-to-date
+  - generic: 917 characters • 6 words
+  - button "Re-scan":
+    - text: Re-scan
+  - button "AI Tools"
+  - listbox:
+  - button "Feedback":
+    - text: Feedback
+  - button:
+  - generic: Here are some useful AI tools.
+  - text: Ways they can help you as a
+  - button "teacher":
+    - generic: teacher
+  - button "Give constructive feedback Generate insights aligned with your rubric criteria.":
+    - generic: Give constructive feedback
+    - generic: Generate insights aligned with your rubric criteria.
+  - button "Help with addressing AI use in this assignment Get advice on how to address AI use with your student.":
+    - generic: Help with addressing AI use in this assignment
+    - generic: Get advice on how to address AI use with your student.
+  - button "Help support a struggling learner Develop a plan to help this student succeed.":
+    - generic: Help support a struggling learner
+    - generic: Develop a plan to help this student succeed.
+  - button "Find contradictions in my text Uncover inconsistencies and improve logical clarity.":
+    - generic: Find contradictions in my text
+    - generic: Uncover inconsistencies and improve logical clarity.
+  - button "Custom question":
+    - generic: Custom question
+  - separator
+  - separator
+  - textbox "Enter your response or upload file..."
+  - button "Add rubric or documents":
+    - text: Add rubric or documents
+  - button "->" [disabled]
+- button "close side bar":

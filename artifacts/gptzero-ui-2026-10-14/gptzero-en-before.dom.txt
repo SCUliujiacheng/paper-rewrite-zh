@@ -1,0 +1,140 @@
+- complementary:
+  - button "GPTZero logo":
+    - img "GPTZero logo"
+  - button "New Scan":
+    - generic: New Scan
+  - button "Custom Review":
+    - generic: Custom Review
+  - navigation "Navigation sidebar":
+    - list:
+      - link "Scans":
+        - /url: /documents-history
+        - generic: Scans
+      - link "Chrome Extension":
+        - /url: https://chromewebstore.google.com/detail/kgobeoibakoahbfnlficpmibdbkdchap?utm_source=dashboard&utm_medium=button&utm_content=sidebar
+        - generic: Chrome Extension
+- main:
+  - paragraph: 本方案拟围绕检索增强生成的证据使用方式建立评估流程，将检索是否找到相关材料与回答是否忠实使用材料分别记录。评审者需要对照问题、检索片段和最终回答，指出结论所依赖的具体信息，并说明材料不足时应如何表达不
+  - button "Tell us what you think":
+    - paragraph: Tell us what you think
+  - button "Sign up"
+  - button "Log in"
+  - button "Expand input view":
+  - button "Copy":
+  - button "Undo":
+  - button "Redo" [disabled]:
+  - button "Text":
+  - button "Bold":
+  - button "Italic":
+  - button "Underline":
+  - button "Add link" [disabled]:
+  - button "More formatting options":
+  - button "Proofread":
+    - text: Proofread
+  - paragraph: The proposed study would examine how retrieval augmentation changes the evidence available to a language model. The evaluation would separate the relevance of retrieved passages from the support they provide for individual claims in an answer. Reviewers would identify the passage supporting each claim and describe ambiguities where the available material permits several interpretations. This arrangement is intended to make the assessment more informative for system development, while preserving a clear account of what the evidence can support.
+  - paragraph: To assess annotation agreement, the protocol would ask 3 reviewers to evaluate each response independently before discussing disagreements. A set of 20 practice items would be used to clarify the decision rules and would remain separate from the evaluation material. Each judgment would include a short rationale linking the decision to the supplied evidence. The proposed analysis would retain initial judgments alongside the discussion record, allowing disagreements about the rules to be distinguished from uncertainty within the material itself.
+  - paragraph: The assessment of tool use would consider both the completion of a task and the sequence of actions taken to reach that outcome. Each task would have an explicit completion criterion established before evaluation. The protocol would preserve the requested inputs, tool responses, and subsequent decisions so that reviewers could trace how intermediate information affected later actions. This proposed design would provide a structured basis for distinguishing errors in planning from errors in interpreting information returned by a tool.
+  - paragraph: The response latency comparison would use matched request lengths under 1 and 4 concurrent requests. For each setting, the reporting plan would include the median and the 95th percentile, measured from request submission to receipt of the complete answer. Model loading would be recorded separately because its duration reflects a different stage of use. These proposed measurement boundaries are intended to clarify the comparison; they describe a future protocol and do not establish that any model is currently faster.
+  - generic: Great! You've entered enough text to scan
+  - generic: 2161 characters
+  - navigation "Scan type navigation":
+    - button "Basic Scan":
+    - button "Advanced":
+      - generic: Advanced
+    - button "Feedback":
+      - generic: Feedback
+    - button "Plagiarism":
+      - generic: Plagiarism
+    - button "Hallucination":
+      - generic: Hallucination
+  - heading "Basic Scan" [level=1]
+  - button "Share":
+    - generic: Share
+  - button "Export":
+    - generic: Export
+  - generic: GPTZero AI Detection
+  - generic: Model 4.1o
+  - generic: We are highly confident this text was AI generated
+  - generic: Chance this entire text is...
+  - button "AI 100%":
+    - text: AI 100%
+  - button "Mixed 0%":
+    - text: Mixed 0%
+  - button "Human 0%":
+    - text: Human 0%
+  - separator
+  - radiogroup:
+    - radio "AI Sentences" [checked]:
+      - generic: AI Sentences
+    - radio "AI Vocab":
+      - generic: AI Vocab
+  - heading "Your most AI sentences" [level=6]
+  - list:
+    - status "Low impact":
+      - generic: High AI impact
+    - status "Medium impact":
+      - generic: High AI impact
+    - status "High impact":
+      - generic: High AI impact
+    - generic: The protocol would preserve the requested inputs, tool responses, and subsequent decisions so that reviewers could trace how intermediate information affected later actions.
+    - status "Low impact":
+      - generic: High AI impact
+    - status "Medium impact":
+      - generic: High AI impact
+    - status "High impact":
+      - generic: High AI impact
+    - generic: The proposed analysis would retain initial judgments alongside the discussion record, allowing disagreements about the rules to be distinguished from uncertainty within the material itself.
+    - status "Low impact":
+      - generic: High AI impact
+    - status "Medium impact":
+      - generic: High AI impact
+    - status "High impact":
+      - generic: High AI impact
+    - generic: This proposed design would provide a structured basis for distinguishing errors in planning from errors in interpreting information returned by a tool.
+  - paragraph: Advanced sentence scanning
+  - paragraph: Understand how each sentence impacts AI probabilities.
+  - button "Try for Free"
+  - paragraph: 1/1 free scans left
+  - paragraph: What's next?
+  - button "Writing feedback on your draft Structure, tone, and argument analysis":
+    - paragraph: Writing feedback on your draft
+    - paragraph: Structure, tone, and argument analysis
+  - button "Guidance for Teachers and reviewers":
+    - generic: Guidance for Teachers and reviewers
+  - generic: Text up-to-date
+  - generic: 2,161 characters • 315 words
+  - button "Re-scan":
+    - text: Re-scan
+  - button "AI Tools"
+  - listbox:
+  - button "Feedback":
+    - text: Feedback
+  - button:
+  - generic: Here are some useful AI tools.
+  - text: Ways they can help you as a
+  - button "teacher":
+    - generic: teacher
+  - button "Give constructive feedback Generate insights aligned with your rubric criteria.":
+    - generic: Give constructive feedback
+    - generic: Generate insights aligned with your rubric criteria.
+  - button "Help with addressing AI use in this assignment Get advice on how to address AI use with your student.":
+    - generic: Help with addressing AI use in this assignment
+    - generic: Get advice on how to address AI use with your student.
+  - button "Help support a struggling learner Develop a plan to help this student succeed.":
+    - generic: Help support a struggling learner
+    - generic: Develop a plan to help this student succeed.
+  - button "Find contradictions in my text Uncover inconsistencies and improve logical clarity.":
+    - generic: Find contradictions in my text
+    - generic: Uncover inconsistencies and improve logical clarity.
+  - button "Custom question":
+    - generic: Custom question
+  - separator
+  - separator
+  - textbox "Enter your response or upload file..."
+  - button "Add rubric or documents":
+    - text: Add rubric or documents
+  - button "->" [disabled]
+- button "close side bar":
+- generic: Run a scan
+- generic: Ctrl
+- generic: Enter
