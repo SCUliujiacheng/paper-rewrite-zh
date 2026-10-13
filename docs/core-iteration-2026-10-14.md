@@ -67,6 +67,20 @@
 
 初次 `core` 运行还发现 `en-04` 的 `is a placeholder` 被写成 `remains a placeholder`，引入继续保持的轻微预设；这种时间含义未被词频规则覆盖。不能声称所有已采用文本含义完全不变。没有独立人工标注集，也没有完成新模型训练。
 
+## 审查后的边界修复
+
+独立代码审查复现了两处新回归，已用先失败后通过的测试修复：`5 mg → one to five mg / −five mg` 不能因只匹配尾部数词而放行；Markdown 链接、自动链接及引用式链接中的中文标点属于显式目标的一部分，不能按普通句读截掉。百分数与 percent points 同样保持区分。修复后重放最终报告中的全部候选，检查结果与记录一致。
+
+仍保留一个误报：`One samples from the posterior distribution.` 中的 One 是泛指人，规则却可能把它与 samples 当作数量结构。它会导致人工复核，不会静默改掉稿件；本轮未加入语法分析器来处理这类歧义。
+
+本轮使用独立开发分支而非第二份工作目录，复用已有模型运行时；用途与程度提示宁可多要求一次核对。没有将完整语义保留、提示注入抵抗、检测器准确性、运行服务的模型身份或跨平台通用效果当作已验证属性。任意实体与数值重新配对仍是已知漏检范围。
+
+## 本地验证
+
+中英文版分别通过 304 项 Python 测试和 46 项前端测试，前端构建、Ruff 检查与格式检查均通过。两边各有 1 项 Windows 符号链接权限相关测试跳过，以及 1 条上游 Starlette/httpx 弃用警告。锁定依赖的 pip-audit 与 npm audit 未发现已知漏洞；这不是没有漏洞的保证。以上是工程回归检查，不代表检测降分或语义保留达标。
+
+浏览器实际运行检查了中文与英文的许可丢失提示、保留原稿的处理和语言切换，未见浏览器控制台错误。未进行全面的浏览器、屏幕尺寸和辅助功能兼容性测试。
+
 ## English summary
 
 The real GPTZero web comparison did **not** show a reduction: one Chinese synthetic composite scored 99% before and after, with a six-word/under-100-word warning. One English source scored 100%; the after-scan hit registration/quota and is excluded. Raw visible evidence and exact input hashes are linked above. This is a small observation of v0.1.0 output, not the later patch, an API validation, a Chinese-paper benchmark or proof of human authorship.

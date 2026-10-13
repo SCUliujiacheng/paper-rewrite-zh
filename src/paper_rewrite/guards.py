@@ -23,7 +23,9 @@ class AuditResult(BaseModel):
 
 
 _ARABIC = r"[+−-]?(?:(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|\.\d+)(?:[eE][+−-]?\d+)?"
-_CHINESE = r"[负負]?[零〇一二两兩三四五六七八九十百千万萬亿億]+(?:点[零〇一二三四五六七八九]+)?"
+_CHINESE = (
+    r"[正负負+−±-]?[零〇一二两兩三四五六七八九十百千万萬亿億]+(?:点[零〇一二三四五六七八九]+)?"
+)
 _EN_INTEGERS = dict(
     enumerate(
         (
@@ -60,11 +62,12 @@ _EN_NUMBER_WORD = (
 )
 # Capture unsupported compounds whole, so twenty-one cannot silently become one.
 _EN_QUANTITY = (
-    rf"(?i:\b(?:(?:minus|negative|positive|plus)\s+)?{_EN_NUMBER_WORD}"
-    rf"(?:[\s-]+(?:(?:and|point)\s+)?{_EN_NUMBER_WORD})*\b)"
+    rf"(?i:[+−±-]?\b(?:(?:minus|negative|positive|plus)[\s−–—-]+)?{_EN_NUMBER_WORD}"
+    rf"(?:[\s−–—-]+(?:(?:and|point|to|through)\s+)?{_EN_NUMBER_WORD})*\b)"
 )
 _UNITS = (
-    r"(?:percent|per mille|milligrams?|kilograms?|grams?|milliliters?|liters?|"
+    r"(?:percentage points?|percent points?|percent|per mille|"
+    r"milligrams?|kilograms?|grams?|milliliters?|liters?|"
     r"millimet(?:er|re)s?|centimet(?:er|re)s?|met(?:er|re)s?|seconds?|minutes?|hours?|"
     r"μg|µg|ug|mg|kg|g|ng|pg|mL|ml|μL|µL|uL|L|mm|cm|km|nm|μm|µm|m|"
     r"ms|s|min|h|Hz|kHz|MHz|GHz|Pa|kPa|MPa|W|kW|MW|V|mV|A|mA|mol|mmol|"
@@ -92,6 +95,12 @@ _CITATIONS = re.compile(
     r"|[\u4e00-\u9fff]{2,6}(?:等)?\s*[（(](?:19|20)\d{2}[a-z]?[）)]"
 )
 _URL = re.compile(r"https?://[^\s<>\"'`\[\]（）)。，；：！？]+")
+_EXPLICIT_URL = re.compile(
+    r"<(?P<autolink>https?://[^\s<>]+)>"
+    r"|\]\(\s*(?P<link>https?://[^\s<>]+?)(?:\s+['\"][^\n]*?['\"])?\s*\)"
+    r"|^ {0,3}\[[^\]\n]+\]:[ \t]*(?P<reference>https?://[^\s<>]+)",
+    re.MULTILINE,
+)
 _LATEX = re.compile(
     r"(?<!\\)\$\$[\s\S]*?(?<!\\)\$\$|(?<!\\)\$[^$\n]*?(?<!\\)\$"
     r"|\\\([\s\S]*?\\\)|\\\[[\s\S]*?\\\]"
@@ -175,6 +184,15 @@ def _risk_cues(pattern: re.Pattern[str], text: str) -> list[str]:
     return [aliases.get(token, token) for token in _tokens(pattern, text.lower())]
 
 
+def _urls(text: str) -> list[str]:
+    explicit = list(_EXPLICIT_URL.finditer(text))
+    values = [next(value for value in match.groups() if value is not None) for match in explicit]
+    for match in _URL.finditer(text):
+        if not any(link.start() <= match.start() < link.end() for link in explicit):
+            values.append(match[0].rstrip(".,;:，。；：！!"))
+    return values
+
+
 def _tokens(pattern: re.Pattern[str], text: str, *, compact: bool = False) -> list[str]:
     values = [match.group(0) for match in pattern.finditer(text)]
     return [re.sub(r"\s+", "", value) for value in values] if compact else values
@@ -256,7 +274,7 @@ def audit(source: str, candidate: str, protected_terms: list[str] | None = None)
             ),
         ),
         ("citations", lambda text: _tokens(_CITATIONS, text, compact=True)),
-        ("urls", lambda text: [value.rstrip(".,;:，。；：！!") for value in _tokens(_URL, text)]),
+        ("urls", _urls),
         ("latex", lambda text: _tokens(_LATEX, text)),
         ("code", lambda text: _tokens(_CODE, text) + _nested_code(text)),
         (

@@ -140,3 +140,59 @@ def test_warns_when_degree_hedge_disappears(source, candidate):
 )
 def test_unsupported_compound_number_is_not_reduced_to_its_last_word(source, candidate):
     assert any(issue.code == "numbers" for issue in audit(source, candidate).issues)
+
+
+@pytest.mark.parametrize(
+    "source,candidate",
+    [
+        ("The dose was 5 mg.", "The dose was one to five mg."),
+        ("The dose was 5 mg.", "The dose was one through five mg."),
+        ("The dose was 5 mg.", "The dose was -five mg."),
+        ("The dose was 5 mg.", "The dose was −five mg."),
+        ("The dose was 5 mg.", "The dose was minus-five mg."),
+        ("The dose was 5 mg.", "The dose was minus−five mg."),
+        ("We used 1 groups.", "We used twenty–one groups."),
+        ("We used 1 groups.", "We used twenty—one groups."),
+        ("剂量为5克。", "剂量为−五克。"),
+        ("剂量为5克。", "剂量为-五克。"),
+        ("比例为5%", "比例为±五%"),
+        ("A change of 5 percent.", "A change of five percent points."),
+    ],
+)
+def test_numeric_context_is_preserved_before_integer_normalization(source, candidate):
+    for before, after in [(source, candidate), (candidate, source)]:
+        assert any(issue.code == "numbers" for issue in audit(before, after).issues)
+
+
+async def test_first_candidate_cannot_turn_scalar_into_word_range():
+    class RangeModel:
+        name = "deterministic-regression-fixture"
+
+        async def complete(self, text, seed=0, protected_terms=()):
+            return "The dose was one to five mg."
+
+    result = await Rewriter(RangeModel()).rewrite("The dose was 5 mg.", "en", [], 1)
+    assert result.segments[0].attempts
+    assert result.output == result.source
+    assert result.status == "unchanged"
+
+
+@pytest.mark.parametrize(
+    "template",
+    [
+        "See [data]({}).",
+        "See <{}>.",
+        'See [data]({} "study data").',
+        "[data]: {}",
+    ],
+)
+def test_explicit_link_retains_chinese_punctuation_in_destination(template):
+    source = template.format("https://example.org/search?q=量子，纠缠")
+    candidate = template.format("https://example.org/search?q=量子，光学")
+    assert any(issue.code == "urls" for issue in audit(source, candidate).issues)
+
+
+def test_identical_explicit_link_does_not_capture_surrounding_prose():
+    source = "详见[数据](https://example.org/中文，路径)。原文说明。"
+    candidate = "详见[数据](https://example.org/中文，路径)。修改说明。"
+    assert audit(source, candidate).issues == []
