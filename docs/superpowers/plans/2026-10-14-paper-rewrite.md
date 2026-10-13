@@ -77,4 +77,6 @@ Files: data/smoke.jsonl, scripts/*, docs/*, README*.md, .github/workflows/ci.yml
 - [x] Add synthetic bilingual samples and evaluation script; do not adjust fixtures to hide observed failures.
 - [x] Run full lint/tests/build/audit and actual inference. Save model revision/hash, timing and unedited outputs.
 - [x] Independent whole-project review; fix consequential findings with regression tests.
-- [ ] Commit, create Chinese public repository and push; if English inference succeeds create English edition and push; verify CI and remote SHAs.
+- [x] Commit, create Chinese public repository and push; if English inference succeeds create English edition and push; verify CI and remote SHAs.
+
+Publication check: Chinese `4208ee1` passed run `38426958259`; English `0e3d5e5` passed run `38427378192`. Both runs passed Windows/Linux Python, frontend and dependency-audit jobs. The product remains an experimental preview: completed engineering delivery does not establish detector effectiveness or semantic equivalence. Later documentation-only commits and release asset checks are tracked in Git and the release pages.
